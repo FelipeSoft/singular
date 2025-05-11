@@ -8,7 +8,12 @@ const homeUseCase = new HomeUseCase(homeRepositoryMySQL)
 
 export const homeController = async (request: FastifyRequest<{ Body: HomeBody }>, reply: FastifyReply) => {
     const { text } = request.body;
+    
+
     if (homeUseCase.test()) {
         return reply.code(200).send({ received: text });
+    }
+    if (!homeUseCase.test()) {
+        return reply.code(200).send({ message: "ajsakjska" });
     }
 };
