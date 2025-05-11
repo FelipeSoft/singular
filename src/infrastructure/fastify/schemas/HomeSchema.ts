@@ -6,13 +6,4 @@ export const homeSchema = {
             text: { type: 'string' },
         },
     },
-    response: {
-        200: {
-            type: 'object',
-            required: ['received'],
-            properties: {
-                received: { type: 'string' },
-            },
-        },
-    },
 };

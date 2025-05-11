@@ -1,11 +1,13 @@
 import { configDotenv } from 'dotenv';
 import Fastify, { FastifyInstance } from 'fastify';
-import homeRoute from './routes/HomeRoute';
+import homeRoute from './routes/HomeRoutes';
+import enrollmentRoutes from './routes/EnrollmentRoutes';
 
 const app: FastifyInstance = Fastify();
 configDotenv()
 
 app.register(homeRoute)
+app.register(enrollmentRoutes)
 
 const start = async () => {
   try {
