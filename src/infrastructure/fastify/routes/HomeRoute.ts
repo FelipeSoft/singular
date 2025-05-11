@@ -8,3 +8,5 @@ const homeRoute: FastifyPluginAsync = async (fastify) => {
 };
 
 export default homeRoute
+
+//asdasddasd
