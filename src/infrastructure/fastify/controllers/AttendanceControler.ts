@@ -9,7 +9,7 @@ export const justifyAbsence = async (request: FastifyRequest<{ Body: JustifyAbse
   reply.code(200).send({ message: "hello!" })
 };
 
-export const studentAttendance = async (request: FastifyRequest, reply: FastifyReply) => {
+export const checkStudentAttendance = async (request: FastifyRequest, reply: FastifyReply) => {
   reply.code(200).send({ message: "hello!" })
 };
 
