@@ -1,6 +1,6 @@
 import { FastifyPluginAsync } from "fastify";
 import { enrollmentCancel, enrollmentEdit, enrollmentLock, enrollmentRegistry, enrollmentSearch } from "../controllers/EnrollmentController";
-import { EnrollmentCancel, EnrollmentEdit, EnrollmentLock, EnrollmentRegistry } from "../../../shared/types/EnrollmentTypes";
+import { EnrollmentCancel, EnrollmentEdit, EnrollmentLock, EnrollmentRegistry } from "../../../../shared/types/EnrollmentTypes";
 
 const enrollmentRoutes: FastifyPluginAsync = async (fastify) => {
     fastify.post<{ Body: EnrollmentRegistry }>('/enrollment/registry', { handler: enrollmentRegistry })

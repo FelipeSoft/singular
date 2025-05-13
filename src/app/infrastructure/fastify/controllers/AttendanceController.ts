@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { AttendanceRegistry, JustifyAbsence } from '../../../shared/types/AttendanceTypes';
+import { AttendanceRegistry, JustifyAbsence } from '../../../../shared/types/AttendanceTypes';
 
 export const attendanceRegistry = async (request: FastifyRequest<{ Body: AttendanceRegistry }>, reply: FastifyReply) => {
   reply.code(200).send({ message: "hello!" })

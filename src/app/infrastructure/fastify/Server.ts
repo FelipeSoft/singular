@@ -1,14 +1,34 @@
 import { configDotenv } from 'dotenv';
 import Fastify, { FastifyInstance } from 'fastify';
-import homeRoute from './routes/HomeRoutes';
 import enrollmentRoutes from './routes/EnrollmentRoutes';
 import classRoutes from './routes/ClassRoutes';
 import attendanceRoutes from './routes/AttendanceRoutes';
+import view from '@fastify/view';
+import fastifyStatic from '@fastify/static';
+import path from "path";
+import homeRoutes from './routes/HomeRoutes';
 
-const app: FastifyInstance = Fastify();
 configDotenv()
 
-app.register(homeRoute)
+const app: FastifyInstance = Fastify({
+  logger: true
+});
+app.register(fastifyStatic, {
+  root: path.join(__dirname, '..', '..', '..', '..', 'public'),
+  prefix: '/public/',
+});
+
+console.log(process.env.VIEWS_ROOT_PATH,)
+
+app.register(view, {
+  engine: {
+    ejs: require('ejs')
+  },
+  root: process.env.VIEWS_ROOT_PATH,
+  viewExt: 'ejs',
+});
+
+app.register(homeRoutes)
 app.register(enrollmentRoutes)
 app.register(classRoutes)
 app.register(attendanceRoutes)

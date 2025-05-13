@@ -1,1 +1,1 @@
-import "./infrastructure/fastify/Server"
+import "./app/infrastructure/fastify/Server"

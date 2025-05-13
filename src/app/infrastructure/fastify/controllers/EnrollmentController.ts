@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { EnrollmentCancel, EnrollmentEdit, EnrollmentLock, EnrollmentRegistry } from '../../../shared/types/EnrollmentTypes';
+import { EnrollmentCancel, EnrollmentEdit, EnrollmentLock, EnrollmentRegistry } from '../../../../shared/types/EnrollmentTypes';
 
 export const enrollmentRegistry = async (request: FastifyRequest<{ Body: EnrollmentRegistry }>, reply: FastifyReply) => {
     reply.code(200).send({ message: "hello!" })

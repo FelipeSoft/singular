@@ -1,6 +1,6 @@
 import { FastifyPluginAsync } from "fastify";
-import { AttendanceRegistry, JustifyAbsence } from "../../../shared/types/AttendanceTypes";
-import { attendanceRegistry, checkStudentAttendance, justifyAbsence } from "../controllers/AttendanceControler";
+import { AttendanceRegistry, JustifyAbsence } from "../../../../shared/types/AttendanceTypes";
+import { attendanceRegistry, checkStudentAttendance, justifyAbsence } from "../controllers/AttendanceController";
 
 const attendanceRoutes: FastifyPluginAsync = async (fastify) => {
   fastify.post<{ Body: AttendanceRegistry }>('/attendance/registry', { handler: attendanceRegistry });
