@@ -1,4 +1,6 @@
 import { FastifyPluginAsync } from "fastify";
+import { AttendanceRegistry, JustifyAbsence } from "../../../shared/types/AttendanceTypes";
+import { attendanceRegistry, justifyAbsence } from "../controllers/AttendanceControler";
 
 //Precisa atualizar e importar posteriormente 
 const attendanceRoute: FastifyPluginAsync = async (fastify) => {
