@@ -1,12 +1,15 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
+import { AttendanceRegistry, JustifyAbsence } from '../../../shared/types/AttendanceTypes';
 
-//Preciso importar quando atualizado
 export const attendanceRegistry = async (request: FastifyRequest<{ Body: AttendanceRegistry }>, reply: FastifyReply) => {
-    reply.code(200).send({ message: "hello!" })
+  reply.code(200).send({ message: "hello!" })
 };
 
-//Preciso importar quando atualizado
 export const justifyAbsence = async (request: FastifyRequest<{ Body: JustifyAbsence }>, reply: FastifyReply) => {
+  reply.code(200).send({ message: "hello!" })
+};
+
+export const studentAttendance = async (request: FastifyRequest, reply: FastifyReply) => {
   reply.code(200).send({ message: "hello!" })
 };
 
