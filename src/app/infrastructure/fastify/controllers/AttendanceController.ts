@@ -34,7 +34,7 @@ export const renderAttendanceTracking = async (request: FastifyRequest<{ Body: A
   }
 
   return reply.view("layout.ejs", {
-    title: "Singular | Frequência - Acompanhamento de Frequência",
+    title: "Singular | Frequência - Controle de Frequência",
     body: renderedContent,
     tab: data.tab,
     subtab: data.subtab
