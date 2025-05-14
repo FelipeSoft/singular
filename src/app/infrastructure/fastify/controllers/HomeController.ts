@@ -1,16 +1,21 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
-import { HomeBody } from '../../../../shared/types/HomeTypes';
 import fs from "fs";
 import ejs from "ejs";
 import path from 'path';
+import { ActiveSubTab, ActiveTab } from '../../../../shared/types/ui/ActiveTab';
 
-export const homeController = async (request: FastifyRequest<{ Body: HomeBody }>, reply: FastifyReply) => {
-    const filePath = path.join(process.env.VIEWS_ROOT_PATH ?? "", "home.ejs");
+export const homeController = async (request: FastifyRequest, reply: FastifyReply) => {
+    const filePath = path.join(process.env.VIEWS_ROOT_PATH ?? "", "/home.ejs");
     const pageContent = fs.readFileSync(filePath, 'utf-8');
     const renderedContent = ejs.render(pageContent);
 
+    const data: { tab: ActiveTab, subtab?: ActiveSubTab } = {
+        tab: "home"
+    }
+
     return reply.view("layout.ejs", {
         title: "Singular",
-        body: renderedContent
+        body: renderedContent,
+        tab: data.tab
     })
 };

@@ -20,7 +20,7 @@
             </div>
             <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto">
                 <li class="text-[#747171] font-semibold">
-                    <a href="/home" class="flex items-center gap-2 text-sm">
+                    <a href="/home" class="flex items-center gap-2 text-sm <%= tab === "home" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" %>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g fill="none" stroke="#747171" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2">
@@ -32,11 +32,11 @@
                     </a>
                 </li>
                 <h2 class="mt-6 font-medium text-sm mb-3 text-[#747171]">Menu</h2>
-                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-4">
+                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item w-full" id="delivery-basic">
+                        <div class="accordion-item <%= tab === "class" ? "active" : ""  %> w-full" id="class-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
-                                aria-controls="delivery-basic-collapse" aria-expanded="false">
+                                aria-controls="class-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2 text-gray-500 text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -62,16 +62,16 @@
                                         </svg>
                                     </span>
                                 </div>
-                                <div id="delivery-basic-collapse"
-                                    class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                                    aria-labelledby="delivery-basic" role="region">
-                                    <div class="pb-1 mt-1">
+                                <div id="class-basic-collapse"
+                                    class="accordion-content <%= tab !== "class" ? "hidden" : ""  %> w-full overflow-hidden transition-[height] duration-300"
+                                    aria-labelledby="class-basic" role="region">
+                                    <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
-                                        <ul class="flex flex-col gap-2 mt-1">
-                                            <li><a href="/" class="text-sm text-[#747171]">Planejamento de Aulas</a>
+                                        <ul class="flex flex-col gap-3 mt-3 w-full">
+                                            <li><a href="/class/planning" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <%= tab === "class" && subtab === "class-planning" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" %>">Planejamento de Aulas</a>
                                             </li>
-                                            <li><a href="/" class="text-sm text-[#747171]">Execução de Aulas</a></li>
-                                            <li><a href="/" class="text-sm text-[#747171]">Estrutura Acadêmica</a></li>
+                                            <li><a href="/class/execution" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <%= tab === "class" && subtab === "class-execution" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" %>">Execução de Aulas</a></li>
+                                            <li><a href="/class/academic-structure" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <%= tab === "class" && subtab === "academic-structure" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" %>">Estrutura Acadêmica</a></li>
                                         </ul>
                                         </p>
                                     </div>
@@ -79,11 +79,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-4">
+                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item w-full" id="delivery-basic">
+                        <div class="accordion-item <%= tab === "attendance" ? "active" : ""  %> w-full" id="attendance-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
-                                aria-controls="delivery-basic-collapse" aria-expanded="false">
+                                aria-controls="attendance-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2 text-gray-500 text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -109,15 +109,15 @@
                                         </svg>
                                     </span>
                                 </div>
-                                <div id="delivery-basic-collapse"
-                                    class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                                    aria-labelledby="delivery-basic" role="region">
-                                    <div class="pb-1 mt-1">
+                                <div id="attendance-basic-collapse"
+                                    class="accordion-content <%= tab !== "attendance" ? "hidden" : ""  %> w-full overflow-hidden transition-[height] duration-300"
+                                    aria-labelledby="attendance-basic" role="region">
+                                    <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
-                                        <ul class="flex flex-col gap-2 mt-1">
-                                            <li><a href="/" class="text-sm text-[#747171]">Realizar Chamada</a>
+                                        <ul class="flex flex-col gap-3 mt-3 w-full">
+                                            <li><a href="/attendance/take" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <%= tab === "attendance" && subtab === "take-attendance" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" %>">Realizar Chamada</a>
                                             </li>
-                                            <li><a href="/" class="text-sm text-[#747171]">Acompanhamento de
+                                            <li><a href="/attendance/tracking" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <%= tab === "attendance" && subtab === "attendance-tracking" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" %>">Controle de
                                                     Frequência</a></li>
                                         </ul>
                                         </p>
@@ -126,11 +126,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-4">
+                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item w-full" id="delivery-basic">
+                        <div class="accordion-item <%= tab === "enrollment" ? "active" : ""  %> w-full" id="enrollment-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
-                                aria-controls="delivery-basic-collapse" aria-expanded="false">
+                                aria-controls="enrollment-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2 text-gray-500 text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
@@ -155,15 +155,15 @@
                                         </svg>
                                     </span>
                                 </div>
-                                <div id="delivery-basic-collapse"
-                                    class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                                    aria-labelledby="delivery-basic" role="region">
-                                    <div class="pb-1 mt-1">
+                                <div id="enrollment-basic-collapse"
+                                    class="accordion-content <%= tab !== "enrollment" ? "hidden" : ""  %> w-full overflow-hidden transition-[height] duration-300"
+                                    aria-labelledby="enrollment-basic" role="region">
+                                    <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
-                                        <ul class="flex flex-col gap-2 mt-1">
-                                            <li><a href="/" class="text-sm text-[#747171]">Registro de Matrículas</a>
+                                        <ul class="flex flex-col gap-3 mt-3 w-full">
+                                            <li><a href="/enrollment/records" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <%= tab === "enrollment" && subtab === "enrollment-records" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" %>">Registro de Matrículas</a>
                                             </li>
-                                            <li><a href="/" class="text-sm text-[#747171]">Matricular Aluno</a></li>
+                                            <li><a href="/enrollment/enroll-student" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <%= tab === "enrollment" && subtab === "enroll-student" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" %>">Matricular Aluno</a></li>
                                         </ul>
                                         </p>
                                     </div>
@@ -171,11 +171,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-4">
+                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item w-full" id="delivery-basic">
+                        <div class="accordion-item <%= tab === "users" ? "active" : ""  %> w-full" id="">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
-                                aria-controls="delivery-basic-collapse" aria-expanded="false">
+                                aria-controls="users-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2 text-gray-500 text-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -204,13 +204,13 @@
                                         </svg>
                                     </span>
                                 </div>
-                                <div id="delivery-basic-collapse"
-                                    class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                                    aria-labelledby="delivery-basic" role="region">
-                                    <div class="pb-1 mt-1">
+                                <div id="users-basic-collapse"
+                                    class="accordion-content <%= tab !== "users" ? "hidden" : ""  %> w-full overflow-hidden transition-[height] duration-300"
+                                    aria-labelledby="users-basic" role="region">
+                                    <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
-                                        <ul class="flex flex-col gap-2 mt-1">
-                                            <li><a href="/" class="text-sm text-[#747171]">Gestão de Usuários</a>
+                                        <ul class="flex flex-col gap-3 mt-3 w-full">
+                                            <li><a href="/users/management" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <%= tab === "users" && subtab === "users-management" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" %>">Gestão de Usuários</a>
                                             </li>
                                         </ul>
                                         </p>
@@ -220,7 +220,7 @@
                     </div>
                 </li>
                 <div class="mt-auto">
-                    <li class="text-[#747171] font-semibold mb-3">
+                    <li class="text-[#747171] font-semibold mb-5">
                         <a href="/home" class="flex items-center gap-2 text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                 <path fill="#747171"
@@ -248,9 +248,9 @@
         <div class="flex flex-col w-full">
             <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] w-full bg-gray-200">
                 <div class="flex items-center gap-2">
-                    <div class="flex flex-col items-end">
+                    <div class="flex flex-col items-end text-gray-500">
                         <h2 class="font-semibold">Coordenador FATEC</h2>
-                        <p class="text-sm">Coordenador</p>
+                        <p class="text-sm -mt-1">Coordenador</p>
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
                         <g fill="none" stroke="#F73C39" stroke-width="1.5">

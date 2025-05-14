@@ -1,4 +1,4 @@
-export type EnrollmentRegistry = {
+export type EnrollmentRecord = {
     cpf: string;
 }
 

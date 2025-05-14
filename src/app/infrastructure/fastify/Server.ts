@@ -7,6 +7,7 @@ import view from '@fastify/view';
 import fastifyStatic from '@fastify/static';
 import path from "path";
 import homeRoutes from './routes/HomeRoutes';
+import userRoutes from './routes/UserRoutes';
 
 configDotenv()
 
@@ -28,10 +29,11 @@ app.register(view, {
   viewExt: 'ejs',
 });
 
-app.register(homeRoutes)
-app.register(enrollmentRoutes)
-app.register(classRoutes)
-app.register(attendanceRoutes)
+app.register(homeRoutes);
+app.register(enrollmentRoutes);
+app.register(classRoutes);
+app.register(attendanceRoutes);
+app.register(userRoutes);
 
 const start = async () => {
   try {

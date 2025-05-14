@@ -1,4 +1,4 @@
-export const enrollmentRegistry = {
+export const enrollmentRecord = {
     body: {
         type: 'object',
         required: ['cpf'],
