@@ -21,3 +21,15 @@ export const renderUsersManagement = async (request: FastifyRequest, reply: Fast
         subtab: data.subtab
     })
 }
+
+export const createUser = async (request: FastifyRequest, reply: FastifyReply) => {
+}
+
+export const updateUser = async (request: FastifyRequest, reply: FastifyReply) => {
+}
+
+export const deleteUser = async (request: FastifyRequest, reply: FastifyReply) => {
+}
+
+export const getUsers = async (request: FastifyRequest, reply: FastifyReply) => {
+}
