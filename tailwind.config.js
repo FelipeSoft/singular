@@ -5,6 +5,8 @@ module.exports = {
     ],
     plugins: [
         require('flyonui'),
-        require('flyonui/plugin')
+        require('flyonui/plugin'),
+        require('flatpickr'),
+        require('flatpickr/plugin')
     ]
 };

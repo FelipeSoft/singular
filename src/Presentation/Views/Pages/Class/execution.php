@@ -14,30 +14,39 @@ $subtab = "class-execution";
             </svg>
             <h1 class="text-gray-500 font-semibold">Filtros</h1>
         </div>
+
         <form class="grid grid-cols-3 gap-4 mt-4">
+            <script>
+                window.addEventListener('load', function() {
+                    flatpickr('#date', {
+                        monthSelectorType: 'static'
+                    })
+                })
+            </script>
             <div class="w-full text-gray-500">
-                <label class="label-text text-gray-500" for="defaultInput">Data</label>
+                <label class="label-text text-gray-500" for="date">Data</label>
                 <input type="text" placeholder="dd/mm/aaaa"
-                    class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300  focus:outline-[#F73C39]"
-                    id="defaultInput" />
+                    class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
+                    id="date" />
             </div>
             <div class="w-full text-gray-500">
-                <label class="label-text text-gray-500" for="defaultInput">Curso</label>
-                <input type="text" placeholder="John Doe"
-                    class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300  focus:outline-[#F73C39]"
-                    id="defaultInput" />
+                <label class="label-text text-gray-500" for="discipline">Disciplina</label>
+                <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
+                    <option>Engenharia de Software VIII</option>
+                    <option>Cybersegurança</option>
+                </select>
             </div>
             <div class="w-full text-gray-500">
                 <label class="label-text text-gray-500" for="defaultInput">Disciplina</label>
                 <input type="text" placeholder="John Doe"
-                    class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300  focus:outline-[#F73C39]"
+                    class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
                     id="defaultInput" />
             </div>
             <div class="w-full text-gray-500">
-                <label class="label-text text-gray-500" for="defaultInput">Status</label>
+                <label class="label-text text-gray-500" for="status">Status</label>
                 <input type="text" placeholder="John Doe"
-                    class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300  focus:outline-[#F73C39]"
-                    id="defaultInput" />
+                    class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
+                    id="status" />
             </div>
             <div class="col-end-4 flex items-end justify-end gap-4">
                 <button class="btn btn-error w-16">
