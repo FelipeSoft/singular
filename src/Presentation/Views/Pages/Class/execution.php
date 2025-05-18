@@ -1,3 +1,9 @@
+<?php
+$title = "Singular | Aulas - Execução de Aulas";
+$tab = "class";
+$subtab = "class-execution";
+?>
+<?php require __DIR__ . "/../../Partials/header.php" ?>
 <section>
     <div class="flex flex-col">
         <div class="flex items-center gap-2">
@@ -199,3 +205,4 @@
         </div>
     </div>
 </section>
+<?php require __DIR__ . "/../../Partials/footer.php" ?>

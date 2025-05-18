@@ -20,7 +20,7 @@
             </div>
             <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto">
                 <li class="text-[#747171] font-semibold">
-                    <a href="/home" class="flex items-center gap-2 text-sm <?= $tab === "home" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none"?>">
+                    <a href="/home" class="flex items-center gap-2 text-sm <?= $tab === "home" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g fill="none" stroke="#747171" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2">
@@ -34,7 +34,7 @@
                 <h2 class="mt-6 font-medium text-sm mb-3 text-[#747171]">Menu</h2>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "class" ? "active" : "" ?> w-full" id="class-basic">
+                        <div class="accordion-item <?= $tab === "class" ? "active" : "" ?> w-full" id="class-basic" : "">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="class-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -68,10 +68,10 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/class/planning" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "class-planning" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none"?>">Planejamento de Aulas</a>
+                                            <li><a href="/class/planning" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "class-planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento de Aulas</a>
                                             </li>
-                                            <li><a href="/class/execution" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "class-execution" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none"?>">Execução de Aulas</a></li>
-                                            <li><a href="/class/academic-structure" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "academic-structure" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none"?>">Estrutura Acadêmica</a></li>
+                                            <li><a href="/class/execution" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "class-execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução de Aulas</a></li>
+                                            <li><a href="/class/academic-structure" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "academic-structure" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Estrutura Acadêmica</a></li>
                                         </ul>
                                         </p>
                                     </div>
@@ -81,7 +81,7 @@
                 </li>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "attendance" ? "active" : "" ?> w-full" id="attendance-basic">
+                        <div class="accordion-item <?= $tab === "attendance" ? "active" : "" ?> w-full" id="attendance-basic" : "">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="attendance-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -115,9 +115,9 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/attendance/take" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "attendance" && $subtab === "take-attendance" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none"?>">Realizar Chamada</a>
+                                            <li><a href="/attendance/take" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "attendance" && $subtab === "take-attendance" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Realizar Chamada</a>
                                             </li>
-                                            <li><a href="/attendance/tracking" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none"?>">Controle de
+                                            <li><a href="/attendance/tracking" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Controle de
                                                     Frequência</a></li>
                                         </ul>
                                         </p>
@@ -128,7 +128,7 @@
                 </li>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "enrollment" ? "active" : "" ?> w-full" id="enrollment-basic">
+                        <div class="accordion-item <?= $tab === "enrollment" ? "active" : "" ?> w-full" id="enrollment-basic" : "">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="enrollment-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -161,9 +161,9 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/enrollment/records" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "enrollment" && $subtab === "enrollment-records" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none"?>">Registro de Matrículas</a>
+                                            <li><a href="/enrollment/records" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "enrollment" && $subtab === "enrollment-records" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Registro de Matrículas</a>
                                             </li>
-                                            <li><a href="/enrollment/enroll-student" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "enrollment" && $subtab === "enroll-student" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none"?>">Matricular Aluno</a></li>
+                                            <li><a href="/enrollment/enroll-student" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "enrollment" && $subtab === "enroll-student" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Matricular Aluno</a></li>
                                         </ul>
                                         </p>
                                     </div>
@@ -173,7 +173,7 @@
                 </li>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "users" ? "active" : "" ?> w-full" id="">
+                        <div class="accordion-item <?= $tab === "users" ? "active" : "" ?> w-full" id=: "" "">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="users-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -210,7 +210,7 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/users/management" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "users" && $subtab === "users-management" && "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none"?>">Gestão de Usuários</a>
+                                            <li><a href="/users/management" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "users" && $subtab === "users-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Gestão de Usuários</a>
                                             </li>
                                         </ul>
                                         </p>
