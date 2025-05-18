@@ -3,6 +3,7 @@
     "tailwindcss": "npx @tailwindcss/cli -i ./public/assets/css/input.css -o ./public/assets/css/output.css --watch"
   },
   "dependencies": {
+    "flatpickr": "^4.6.13",
     "flyonui": "^2.1.0",
     "tailwindcss": "^4.1.6"
   },

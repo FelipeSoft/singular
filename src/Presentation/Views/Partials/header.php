@@ -10,6 +10,7 @@
 
     <!-- important links/scripts -->
     <link rel="stylesheet" href="/assets/css/output.css" ?>
+    <link rel="stylesheet" href="/assets/css/flatpickr.css" />
 </head>
 
 <body class="w-screen h-screen overflow-hidden">

@@ -3,6 +3,7 @@
 @plugin "@iconify/tailwind4";
 
 @import "./../../../node_modules/flyonui/variants.css";
+@import "flyonui/src/vendor/flatpickr.css";
 
 /* If you gitignored node_modules use below method */
-@source "./../../../node_modules/flyonui/dist/index.js"; /* Require only if you want to use FlyonUI JS component */
+@source "./../../../node_modules/flyonui/src/vendor/flatpickr.css"; /* Require only if you want to use FlyonUI JS component */
