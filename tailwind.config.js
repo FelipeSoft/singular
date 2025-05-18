@@ -1,6 +1,6 @@
 module.exports = {
     content: [
-        './src/**/*.{html,js,php}',
+        './src/Presentation/Views/**/*.{html,js,php}',
         './node_modules/flyonui/dist/js/*.js'
     ],
     plugins: [

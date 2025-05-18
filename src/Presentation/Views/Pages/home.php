@@ -1,3 +1,8 @@
+<?php
+$title = "Singular | Página Inicial";
+$tab = "home";
+?>
+<?php require __DIR__ . "/../Partials/header.php" ?>
 <section>
     <h1 class="font-semibold text-black text-xl">Página Inicial</h1>
     <div class="grid grid-cols-3 gap-4 mt-2">
@@ -275,3 +280,4 @@
         </div>
     </div>
 </section>
+<?php require __DIR__ . "/../Partials/footer.php" ?>
