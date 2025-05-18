@@ -6,16 +6,16 @@ $routes = [
             require __DIR__ . '/../src/Presentation/Views/Pages/home.php';
         },
 
-        '/class/planning' => function () {
-            require __DIR__ . '/../src/Presentation/Views/Pages/Class/planning.php';
+        '/lesson/planning' => function () {
+            require __DIR__ . '/../src/Presentation/Views/Pages/Lesson/planning.php';
         },
 
-        '/class/execution' => function () {
-            require __DIR__ . '/../src/Presentation/Views/Pages/Class/execution.php';
+        '/lesson/execution' => function () {
+            require __DIR__ . '/../src/Presentation/Views/Pages/Lesson/execution.php';
         },
 
-        '/class/academic-structure' => function () {
-            require __DIR__ . '/../src/Presentation/Views/Pages/Class/academic-structure.php';
+        '/lesson/academic-structure' => function () {
+            require __DIR__ . '/../src/Presentation/Views/Pages/Lesson/academic-structure.php';
         },
 
         '/attendance/take' => function () {
