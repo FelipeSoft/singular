@@ -1,2 +1,0 @@
-export type ActiveTab = "home" | "class" | "attendance" | "enrollment" | "users" | "settings";
-export type ActiveSubTab = "class-planning" | "class-execution" | "academic-structure" | "take-attendance" | "attendance-tracking" | "enrollment-records" | "enroll-student" | "users-management";

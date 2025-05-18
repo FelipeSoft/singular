@@ -1,1 +1,0 @@
-import "./app/infrastructure/fastify/Server"
