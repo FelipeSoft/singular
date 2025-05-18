@@ -29,7 +29,6 @@ if (!$found) {
     echo "Página não encontrada.";
 }
 
-
 // how to injected dependencies:
 // $container = require __DIR__ . '/../bootstrap/container.php';
 
