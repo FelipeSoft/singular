@@ -1,0 +1,9 @@
+{
+    "name": "singular/academy",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    }
+}
