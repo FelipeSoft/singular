@@ -16,9 +16,9 @@
 <body class="w-screen h-screen overflow-hidden">
     <div class="flex w-full h-full">
         <nav class="w-[300px] border-r border-gray-300 h-screen overflow-y-auto bg-gray-50">
-            <div class="border-b border-gray-300 h-[70px] flex items-center">
+            <a href="/home" class="border-b border-gray-300 h-[70px] flex items-center">
                 <img class="mt-5 ml-1 object-contain w-[150px]" src="/images/singular.png" alt="Singular">
-            </div>
+            </a>
             <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto">
                 <li class="text-[#747171] font-semibold">
                     <a href="/home" class="flex items-center gap-2 text-sm <?= $tab === "home" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">
@@ -69,10 +69,10 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/class/planning" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "class-planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento de Aulas</a>
+                                            <li><a href="/lesson/planning" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "class-planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento de Aulas</a>
                                             </li>
-                                            <li><a href="/class/execution" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "class-execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução de Aulas</a></li>
-                                            <li><a href="/class/academic-structure" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "academic-structure" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Estrutura Acadêmica</a></li>
+                                            <li><a href="/lesson/execution" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "class-execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução de Aulas</a></li>
+                                            <li><a href="/lesson/academic-structure" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "academic-structure" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Estrutura Acadêmica</a></li>
                                         </ul>
                                         </p>
                                     </div>
