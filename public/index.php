@@ -1,4 +1,5 @@
 <?php
+// Lucas 
 require __DIR__ . '/../bootstrap/routes.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
@@ -26,7 +27,6 @@ if (!$found) {
     http_response_code(404);
     echo "Página não encontrada.";
 }
-
 
 // how to injected dependencies:
 // $container = require __DIR__ . '/../bootstrap/container.php';
