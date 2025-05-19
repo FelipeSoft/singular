@@ -10,15 +10,32 @@ class Lesson
 {
     private LessonStatus $status;
     public function __construct(
-        private string $disciplineId,
-        private string $classroomGroupId,
-        private LessonType $lessonType,
-        private readonly string $content,
-        private readonly ?string $id
+        public readonly string $disciplineId,
+        public readonly string $classroomGroupId,
+        public readonly LessonType $lessonType,
+        public readonly string $content,
+        public readonly ?string $id
     ) {}
+
+    public function minister(): void
+    {
+        if ($this->status === LessonStatus::MINISTERED) {
+            throw LessonException::alreadyMinistered();
+        }
+
+        if ($this->status === LessonStatus::CANCELED) {
+            throw LessonException::alreadyCanceled();
+        }
+
+        $this->status = LessonStatus::MINISTERED;
+    }
 
     public function cancel(): void
     {
+        if ($this->lessonType === LessonType::EVALUATIVE) {
+            throw LessonException::evaluativeLesson();
+        }
+
         if ($this->status === LessonStatus::CANCELED) {
             throw LessonException::alreadyCanceled();
         }
