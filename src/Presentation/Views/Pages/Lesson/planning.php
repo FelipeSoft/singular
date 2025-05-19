@@ -9,7 +9,7 @@ $subtab = "class-planning";
         <h1 class="font-semibold text-black text-xl">Planejamento de Aulas</h1>
         <article class="flex items-center gap-4">
             <p class="text-gray-500">Definições de Aulas Pendentes: <strong class="text-[#F73C39]">36</strong></p>
-            <p class="text-gray-500">Definições de Aulas Pendentes: <strong class="text-[#F73C39]">1</strong></p>
+            <p class="text-gray-500">Prazo Limite: <strong class="text-[#F73C39]">19/06/2025</strong></p>
         </article>
     </div>
     <div class="flex flex-col gap-4">
