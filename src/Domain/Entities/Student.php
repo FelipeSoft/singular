@@ -19,4 +19,16 @@ class Student extends User
         protected readonly Password $password,
         protected readonly ?string $id,
     ) {}
+
+    public function isActive(): bool {
+        return $this->active;
+    }
+
+    public function active(): void {
+        $this->active = true;
+    }
+
+    public function desactive(): void {
+        $this->active = false;
+    }
 }

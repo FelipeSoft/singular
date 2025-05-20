@@ -1,6 +1,8 @@
 <?php
+namespace Src\Domain\ValueObjects;
 
 use Src\Domain\Exceptions\PeriodException;
+use DateTimeImmutable;
 
 class Period {
     public function __construct(

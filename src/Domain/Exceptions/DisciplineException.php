@@ -5,7 +5,7 @@ use Exception;
 
 class DisciplineException extends Exception
 {
-    public static function NotReach(): self
+    public static function NotReached(): self
     {
         return new self("Period invalid.");
     }
