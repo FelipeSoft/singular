@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -1869,6 +1868,36 @@
     overflow: hidden;
     border-radius: var(--radius-2xl);
   }
+  .alert {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-box);
+    padding: calc(0.25rem * 4);
+    color: var(--color-neutral-content);
+    text-align: start;
+    background-size: auto, calc(var(--noise) * 100%);
+    background-image: none, var(--fx-noise);
+    background-color: var(--alert-bg);
+    border: var(--border) solid var(--alert-border);
+    box-shadow: 0 0.1875rem 0 -0.125rem oklch(100% 0 0 / calc(var(--depth) * 0.08)) inset;
+    --alert-bg: var(--alert-color, var(--color-neutral));
+    --alert-border: var(--alert-color, var(--color-neutral));
+    &.alert-outline {
+      color: var(--alert-color, var(--color-neutral));
+      --alert-bg: transparent;
+      box-shadow: none;
+      background-image: none;
+    }
+    &.alert-soft {
+      color: var(--alert-color, var(--color-neutral));
+      --alert-bg: var(--alert-color, var(--color-neutral));
+      @supports (color: color-mix(in lab, red, red)) {
+        --alert-bg: color-mix(in oklab, var(--alert-color, var(--color-neutral)) 10%, var(--color-base-100));
+      }
+      box-shadow: none;
+      background-image: none;
+    }
+  }
   .absolute {
     position: absolute;
   }
@@ -2462,6 +2491,9 @@
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
@@ -2743,15 +2775,6 @@
       }
     }
   }
-  .error-message {
-    display: none;
-    padding: calc(0.25rem * 1);
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-    color: var(--color-error);
-    webkit-user-select: none;
-    user-select: none;
-  }
   .helper-text {
     display: block;
     padding: calc(0.25rem * 1);
@@ -2764,34 +2787,9 @@
     webkit-user-select: none;
     user-select: none;
   }
-  .success-message {
-    display: none;
-    padding: calc(0.25rem * 1);
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-    color: var(--color-success);
-    webkit-user-select: none;
-    user-select: none;
-  }
   .tooltip {
     display: inline-block;
     text-align: center;
-  }
-  .error-message {
-    .validate *:invalid ~ & {
-      display: block;
-    }
-    .validate *:has(:invalid) ~ & {
-      display: block;
-    }
-  }
-  .success-message {
-    .validate *:valid ~ & {
-      display: block;
-    }
-    .validate *:has(:valid) ~ & {
-      display: block;
-    }
   }
   .block {
     display: block;
@@ -2948,26 +2946,11 @@
       }
     }
   }
-  .tabs-vertical {
-    .tabs-bordered& {
-      --tabs-direction: column;
-      & > .tab {
-        width: 100%;
-        justify-content: flex-start;
-        border-bottom-style: var(--tw-border-style);
-        border-bottom-width: 0px;
-        border-inline-end-width: calc(var(--border, 1px) + 1px);
-      }
-    }
-  }
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
   .w-24 {
     width: calc(var(--spacing) * 24);
-  }
-  .w-96 {
-    width: calc(var(--spacing) * 96);
   }
   .w-\[150px\] {
     width: 150px;
@@ -3244,10 +3227,6 @@
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
-  }
-  .border-none {
-    --tw-border-style: none;
-    border-style: none;
   }
   .input {
     &.is-valid, &:has(.is-valid), .validate &:valid, .validate &:has(:valid) {
@@ -3988,6 +3967,9 @@
       color: var(--color-error);
     }
   }
+  .text-\[\#000000\] {
+    color: #000000;
+  }
   .text-\[\#747171\] {
     color: #747171;
   }
@@ -4135,10 +4117,6 @@
     --btn-color: var(--color-primary);
     --btn-fg: var(--color-primary-content);
   }
-  .outline-none {
-    --tw-outline-style: none;
-    outline-style: none;
-  }
   .selected {
     .validate select:has(~ * > &) + .advance-select-toggle {
       --input-color: var(--color-success);
@@ -4159,36 +4137,15 @@
       }
     }
   }
-  .focus\:border {
-    &:focus {
-      border-style: var(--tw-border-style);
-      border-width: 1px;
-    }
-  }
   .focus\:border-none {
     &:focus {
       --tw-border-style: none;
       border-style: none;
     }
   }
-  .focus\:border-gray-300 {
-    &:focus {
-      border-color: var(--color-gray-300);
-    }
-  }
   .focus\:border-primary {
     &:focus {
       border-color: var(--color-primary);
-    }
-  }
-  .focus\:border-red-500 {
-    &:focus {
-      border-color: var(--color-red-500);
-    }
-  }
-  .focus\:ring-red-500 {
-    &:focus {
-      --tw-ring-color: var(--color-red-500);
     }
   }
   .focus\:outline-1 {
@@ -4205,17 +4162,6 @@
   .focus\:outline-primary {
     &:focus {
       outline-color: var(--color-primary);
-    }
-  }
-  .focus\:outline-none {
-    &:focus {
-      --tw-outline-style: none;
-      outline-style: none;
-    }
-  }
-  .active\:outline-\[\#F73C39\] {
-    &:active {
-      outline-color: #F73C39;
     }
   }
   .aria-\[current\=\'page\'\]\:text-bg-primary {

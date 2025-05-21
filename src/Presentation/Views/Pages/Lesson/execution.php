@@ -6,6 +6,7 @@ $subtab = "class-execution";
 <?php require __DIR__ . "/../../Partials/header.php" ?>
 <section>
     <div class="flex flex-col">
+        <h1 class="font-semibold text-black text-xl mb-4">Execução de Aulas</h1>
         <div class="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
