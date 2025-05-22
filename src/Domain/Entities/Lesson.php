@@ -5,6 +5,7 @@ namespace Src\Domain\Entities;
 use Src\Domain\ValueObjects\LessonStatus;
 use Src\Domain\ValueObjects\LessonType;
 use Src\Domain\Exceptions\LessonException;
+use Src\Domain\ValueObjects\Period;
 
 class Lesson
 {
@@ -12,8 +13,10 @@ class Lesson
     public function __construct(
         public readonly string $disciplineId,
         public readonly string $classroomGroupId,
+        public readonly Period $period,
         public readonly LessonType $lessonType,
         public readonly string $content,
+        public readonly string $local,
         public readonly ?string $id
     ) {}
 
