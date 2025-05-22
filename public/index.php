@@ -1,5 +1,8 @@
 <?php
 require __DIR__ . '/../bootstrap/routes.php';
+require_once './../bootstrap/load_env.php';
+
+loadEnv(__DIR__ . '/../.env');
 
 $method = $_SERVER['REQUEST_METHOD'];
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);

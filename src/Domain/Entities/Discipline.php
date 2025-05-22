@@ -10,7 +10,6 @@ class Discipline {
         public readonly Period $period,
         public readonly string $name,
         public readonly int $disciplineTotalLoad,
-        public readonly string $courseId,
         public readonly ?string $id
     ) {}
 

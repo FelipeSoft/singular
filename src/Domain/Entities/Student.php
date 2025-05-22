@@ -11,13 +11,12 @@ class Student extends User
 {
     private bool $active = true;
     public function __construct(
-        private readonly DateTimeImmutable $planExpiresAt,
-        private readonly string $name,
-        private readonly string $cpf,
-        private readonly string $classRoomGroupId,
-        protected readonly Email $email,
-        protected readonly Password $password,
-        protected readonly ?string $id,
+        public readonly DateTimeImmutable $planExpiresAt,
+        public readonly string $name,
+        public readonly string $cpf,
+        public readonly string $classRoomGroupId,
+        public readonly Email $email,
+        public readonly ?string $id,
     ) {}
 
     public function isActive(): bool {
