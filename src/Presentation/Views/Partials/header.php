@@ -35,7 +35,7 @@
                 <h2 class="mt-6 font-medium text-sm mb-3 text-[#747171]">Menu</h2>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "class" ? "active" : "" ?> w-full" id="class-basic" : "">
+                        <div class="accordion-item <?= $tab === "class" ? "active" : "" ?> w-full" id="class-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="class-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -82,7 +82,7 @@
                 </li>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "attendance" ? "active" : "" ?> w-full" id="attendance-basic" : "">
+                        <div class="accordion-item <?= $tab === "attendance" ? "active" : "" ?> w-full" id="attendance-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="attendance-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -129,7 +129,7 @@
                 </li>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "enrollment" ? "active" : "" ?> w-full" id="enrollment-basic" : "">
+                        <div class="accordion-item <?= $tab === "enrollment" ? "active" : "" ?> w-full" id="enrollment-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="enrollment-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -174,7 +174,7 @@
                 </li>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "users" ? "active" : "" ?> w-full" id=: "" "">
+                        <div class="accordion-item <?= $tab === "profiles" ? "active" : "" ?> w-full" id="users-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="users-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -188,7 +188,7 @@
                                                 <path d="M7 21v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" />
                                             </g>
                                         </svg>
-                                        Usuários
+                                        Perfis
                                     </div>
                                     <span>
                                         <svg class="accordion-item-active:hidden block"
@@ -206,13 +206,15 @@
                                     </span>
                                 </div>
                                 <div id="users-basic-collapse"
-                                    class="accordion-content <?= $tab !== "users" ? "hidden" : "" ?> w-full overflow-hidden transition-[height] duration-300"
+                                    class="accordion-content w-full overflow-hidden transition-[height] duration-300"
                                     aria-labelledby="users-basic" role="region">
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/users/management" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "users" && $subtab === "users-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Gestão de Usuários</a>
-                                            </li>
+                                            <li><a href="/students/management" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "profiles" && $subtab === "students-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Alunos</a></li>
+                                            <li><a href="/teachers/management" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "profiles" && $subtab === "teachers-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Professores</a></li>
+                                            <li><a href="/coordinators/management" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "profiles" && $subtab === "coordinators-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Coordenadores</a></li>
+                                            <li><a href="/users/management" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "profiles" && $subtab === "users-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Usuários</a></li>
                                         </ul>
                                         </p>
                                     </div>

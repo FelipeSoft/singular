@@ -38,6 +38,18 @@ $routes = [
             require __DIR__ . '/../src/Presentation/Views/Pages/Users/management.php';
         },
 
+        '/students/management' => function () {
+            require __DIR__ . '/../src/Presentation/Views/Pages/Students/management.php';
+        },
+
+        '/teachers/management' => function () {
+            require __DIR__ . '/../src/Presentation/Views/Pages/Teachers/management.php';
+        },
+
+        '/coordinators/management' => function () {
+            require __DIR__ . '/../src/Presentation/Views/Pages/Coordinators/management.php';
+        },
+
         // '/users/management' => function () {
         //     require __DIR__ . '/src/Views/Users/management.php';
         // },
