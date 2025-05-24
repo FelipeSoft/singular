@@ -7,20 +7,43 @@ $tab = "home";
     <h1 class="font-semibold text-black text-xl">Página Inicial</h1>
     <div class="grid grid-cols-3 gap-4 mt-2">
         <article class="flex items-center rounded-md border p-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
-                <path fill="#F73C39"
-                    d="M6.839 15.89q-.385-.217-.612-.59Q6 14.926 6 14.462v-3.877l-1.592-.883q-.218-.13-.324-.308T3.98 9t.106-.394t.323-.308l6.82-3.72q.182-.101.375-.144T12 4.39t.397.044t.376.143l7.721 4.187q.212.125.32.313q.109.189.109.408v5.4q0 .212-.144.356t-.356.144t-.357-.144t-.143-.356V9.562L18 10.585v3.877q0 .464-.227.838t-.611.59l-4.385 2.374q-.186.105-.38.149t-.397.043t-.397-.043t-.38-.15zm4.93-3.305q.135.076.24.076q.106 0 .241-.076L18.83 9l-6.58-3.565q-.134-.077-.24-.077t-.24.077L5.17 9zm-.019 4.832q.135.077.25.077t.25-.077l4.462-2.411q.154-.096.22-.221t.068-.318v-3.332l-4.217 2.302q-.187.105-.38.149q-.191.043-.403.043t-.404-.043t-.379-.15L7 11.136v3.332q0 .154.067.299q.067.144.221.24zM12 14.36" />
+            <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M31.5 35.8333C31.5 32.9823 30.3938 30.248 28.4246 28.2319C26.4555 26.2159 23.7848 25.0833 21 25.0833C18.2152 25.0833 15.5445 26.2159 13.5754 28.2319C11.6062 30.248 10.5 32.9823 10.5 35.8333"
+                    stroke="#37908E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M21 25.0833C24.866 25.0833 28 21.8747 28 17.9167C28 13.9586 24.866 10.75 21 10.75C17.134 10.75 14 13.9586 14 17.9167C14 21.8747 17.134 25.0833 21 25.0833Z"
+                    stroke="#37908E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M21 39.4167C30.665 39.4167 38.5 31.3951 38.5 21.5C38.5 11.6049 30.665 3.58333 21 3.58333C11.335 3.58333 3.5 11.6049 3.5 21.5C3.5 31.3951 11.335 39.4167 21 39.4167Z"
+                    stroke="#37908E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
+
             <div class="ml-2">
                 <h1 class="font-semibold text-black text-xl">789</h1>
                 <span class="text-gray-500">Total de Alunos Ativos</span>
             </div>
         </article>
         <article class="flex items-center rounded-md border p-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
-                <path fill="none" stroke="#F73C39" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M8.56 3.69a9 9 0 0 0-2.92 1.95M3.69 8.56A9 9 0 0 0 3 12m.69 3.44a9 9 0 0 0 1.95 2.92m2.92 1.95A9 9 0 0 0 12 21m3.44-.69a9 9 0 0 0 2.92-1.95m1.95-2.92A9 9 0 0 0 21 12m-.69-3.44a9 9 0 0 0-1.95-2.92m-2.92-1.95A9 9 0 0 0 12 3" />
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.8333 3.63667C18.925 3.23187 21.0749 3.23187 23.1666 3.63667" stroke="#37908E"
+                    stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M23.1666 36.3633C21.0749 36.7681 18.925 36.7681 16.8333 36.3633" stroke="#37908E"
+                    stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M29.3483 6.20166C31.1174 7.40037 32.6395 8.92811 33.8317 10.7017" stroke="#37908E"
+                    stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M3.63667 23.1667C3.23187 21.075 3.23187 18.925 3.63667 16.8333" stroke="#37908E"
+                    stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M33.7983 29.3483C32.5996 31.1174 31.0719 32.6395 29.2983 33.8317" stroke="#37908E"
+                    stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M36.3633 16.8333C36.7681 18.925 36.7681 21.075 36.3633 23.1667" stroke="#37908E"
+                    stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M6.20166 10.6517C7.40037 8.88255 8.92811 7.36047 10.7017 6.16833" stroke="#37908E"
+                    stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10.6517 33.7983C8.88255 32.5996 7.36047 31.0719 6.16833 29.2983" stroke="#37908E"
+                    stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
+
             <div class="ml-2">
                 <h1 class="font-semibold text-black text-xl">12</h1>
                 <span class="text-gray-500">Justificativas Pendentes</span>
@@ -28,7 +51,7 @@ $tab = "home";
         </article>
         <article class="flex items-center rounded-md border p-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
-                <g fill="none" stroke="#F73C39" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <g fill="none" stroke="#37908E" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                     <path stroke-dasharray="64" stroke-dashoffset="64"
                         d="M5.64 5.64c3.51 -3.51 9.21 -3.51 12.73 0c3.51 3.51 3.51 9.21 0 12.73c-3.51 3.51 -9.21 3.51 -12.73 0c-3.51 -3.51 -3.51 -9.21 -0 -12.73Z">
                         <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0" />

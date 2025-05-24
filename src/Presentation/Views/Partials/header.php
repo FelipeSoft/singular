@@ -17,11 +17,12 @@
     <div class="flex w-full h-full">
         <nav class="w-[300px] border-r border-gray-300 h-screen overflow-y-auto bg-gray-50">
             <a href="/home" class="border-b border-gray-300 h-[70px] flex items-center">
-                <img class="mt-5 ml-1 object-contain w-[150px]" src="/images/singular.png" alt="Singular">
+                <img class=" ml-3 object-contain w-[150px]" src="/images/sanquim.png" alt="Singular">
             </a>
             <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto">
                 <li class="text-[#747171] font-semibold">
-                    <a href="/home" class="flex items-center gap-2 text-sm <?= $tab === "home" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">
+                    <a href="/home"
+                        class="flex items-center gap-2 text-sm <?= $tab === "home" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g fill="none" stroke="#747171" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2">
@@ -35,7 +36,8 @@
                 <h2 class="mt-6 font-medium text-sm mb-3 text-[#747171]">Menu</h2>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "class" ? "active" : "" ?> w-full" id="class-basic" : "">
+                        <div class="accordion-item <?= $tab === "class" ? "active" : "" ?> w-full" id="class-basic"
+                            : "">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="class-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -69,10 +71,16 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/lesson/planning" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "class-planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento de Aulas</a>
+                                            <li><a href="/lesson/planning"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento
+                                                    de Aulas</a>
                                             </li>
-                                            <li><a href="/lesson/execution" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "class-execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução de Aulas</a></li>
-                                            <li><a href="/lesson/academic-structure" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "class" && $subtab === "academic-structure" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Estrutura Acadêmica</a></li>
+                                            <li><a href="/lesson/execution"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução
+                                                    de Aulas</a></li>
+                                            <li><a href="/lesson/academic-structure"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "academic-structure" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Estrutura
+                                                    Acadêmica</a></li>
                                         </ul>
                                         </p>
                                     </div>
@@ -82,7 +90,8 @@
                 </li>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "attendance" ? "active" : "" ?> w-full" id="attendance-basic" : "">
+                        <div class="accordion-item <?= $tab === "attendance" ? "active" : "" ?> w-full"
+                            id="attendance-basic" : "">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="attendance-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -116,9 +125,13 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/attendance/take" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "attendance" && $subtab === "take-attendance" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Realizar Chamada</a>
+                                            <li><a href="/attendance/take"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "take-attendance" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Realizar
+                                                    Chamada</a>
                                             </li>
-                                            <li><a href="/attendance/tracking" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Controle de
+                                            <li><a href="/attendance/tracking"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Controle
+                                                    de
                                                     Frequência</a></li>
                                         </ul>
                                         </p>
@@ -129,7 +142,8 @@
                 </li>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "enrollment" ? "active" : "" ?> w-full" id="enrollment-basic" : "">
+                        <div class="accordion-item <?= $tab === "enrollment" ? "active" : "" ?> w-full"
+                            id="enrollment-basic" : "">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="enrollment-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -162,9 +176,13 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/enrollment/records" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "enrollment" && $subtab === "enrollment-records" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Registro de Matrículas</a>
+                                            <li><a href="/enrollment/records"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "enrollment-records" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Registro
+                                                    de Matrículas</a>
                                             </li>
-                                            <li><a href="/enrollment/enroll-student" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "enrollment" && $subtab === "enroll-student" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Matricular Aluno</a></li>
+                                            <li><a href="/enrollment/enroll-student"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "enroll-student" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Matricular
+                                                    Aluno</a></li>
                                         </ul>
                                         </p>
                                     </div>
@@ -174,7 +192,7 @@
                 </li>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "users" ? "active" : "" ?> w-full" id=: "" "">
+                        <div class="accordion-item <?= $tab === "profiles" ? "active" : "" ?> w-full" id="users-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="users-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -188,7 +206,7 @@
                                                 <path d="M7 21v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" />
                                             </g>
                                         </svg>
-                                        Usuários
+                                        Perfis
                                     </div>
                                     <span>
                                         <svg class="accordion-item-active:hidden block"
@@ -206,12 +224,14 @@
                                     </span>
                                 </div>
                                 <div id="users-basic-collapse"
-                                    class="accordion-content <?= $tab !== "users" ? "hidden" : "" ?> w-full overflow-hidden transition-[height] duration-300"
+                                    class="accordion-content w-full overflow-hidden transition-[height] duration-300"
                                     aria-labelledby="users-basic" role="region">
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/users/management" class="text-sm text-[#747171] w-full flex hover:text-[#F73C39] transition-all <?= $tab === "users" && $subtab === "users-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Gestão de Usuários</a>
+                                            <li><a href="/users/management"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "users" && $subtab === "users-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Gestão
+                                                    de Usuários</a>
                                             </li>
                                         </ul>
                                         </p>
@@ -253,13 +273,18 @@
                         <h2 class="font-semibold">Coordenador FATEC</h2>
                         <p class="text-sm -mt-1">Coordenador</p>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-                        <g fill="none" stroke="#F73C39" stroke-width="1.5">
-                            <circle cx="12" cy="9" r="3" />
-                            <circle cx="12" cy="12" r="10" />
-                            <path stroke-linecap="round" d="M17.97 20c-.16-2.892-1.045-5-5.97-5s-5.81 2.108-5.97 5" />
-                        </g>
+                    <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M31.5 35.8333C31.5 32.9823 30.3938 30.248 28.4246 28.2319C26.4555 26.2159 23.7848 25.0833 21 25.0833C18.2152 25.0833 15.5445 26.2159 13.5754 28.2319C11.6062 30.248 10.5 32.9823 10.5 35.8333"
+                            stroke="#37908E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M21 25.0833C24.866 25.0833 28 21.8747 28 17.9167C28 13.9586 24.866 10.75 21 10.75C17.134 10.75 14 13.9586 14 17.9167C14 21.8747 17.134 25.0833 21 25.0833Z"
+                            stroke="#37908E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M21 39.4167C30.665 39.4167 38.5 31.3951 38.5 21.5C38.5 11.6049 30.665 3.58333 21 3.58333C11.335 3.58333 3.5 11.6049 3.5 21.5C3.5 31.3951 11.335 39.4167 21 39.4167Z"
+                            stroke="#37908E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
+
                 </div>
             </header>
             <main class="bg-white flex-1 overflow-auto p-4">

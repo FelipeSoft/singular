@@ -148,7 +148,7 @@ $subtab = "class-planning";
                 <div class="flex items-center gap-x-1">
                     <button type="button"
                         class="btn btn-text btn-square aria-[current='page']:text-bg-primary">1</button>
-                    <button type="button" class="btn btn-text btn-square aria-[current='page']:bg-[#F73C39] aria-[current='page']:text-white"
+                    <button type="button" class="btn btn-text btn-square aria-[current='page']:bg-[#37908e] aria-[current='page']:text-white"
                         aria-current="page"> 2 </button>
                     <button type="button"
                         class="btn btn-text btn-square aria-[current='page']:text-bg-primary">3</button>
