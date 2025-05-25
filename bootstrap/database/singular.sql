@@ -3,7 +3,7 @@ CREATE DATABASE `singular_db`;
 USE `singular_db`;
 
 CREATE TABLE `users` (
-    `id` BIGINT PRIMARY KEY,
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
     `name` VARCHAR(100) NOT NULL,
     `email` VARCHAR(255) NOT NULL UNIQUE,
     `password` VARCHAR(255) NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE `users` (
 );
 
 CREATE TABLE `address` (
-    `id` BIGINT PRIMARY KEY,
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
     `neighborhood` VARCHAR(255) NOT NULL,
     `city` VARCHAR(255) NOT NULL,
     `state` VARCHAR(255) NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE `address` (
 );
 
 CREATE TABLE `classroom_groups` (
-    `id` BIGINT PRIMARY KEY,
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
     `name` VARCHAR(100) NOT NULL,
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -33,7 +33,7 @@ CREATE TABLE `classroom_groups` (
 );
 
 CREATE TABLE `courses` (
-    `id` BIGINT PRIMARY KEY,
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
     `name` VARCHAR(100) NOT NULL,
     `course_period` TINYINT UNSIGNED NOT NULL COMMENT '0=MORNING, 1=AFTERNOON, 2=NIGHT, 3=FULLTIME',
     `modality` VARCHAR(100) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE `courses` (
 );
 
 CREATE TABLE `disciplines` (
-    `id` BIGINT PRIMARY KEY,
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
     `name` VARCHAR(100) NOT NULL,
     `course_id` BIGINT NOT NULL,
     `discipline_total_load` INT NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE `disciplines` (
 );
 
 CREATE TABLE `students` (
-    `id` BIGINT PRIMARY KEY,
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
     `user_id` BIGINT NOT NULL,
     `classroom_group_id` BIGINT NOT NULL,
     `plan_expires_at` DATE NOT NULL,
@@ -78,7 +78,7 @@ CREATE TABLE `students` (
 );
 
 CREATE TABLE `teachers` (
-    `id` BIGINT PRIMARY KEY,
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
     `user_id` BIGINT NOT NULL,
     `phone` VARCHAR(100),
     `cpf` CHAR(11) NOT NULL UNIQUE,
@@ -93,7 +93,7 @@ CREATE TABLE `teachers` (
 );
 
 CREATE TABLE `coordinators` (
-    `id` BIGINT PRIMARY KEY,
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
     `user_id` BIGINT NOT NULL,
     `phone` VARCHAR(100),
     `cpf` CHAR(11) NOT NULL UNIQUE,
@@ -108,7 +108,7 @@ CREATE TABLE `coordinators` (
 );
 
 CREATE TABLE `lessons` (
-    `id` BIGINT PRIMARY KEY,
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
     `discipline_id` BIGINT NOT NULL,
     `classroom_group_id` BIGINT NOT NULL,
     `period_start` DATE NOT NULL,
@@ -125,7 +125,7 @@ CREATE TABLE `lessons` (
 );
 
 CREATE TABLE `materials` (
-    `id` BIGINT PRIMARY KEY,
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
     `title` VARCHAR(100) NOT NULL,
     `course_id` BIGINT NOT NULL,
     `classroom_group_id` BIGINT NOT NULL,
@@ -137,6 +137,22 @@ CREATE TABLE `materials` (
     CONSTRAINT `fk_materials_course` FOREIGN KEY (`course_id`) REFERENCES `courses`(`id`),
     CONSTRAINT `fk_materials_classroom` FOREIGN KEY (`classroom_group_id`) REFERENCES `classroom_groups`(`id`),
     CONSTRAINT `fk_materials_discipline` FOREIGN KEY (`discipline_id`) REFERENCES `disciplines`(`id`)
+);
+
+CREATE TABLE enrollments (
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT,
+    `student_id` BIGINT NOT NULL,
+    `course_id` BIGINT NOT NULL,
+    `classroom_group_id` BIGINT NOT NULL,
+    `enrollment_date` DATE NOT NULL
+);
+
+CREATE TABLE enrollment_disciplines (
+    `enrollment_id` BIGINT,
+    `discipline_id` BIGINT,
+    PRIMARY KEY (`enrollment_id`, `discipline_id`),
+    FOREIGN KEY (`enrollment_id`) REFERENCES `enrollments`(`id`),
+    FOREIGN KEY (`discipline_id`) REFERENCES `disciplines`(`id`)
 );
 
 -- Inserção de dados de exemplo
