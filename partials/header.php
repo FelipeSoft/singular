@@ -36,8 +36,7 @@
                 <h2 class="mt-6 font-medium text-sm mb-3 text-[#747171]">Menu</h2>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "class" ? "active" : "" ?> w-full" id="class-basic"
-                            : "">
+                        <div class="accordion-item <?= $tab === "class" ? "active" : "" ?> w-full" id="class-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="class-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -91,7 +90,7 @@
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
                         <div class="accordion-item <?= $tab === "attendance" ? "active" : "" ?> w-full"
-                            id="attendance-basic" : "">
+                            id="attendance-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="attendance-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -143,7 +142,7 @@
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
                         <div class="accordion-item <?= $tab === "enrollment" ? "active" : "" ?> w-full"
-                            id="enrollment-basic" : "">
+                            id="enrollment-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="enrollment-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
