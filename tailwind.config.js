@@ -8,5 +8,8 @@ module.exports = {
         require('flyonui/plugin'),
         require('flatpickr'),
         require('flatpickr/plugin')
-    ]
+    ],
+    content: {
+        
+    }
 };
