@@ -19,14 +19,14 @@
       <img class="animate-[pulse_5s_ease-in_infinite_alternate] w-full" src="./images/backgroundLogin.png" alt="gradient background image" class="w-full h-full object-cover fixed">
       <div class="mx-auto max-w-lg px-6 lg:px-8 absolute py-20">
         <img src="./images/Sanquim.png" alt="pagedone logo" width="400" class=" mx-auto lg:mb-11 mb-8 object-cover">
-        <div class="rounded-2xl bg-white shadow-xl">
+        <div class="rounded-2xl bg-white/30 shadow-xl">
           <form action="" class="lg:p-11 p-7 mx-auto">
             <div class="mb-11">
               <h1 class="text-gray-900 text-center font-manrope text-3xl font-bold leading-10 mb-2">Login</h1>
               
             </div>
-            <input type="text" class="w-full h-12 text-gray-900 placeholder:text-gray-400 text-lg font-normal leading-7 rounded-full border-gray-300 border shadow-sm focus:outline-none px-4 mb-6 hover:border-[#E0A400] focus:border-[#E0A400]" placeholder="Username">
-            <input type="text" class="w-full h-12 text-gray-900 placeholder:text-gray-400 text-lg font-normal leading-7 rounded-full border-gray-300 hover:border-[#E0A400] focus:border-[#E0A400] border shadow-sm focus:outline-none px-4 mb-1" placeholder="Password">
+            <input type="text" class="w-full h-12 text-gray-900 placeholder:text-gray-400 text-lg font-normal leading-7 rounded-full border-gray-300 border shadow-sm focus:outline-none px-4 mb-6 hover:border-[#E0A400] focus:border-[#E0A400]" placeholder="Digite seu email">
+            <input type="text" class="w-full h-12 text-gray-900 placeholder:text-gray-400 text-lg font-normal leading-7 rounded-full border-gray-300 hover:border-[#E0A400] focus:border-[#E0A400] border shadow-sm focus:outline-none px-4 mb-1" placeholder="********">
             <a href="javascript:;" class="flex justify-end mb-6">
               <span  class="text-[#36918f] hover:text-[#E0A400] transition-all duration-500 text-right text-base font-normal leading-6">Esqueceu sua senha?</span>
             </a>
