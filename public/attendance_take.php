@@ -26,7 +26,7 @@ $students = [
     ],
 ];
 ?>
-<?php require __DIR__ . "/../../Partials/header.php" ?>
+<?php require __DIR__ . "/../partials/header.php" ?>
 <section class="p-4">
     <div class="flex flex-col">
         <h1 class="font-semibold text-black text-xl mb-4">Realizar Chamada</h1>
@@ -155,4 +155,4 @@ $students = [
         <button class="btn bg-black text-white w-24">Salvar</button>
     </div>
 </section>
-<?php require __DIR__ . "/../../Partials/footer.php" ?>
+<?php require __DIR__ . "/../partials/footer.php" ?>

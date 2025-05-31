@@ -3,7 +3,7 @@ $title = "Singular | Alunos - Gestão de Alunos";
 $tab = "profiles";
 $subtab = "students-management";
 ?>
-<?php require __DIR__ . "/../../Partials/header.php" ?>
+<?php require __DIR__ . "/../partials/header.php" ?>
 <section>
     <h1 class="font-semibold text-black text-xl mb-4">Gestão de Alunos</h1>
     <div>
@@ -171,4 +171,4 @@ $subtab = "students-management";
         </div>
     </div>
 </section>
-<?php require __DIR__ . "/../../Partials/footer.php" ?>
+<?php require __DIR__ . "/../partials/footer.php" ?>
