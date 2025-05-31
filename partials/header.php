@@ -269,7 +269,7 @@
             <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] w-full bg-gray-50">
                 <div class="flex items-center gap-2">
                     <div class="flex flex-col items-end text-gray-500">
-                        <h2 class="font-semibold">Coordenador FATEC</h2>
+                        <h2 class="font-semibold">Coordenador SANQUIM</h2>
                         <p class="text-sm -mt-1">Coordenador</p>
                     </div>
                     <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
