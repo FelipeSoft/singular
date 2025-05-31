@@ -3,7 +3,7 @@ $title = "Singular | Usuários - Gestão de Usuários";
 $tab = "profiles";
 $subtab = "users-management";
 ?>
-<?php require __DIR__ . "/../../Partials/header.php" ?>
+<?php require __DIR__ . "/../partials/header.php" ?>
 <section>
     <h1 class="font-semibold text-black text-xl mb-4">Gestão de Usuários</h1>
     <div>
@@ -13,7 +13,7 @@ $subtab = "users-management";
             </svg>
             <span class="text-gray-500">Manutenção</span>
         </h2>
-        <form class="flex flex-wrap gap-4">
+        <form action="./actions/user_maintenance_action.php" method="POST" class="flex flex-wrap gap-4">
             <script>
                 window.addEventListener('load', function() {
                     flatpickr('#date', {
@@ -22,10 +22,10 @@ $subtab = "users-management";
                 })
             </script>
             <div class="w-[200px] text-gray-500">
-                <label hidden class="label-text text-gray-500" for="date">ID</label>
+                <label hidden class="label-text text-gray-500" for="user_id">ID</label>
                 <input disabled hidden type="text"
                     class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                    id="date" />
+                    id="user_id" name="user_id" />
             </div>
             <div class="flex items-center gap-4 w-full">
                 <div class="flex items-center gap-4 w-full">
@@ -33,7 +33,7 @@ $subtab = "users-management";
                         <label class="label-text text-gray-500" for="discipline">Nome</label>
                         <input type="text" placeholder="ex.: João Silva"
                             class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                            id="name" />
+                            id="name" name="user_name" />
                     </div>
                     <div class="w-1/3 text-gray-500">
                         <label class="label-text text-gray-500" for="discipline">E-mail</label>
@@ -171,4 +171,4 @@ $subtab = "users-management";
         </div>
     </div>
 </section>
-<?php require __DIR__ . "/../../Partials/footer.php" ?>
+<?php require __DIR__ . "/../partials/footer.php" ?>
