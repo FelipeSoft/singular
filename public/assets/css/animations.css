@@ -1,8 +1,4 @@
-#background {
-    background: linear-gradient(-45deg, #FFC544, #FFD26F, #FFECC1);
-    background-size: 400% 400%;
-    animation: gradient 10s infinite alternate; 
-}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -13,4 +9,26 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* Keyframes para aparecer */
+#btn_password {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#btn_password::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  transition: width 0.4s ease;
+}
+
+#btn_password:hover::after {
+  width: 100%;
 }
