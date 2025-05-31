@@ -265,7 +265,7 @@
                 </div>
             </ul>
         </nav>
-        <div class="flex flex-col w-full">
+        <div clawss="flex flex-col w-full">
             <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] w-full bg-gray-50">
                 <div class="flex items-center gap-2">
                     <div class="flex flex-col items-end text-gray-500">
@@ -283,7 +283,6 @@
                             d="M21 39.4167C30.665 39.4167 38.5 31.3951 38.5 21.5C38.5 11.6049 30.665 3.58333 21 3.58333C11.335 3.58333 3.5 11.6049 3.5 21.5C3.5 31.3951 11.335 39.4167 21 39.4167Z"
                             stroke="#37908E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-
                 </div>
             </header>
             <main class="bg-white flex-1 overflow-auto p-4">
