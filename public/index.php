@@ -2,7 +2,6 @@
 require_once './../bootstrap/load_env.php';
 loadEnv(__DIR__ . '/../.env');
 require_once './../bootstrap/connection.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
