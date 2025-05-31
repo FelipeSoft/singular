@@ -21,7 +21,7 @@
             </a>
             <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto">
                 <li class="text-[#747171] font-semibold">
-                    <a href="/home"
+                    <a href="/home.php"
                         class="flex items-center gap-2 text-sm <?= $tab === "home" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g fill="none" stroke="#747171" stroke-linecap="round" stroke-linejoin="round"
@@ -70,14 +70,14 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/lesson/planning"
+                                            <li><a href="/lesson_planning.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento
                                                     de Aulas</a>
                                             </li>
-                                            <li><a href="/lesson/execution"
+                                            <li><a href="/lesson_execution.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução
                                                     de Aulas</a></li>
-                                            <li><a href="/lesson/academic-structure"
+                                            <li><a href="/lesson_academic_structure.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "academic-structure" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Estrutura
                                                     Acadêmica</a></li>
                                         </ul>
@@ -124,11 +124,11 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/attendance/take"
+                                            <li><a href="/attendance_take.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "take-attendance" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Realizar
                                                     Chamada</a>
                                             </li>
-                                            <li><a href="/attendance/tracking"
+                                            <li><a href="/attendance_tracking.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Controle
                                                     de
                                                     Frequência</a></li>
@@ -175,11 +175,11 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/enrollment/records"
+                                            <li><a href="/enrollment_records.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "enrollment-records" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Registro
                                                     de Matrículas</a>
                                             </li>
-                                            <li><a href="/enrollment/enroll-student"
+                                            <li><a href="/enrollment_enroll_student.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "enroll-student" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Matricular
                                                     Aluno</a></li>
                                         </ul>
@@ -228,7 +228,7 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/users/management"
+                                            <li><a href="/users_management.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "users" && $subtab === "users-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Gestão
                                                     de Usuários</a>
                                             </li>
