@@ -4,7 +4,7 @@ $tab = "class";
 $subtab = "academic-structure";
 ?>
 <?php require __DIR__ . "/../partials/header.php" ?>
-<section class="p-4">
+<section>
     <h1 class="font-semibold text-black text-xl mb-4">Estrutura Acadêmica</h1>
     <!-- <div class="alert alert-outline" role="alert">
         A quick alert conveying key information or prompting action within a system.
@@ -24,7 +24,6 @@ $subtab = "academic-structure";
                         <path d="M12 8H12.01" stroke="black" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
-
                     <h2 class="text-[#000000] font-semibold">O que é a Estrutura Acadêmica?</h2>
                 </div>
                 <p class="text-gray-400 font-semibold">
@@ -33,7 +32,6 @@ $subtab = "academic-structure";
                     </p>
             </div>
         </div>
-
     </div>
     <div class="p-4 border border-gray-300 rounded-md mt-8 shadow-md mb-8">
         <div class="flex items-center gap-4">
@@ -56,13 +54,10 @@ $subtab = "academic-structure";
                     </p>
             </div>
         </div>
-
     </div>
-
 
     <h2 class="font-semibold text-black text-xl mb-4">Recursos</h2>
     <!-- Card -->
-
     <article class="mt-4 grid grid-cols-2 gap-4">
         <div class="flex items-center justify-between p-4 border border-gray-300 rounded-md">
             <div class="flex items-center gap-4">
@@ -77,8 +72,6 @@ $subtab = "academic-structure";
                             d="M4 6C3.73478 6 3.48043 6.10536 3.29289 6.29289C3.10536 6.48043 3 6.73478 3 7V12C3 12.2652 3.10536 12.5196 3.29289 12.7071C3.48043 12.8946 3.73478 13 4 13H17C17.4124 13 17.8148 12.8725 18.152 12.635L21.576 10.318C21.707 10.2257 21.8139 10.1032 21.8877 9.96097C21.9615 9.8187 22.0001 9.66077 22.0001 9.5005C22.0001 9.34022 21.9615 9.1823 21.8877 9.04003C21.8139 8.89775 21.707 8.77531 21.576 8.683L18.152 6.365C17.8148 6.12746 17.4124 5.99997 17 6H4Z"
                             stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-
-
                 </div>
                 <div>
                     <h2 class="text-[#000000] font-semibold text-xl">Registro de Cursos</h2>
@@ -107,9 +100,6 @@ $subtab = "academic-structure";
                             d="M5 14H4C3.46957 14 2.96086 14.2107 2.58579 14.5858C2.21071 14.9609 2 15.4696 2 16C2 16.5304 2.21071 17.0391 2.58579 17.4142C2.96086 17.7893 3.46957 18 4 18H5"
                             stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-
-
-
                 </div>
                 <div>
                     <h2 class="text-[#000000] font-semibold text-xl">Registro de Disciplinas</h2>
@@ -151,9 +141,6 @@ $subtab = "academic-structure";
                         <path d="M16 18H16.01" stroke="black" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
-
-
-
                 </div>
                 <div>
                     <h2 class="text-[#000000] font-semibold text-xl">Mapa Acadêmico</h2>
@@ -185,9 +172,6 @@ $subtab = "academic-structure";
                             d="M12 15C13.1046 15 14 14.1046 14 13C14 11.8954 13.1046 11 12 11C10.8954 11 10 11.8954 10 13C10 14.1046 10.8954 15 12 15Z"
                             stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-
-
-
                 </div>
                 <div>
                     <h2 class="text-[#000000] font-semibold text-xl">Anexar Disciplina ou Curso</h2>
@@ -203,7 +187,5 @@ $subtab = "academic-structure";
             </a>
         </div>
     </article>
-
-    
 </section>
 <?php require __DIR__ . "/../partials/footer.php" ?>

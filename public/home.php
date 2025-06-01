@@ -303,4 +303,4 @@ $tab = "home";
         </div>
     </div>
 </section>
-<?php require __DIR__ . "/../Partials/footer.php" ?>
+<?php require __DIR__ . "/../partials/footer.php" ?>

@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="/assets/css/flatpickr.css" />
 </head>
 
-<body class="w-screen h-screen overflow-hidden">
-    <div class="flex w-full h-full">
-        <nav class="w-[300px] border-r border-gray-300 h-screen overflow-y-auto bg-gray-50">
+<body class="w-screen h-screen overflow-x-hidden">
+    <div class="flex h-full relative">
+        <nav class="fixed top-0 left-0 h-screen w-[300px] border-r border-gray-300 bg-gray-50 z-50">
             <a href="/home" class="border-b border-gray-300 h-[70px] flex items-center">
                 <img class=" ml-3 object-contain w-[150px]" src="/images/sanquim.png" alt="Singular">
             </a>
-            <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto">
+            <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto w-full">
                 <li class="text-[#747171] font-semibold">
                     <a href="/home.php"
                         class="flex items-center gap-2 text-sm <?= $tab === "home" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">
@@ -265,8 +265,8 @@
                 </div>
             </ul>
         </nav>
-        <div clawss="flex flex-col w-full">
-            <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] w-full bg-gray-50">
+        <div class="w-full ml-[300px]">
+            <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] bg-gray-50">
                 <div class="flex items-center gap-2">
                     <div class="flex flex-col items-end text-gray-500">
                         <h2 class="font-semibold">Coordenador SANQUIM</h2>
@@ -285,4 +285,4 @@
                     </svg>
                 </div>
             </header>
-            <main class="bg-white flex-1 overflow-auto p-4">
+            <main class="bg-white p-4 pr-8 w-full h-full">

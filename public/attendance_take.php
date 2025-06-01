@@ -27,7 +27,7 @@ $students = [
 ];
 ?>
 <?php require __DIR__ . "/../partials/header.php" ?>
-<section class="p-4">
+<section>
     <div class="flex flex-col">
         <h1 class="font-semibold text-black text-xl mb-4">Realizar Chamada</h1>
         <div class="flex items-center gap-2">
@@ -37,10 +37,9 @@ $students = [
             </svg>
             <h1 class="text-gray-500 font-semibold">Configurar</h1>
         </div>
-
         <form class="grid grid-cols-3 gap-8 mt-4">
             <script>
-                window.addEventListener('load', function () {
+                window.addEventListener('load', function() {
                     flatpickr('#date', {
                         monthSelectorType: 'static'
                     })
@@ -88,8 +87,6 @@ $students = [
                     <option>Maria</option>
                 </select>
             </div>
-
-
             <div class="col-end-4 flex items-end gap-4">
                 <button class="btn bg-black text-white w-full"><svg width="24" height="24" viewBox="0 0 24 24"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +101,7 @@ $students = [
         </form>
     </div>
 </section>
-<section class="p-4">
+<section>
     <div class="w-full overflow-x-auto mt-4">
         <table class="text-black table border border-gray-300">
             <thead class="border-gray-300">
@@ -151,7 +148,6 @@ $students = [
         </table>
     </div>
     <div class="col-end-4 flex items-end justify-end gap-4 mt-4">
-
         <button class="btn bg-black text-white w-24">Salvar</button>
     </div>
 </section>

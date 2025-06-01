@@ -4,5 +4,7 @@ $tab = "enrollment";
 $subtab = "enrollment-records";
 ?>
 <?php require __DIR__ . "/../partials/header.php" ?>
-<h1>Registro de Matrículas!</h1>
+<section class="w-full">
+    <h1>Registro de Matrículas!</h1>
+</section>
 <?php require __DIR__ . "/../partials/footer.php" ?>
