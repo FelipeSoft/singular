@@ -1,6 +1,6 @@
 <?php
 $title = "Singular | Usuários - Gestão de Usuários";
-$tab = "profiles";
+$tab = "users";
 $subtab = "users-management";
 ?>
 <?php require __DIR__ . "/../partials/header.php" ?>
