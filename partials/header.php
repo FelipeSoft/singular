@@ -275,7 +275,7 @@
         </nav>
         <div class="w-full ml-[300px]">
             <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] bg-gray-50">
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 mr-4">
                     <div class="flex flex-col items-end text-gray-500">
                         <h2 class="font-semibold">Coordenador SANQUIM</h2>
                         <p class="text-sm -mt-1">Coordenador</p>
