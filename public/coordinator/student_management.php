@@ -1,11 +1,11 @@
 <?php
-$title = "Singular | Professores - Gestão de Professores";
+$title = "Singular | Alunos - Gestão de Alunos";
 $tab = "profiles";
-$subtab = "teachers-management";
+$subtab = "students-management";
 ?>
-<?php require __DIR__ . "/../partials/header.php" ?>
+<?php require __DIR__ . "/../../partials/header.php" ?>
 <section>
-    <h1 class="font-semibold text-black text-xl mb-4">Gestão de Professores</h1>
+    <h1 class="font-semibold text-black text-xl mb-4">Gestão de Alunos</h1>
     <div>
         <h2 class="text-black flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -171,4 +171,4 @@ $subtab = "teachers-management";
         </div>
     </div>
 </section>
-<?php require __DIR__ . "/../partials/footer.php" ?>
+<?php require __DIR__ . "/../../partials/footer.php" ?>

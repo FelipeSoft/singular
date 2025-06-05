@@ -3,7 +3,7 @@ $title = "Singular | Aulas - Estrutura Acadêmica";
 $tab = "class";
 $subtab = "academic-structure";
 ?>
-<?php require __DIR__ . "/../partials/header.php" ?>
+<?php require __DIR__ . "/../../partials/header.php" ?>
 <section>
     <h1 class="font-semibold text-black text-xl mb-4">Estrutura Acadêmica</h1>
     <!-- <div class="alert alert-outline" role="alert">
@@ -188,4 +188,4 @@ $subtab = "academic-structure";
         </div>
     </article>
 </section>
-<?php require __DIR__ . "/../partials/footer.php" ?>
+<?php require __DIR__ . "/../../partials/footer.php" ?>

@@ -1,16 +1,14 @@
 <?php
 session_start();
-// if (!isset($_SESSION["user_id"])) {
-//     header("Location: login.php");
-//     exit;
-// }
-$_SESSION["logged_user"] = [
-    "level" => 3
-];
-$loggedLevel = $_SESSION["logged_user"]["level"];
 
+if (!isset($_SESSION["logged_user"])) {
+    header("Location: /login.php");
+    exit;
+}
+
+$loggedLevel = $_SESSION["logged_user"]["level"];
 switch ($loggedLevel) {
-    case 1:
+    case 1: 
         require_once __DIR__ . "../header/student_header.php";
         break;
     case 2:

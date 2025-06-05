@@ -70,11 +70,11 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/lesson_timeline.php"
+                                            <li><a href="/student/lesson_timeline.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-timeline" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Cronograma
                                                     de Aulas</a>
                                             </li>
-                                            <li><a href="/materials.php"
+                                            <li><a href="/student/materials.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "materials" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Materiais Didáticos</a></li>
                                         </ul>
                                         </p>
@@ -120,11 +120,7 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/attendance_tracking.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Acompanhamento
-                                                    de
-                                                    Frequência</a></li>
-                                            <li><a href="/attendance_justify_abscense.php"
+                                            <li><a href="/student/attendance_justify_abscense.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-justify-abscense" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Justificar Ausência</a>
                                             </li>
                                         </ul>
@@ -170,57 +166,8 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/enrollment_request_enrollment_lock.php"
+                                            <li><a href="/student/enrollment_request_enrollment_lock.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "request-enrollment-lock" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Solicitar Trancamento</a></li>
-                                        </ul>
-                                        </p>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
-                    <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "profiles" ? "active" : "" ?> w-full" id="users-basic">
-                            <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
-                                aria-controls="users-basic-collapse" aria-expanded="true">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-2 text-gray-500 text-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24">
-                                            <g fill="none" stroke="#747171" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2">
-                                                <rect width="18" height="18" x="3" y="3" rx="2" />
-                                                <circle cx="12" cy="10" r="3" />
-                                                <path d="M7 21v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" />
-                                            </g>
-                                        </svg>
-                                        Perfis
-                                    </div>
-                                    <span>
-                                        <svg class="accordion-item-active:hidden block"
-                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            viewBox="0 0 32 32">
-                                            <path fill="none" stroke="#747171" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="3" d="M30 12L16 24L2 12" />
-                                        </svg>
-                                        <svg class="accordion-item-active:block hidden"
-                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            viewBox="0 0 32 32">
-                                            <path fill="none" stroke="#747171" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="3" d="M30 20L16 8L2 20" />
-                                        </svg>
-                                    </span>
-                                </div>
-                                <div id="users-basic-collapse"
-                                    class="accordion-content w-full overflow-hidden transition-[height] duration-300"
-                                    aria-labelledby="users-basic" role="region">
-                                    <div class="pb-1 mt-1 w-full">
-                                        <p class="text-base-content/80 font-normal">
-                                        <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/users_management.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "users" && $subtab === "users-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Alterar Dados</a>
-                                            </li>
                                         </ul>
                                         </p>
                                     </div>
@@ -258,8 +205,8 @@
             <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] bg-gray-50">
                 <div class="flex items-center gap-2">
                     <div class="flex flex-col items-end text-gray-500">
-                        <h2 class="font-semibold">Coordenador SANQUIM</h2>
-                        <p class="text-sm -mt-1">Coordenador</p>
+                        <h2 class="font-semibold">Aluno SANQUIM</h2>
+                        <p class="text-sm -mt-1">Aluno</p>
                     </div>
                     <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

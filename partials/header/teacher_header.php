@@ -70,16 +70,13 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/lesson_planning.php"
+                                            <li><a href="/teacher/lesson_planning.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento
                                                     de Aulas</a>
                                             </li>
-                                            <li><a href="/lesson_execution.php"
+                                            <li><a href="/teacher/lesson_execution.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução
                                                     de Aulas</a></li>
-                                            <li><a href="/lesson_academic_structure.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "academic-structure" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Estrutura
-                                                    Acadêmica</a></li>
                                         </ul>
                                         </p>
                                     </div>
@@ -124,11 +121,11 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/attendance_take.php"
+                                            <li><a href="/teacher/attendance_take.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "take-attendance" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Realizar
                                                     Chamada</a>
                                             </li>
-                                            <li><a href="/attendance_tracking.php"
+                                            <li><a href="/teacher/attendance_tracking.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Controle
                                                     de
                                                     Frequência</a></li>
@@ -169,8 +166,8 @@
             <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] bg-gray-50">
                 <div class="flex items-center gap-2">
                     <div class="flex flex-col items-end text-gray-500">
-                        <h2 class="font-semibold">Coordenador SANQUIM</h2>
-                        <p class="text-sm -mt-1">Coordenador</p>
+                        <h2 class="font-semibold">Professor SANQUIM</h2>
+                        <p class="text-sm -mt-1">Professor</p>
                     </div>
                     <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
