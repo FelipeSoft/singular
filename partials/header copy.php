@@ -1,3 +1,15 @@
+<?php
+session_start();
+// if (!isset($_SESSION["user_id"])) {
+//     header("Location: login.php");
+//     exit;
+// }
+$_SESSION["logged_user"] = [
+    "level" => 1
+];
+$loggedLevel = $_SESSION["logged_user"]["level"];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br" class="w-full">
 
@@ -70,12 +82,16 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/lesson_timeline.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-timeline" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Cronograma
+                                            <li><a href="/lesson_planning.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento
                                                     de Aulas</a>
                                             </li>
-                                            <li><a href="/materials.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "materials" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Materiais Didáticos</a></li>
+                                            <li><a href="/lesson_execution.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução
+                                                    de Aulas</a></li>
+                                            <li><a href="/lesson_academic_structure.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "academic-structure" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Estrutura
+                                                    Acadêmica</a></li>
                                         </ul>
                                         </p>
                                     </div>
@@ -120,13 +136,14 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
+                                            <li><a href="/attendance_take.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "take-attendance" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Realizar
+                                                    Chamada</a>
+                                            </li>
                                             <li><a href="/attendance_tracking.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Acompanhamento
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Controle
                                                     de
                                                     Frequência</a></li>
-                                            <li><a href="/attendance_justify_abscense.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-justify-abscense" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Justificar Ausência</a>
-                                            </li>
                                         </ul>
                                         </p>
                                     </div>
@@ -170,8 +187,13 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/enrollment_request_enrollment_lock.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "request-enrollment-lock" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Solicitar Trancamento</a></li>
+                                            <li><a href="/enrollment_records.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "enrollment-records" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Registro
+                                                    de Matrículas</a>
+                                            </li>
+                                            <li><a href="/enrollment_enroll_student.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "enroll-student" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Matricular
+                                                    Aluno</a></li>
                                         </ul>
                                         </p>
                                     </div>
@@ -219,7 +241,8 @@
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
                                             <li><a href="/users_management.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "users" && $subtab === "users-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Alterar Dados</a>
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "users" && $subtab === "users-management" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Gestão
+                                                    de Usuários</a>
                                             </li>
                                         </ul>
                                         </p>
@@ -256,7 +279,7 @@
         </nav>
         <div class="w-full ml-[300px]">
             <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] bg-gray-50">
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 mr-4">
                     <div class="flex flex-col items-end text-gray-500">
                         <h2 class="font-semibold">Coordenador SANQUIM</h2>
                         <p class="text-sm -mt-1">Coordenador</p>

@@ -9,7 +9,7 @@
     </title>
 
     <!-- important links/scripts -->
-    <link rel="stylesheet" href="/assets/css/output.css" ?>
+    <link rel="stylesheet" href="/assets/css/output.css" />
     <link rel="stylesheet" href="/assets/css/flatpickr.css" />
 </head>
 
@@ -71,7 +71,7 @@
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
                                             <li><a href="/lesson_timeline.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Cronograma
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-timeline" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Cronograma
                                                     de Aulas</a>
                                             </li>
                                             <li><a href="/lesson_academic_structure.php"
@@ -179,7 +179,7 @@
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "enroll-student" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Matricular
                                                     Aluno</a></li>
                                             <li><a href="/enrollment_lock_enrollment.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "enroll-student" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Trancar
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "lock-enrollment" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Trancar
                                                     Matrícula</a></li>
                                         </ul>
                                         </p>
