@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . "/../../bootstrap/load_env.php";
+loadEnv("./../.env");
+$BASE_URL = getenv(name: "BASE_URL");
+?>
 <!DOCTYPE html>
 <html lang="pt-br" class="w-full">
 
