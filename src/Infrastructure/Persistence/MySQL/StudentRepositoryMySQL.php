@@ -1,7 +1,7 @@
 <?php
 
 namespace Src\Infrastructure\Persistence\MySQL;
-//hello
+
 use PDO;
 use PDOException;
 use Src\Domain\Entities\Student;

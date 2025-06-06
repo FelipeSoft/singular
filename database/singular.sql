@@ -252,3 +252,30 @@ VALUES
 ('Resumo de Biologia Celular', 2, 2, 3, TRUE),
 ('Guia de Plano de Negócios', 3, 3, 5, TRUE);
 
+-- Matrículas
+INSERT INTO `enrollments` (`student_id`, `course_id`, `classroom_group_id`, `enrollment_date`)
+VALUES
+(1, 1, 1, '2025-01-10'),
+(2, 1, 1, '2025-01-10'),
+(3, 2, 2, '2025-02-10'),
+(4, 2, 2, '2025-02-10'),
+(5, 3, 3, '2025-01-20');
+
+-- Disciplinas das matrículas
+INSERT INTO `enrollment_disciplines` (`enrollment_id`, `discipline_id`)
+VALUES
+(1, 1), (1, 2),
+(2, 1), (2, 2),
+(3, 3), (3, 4),
+(4, 3), (4, 4),
+(5, 5);
+
+-- Aulas
+INSERT INTO `lessons` (`discipline_id`, `classroom_group_id`, `period_start`, `period_end`, `lesson_type`, `status`, `content`, `local`)
+VALUES
+(1, 1, '2025-02-05', '2025-02-05', 0, 1, 'Revisão de equações do 1º grau', 'Sala 101'),
+(2, 1, '2025-02-06', '2025-02-06', 0, 1, 'Interpretação de texto e gramática', 'Sala 102'),
+(3, 2, '2025-03-10', '2025-03-10', 1, 1, 'Estudo de células e tecidos', 'Laboratório Biologia'),
+(4, 2, '2025-03-11', '2025-03-11', 3, 0, 'Avaliação diagnóstica de redação', 'Sala 201'),
+(5, 3, '2025-02-01', '2025-02-01', 0, 1, 'Introdução à gestão estratégica', 'Auditório A');
+
