@@ -4,5 +4,7 @@ $tab = "attendance";
 $subtab = "attendance-justify-abscense";
 ?>
 <?php require __DIR__ . "/../../partials/header.php" ?>
-<h1>Justificar Ausência!</h1>
+<ul>
+    <li>test</li>
+</ul>
 <?php require __DIR__ . "/../../partials/footer.php" ?>
