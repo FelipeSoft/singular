@@ -221,4 +221,4 @@
                     </svg>
                 </div>
             </header>
-            <main class="bg-white p-4 pr-8 w-full h-full">
+            <main class="bg-white p-4  w-full h-full">
