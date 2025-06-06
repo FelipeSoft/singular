@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . "/../../bootstrap/load_env.php";
+loadEnv("./../.env");
+$BASE_URL = getenv(name: "BASE_URL");
+?>
 <!DOCTYPE html>
 <html lang="pt-br" class="w-full">
 
@@ -229,4 +234,4 @@
                     </svg>
                 </div>
             </header>
-            <main class="bg-white p-4 pr-8 w-full h-full">
+            <main class="bg-white p-10 w-full h-full">
