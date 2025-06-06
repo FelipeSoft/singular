@@ -171,15 +171,6 @@ VALUES
 ('Turma PV A', TRUE),
 ('Turma EMP A', TRUE);
 
--- Usuários (professores)
-INSERT INTO `users` (`name`, `email`, `password`, `level`, `status`)
-VALUES
-('Prof. Ana Souza', 'ana@escola.com', 'senha123', 2, TRUE),
-('Prof. Bruno Lima', 'bruno@escola.com', 'senha123', 2, TRUE),
-('Prof. Carla Dias', 'carla@escola.com', 'senha123', 2, TRUE),
-('Prof. Diego Luz', 'diego@escola.com', 'senha123', 2, TRUE),
-('Prof. Elisa Nunes', 'elisa@escola.com', 'senha123', 2, TRUE);
-
 -- Endereços genéricos para professores e alunos
 INSERT INTO `address` (`neighborhood`, `city`, `state`, `status`)
 VALUES
@@ -199,15 +190,6 @@ VALUES
 ('Brooklin', 'São Paulo', 'SP', TRUE),
 ('Consolação', 'São Paulo', 'SP', TRUE);
 
--- Professores
-INSERT INTO `teachers` (`user_id`, `cpf`, `rg`, `address_id`, `status`)
-VALUES
-(1, '00000000101', '123456789', 1, TRUE),
-(2, '00000000102', '123456788', 2, TRUE),
-(3, '00000000103', '123456787', 3, TRUE),
-(4, '00000000104', '123456786', 4, TRUE),
-(5, '00000000105', '123456785', 5, TRUE);
-
 -- Disciplinas
 INSERT INTO `disciplines` (`name`, `course_id`, `discipline_total_load`, `period_start`, `period_end`, `status`)
 VALUES
@@ -220,30 +202,21 @@ VALUES
 -- Usuários (alunos)
 INSERT INTO `users` (`name`, `email`, `password`, `level`, `status`)
 VALUES
-('Aluno A', 'alunoa@email.com', 'senha123', 0, TRUE),
-('Aluno B', 'alunob@email.com', 'senha123', 0, TRUE),
-('Aluno C', 'alunoc@email.com', 'senha123', 0, TRUE),
-('Aluno D', 'alunod@email.com', 'senha123', 0, TRUE),
-('Aluno E', 'alunoe@email.com', 'senha123', 0, TRUE),
-('Aluno F', 'alunof@email.com', 'senha123', 0, TRUE),
-('Aluno G', 'alunog@email.com', 'senha123', 0, TRUE),
-('Aluno H', 'alunoh@email.com', 'senha123', 0, TRUE),
-('Aluno I', 'alunoi@email.com', 'senha123', 0, TRUE),
-('Aluno J', 'alunoj@email.com', 'senha123', 0, TRUE);
+('Aluno A', 'aluno1@example.com', 'aluno', 1, TRUE),
+('Aluno B', 'aluno2@example.com', 'aluno', 1, TRUE),
+('Aluno C', 'aluno3@example.com', 'aluno', 1, TRUE),
+('Aluno D', 'aluno4@example.com', 'aluno', 1, TRUE),
+('Aluno E', 'aluno5@example.com', 'aluno', 1, TRUE);
 
--- Alunos
-INSERT INTO `students` (`user_id`, `classroom_group_id`, `plan_expires_at`, `phone`, `cpf`, `rg`, `address_id`, `born_date`, `status`)
+-- Usuários (professores)
+INSERT INTO `users` (`name`, `email`, `password`, `level`, `status`)
 VALUES
-(6, 1, '2025-12-31', '11999990001', '11111111101', '111111111', 6, '2006-01-01', TRUE),
-(7, 2, '2025-12-31', '11999990002', '11111111102', '111111112', 7, '2006-02-01', TRUE),
-(8, 1, '2025-12-31', '11999990003', '11111111103', '111111113', 8, '2005-03-01', TRUE),
-(9, 3, '2025-12-31', '11999990004', '11111111104', '111111114', 9, '2005-04-01', TRUE),
-(10, 1, '2025-12-31', '11999990005', '11111111105', '111111115', 10, '2003-05-01', TRUE),
-(11, 2, '2025-12-31', '11999990006', '11111111106', '111111116', 11, '2003-06-01', TRUE),
-(12, 3, '2025-12-31', '11999990007', '11111111107', '111111117', 12, '2006-07-01', TRUE),
-(13, 1, '2025-12-31', '11999990008', '11111111108', '111111118', 13, '2005-08-01', TRUE),
-(14, 2, '2025-12-31', '11999990009', '11111111109', '111111119', 14, '2003-09-01', TRUE),
-(15, 1, '2025-12-31', '11999990010', '11111111110', '111111120', 15, '2006-10-01', TRUE);
+('Prof. Ana Souza', 'professor@example.com', 'professor', 2, TRUE);
+
+-- Usuários (coordenadores)
+INSERT INTO `users` (`name`, `email`, `password`, `level`, `status`)
+VALUES
+('Coordenador A', 'coordenador@example.com', 'coordenador', 3, TRUE);
 
 -- Materiais
 INSERT INTO `materials` (`title`, `course_id`, `classroom_group_id`, `discipline_id`, `status`)
@@ -251,4 +224,57 @@ VALUES
 ('Apostila de Matemática - Volume 1', 1, 1, 1, TRUE),
 ('Resumo de Biologia Celular', 2, 2, 3, TRUE),
 ('Guia de Plano de Negócios', 3, 3, 5, TRUE);
+
+-- Matrículas
+INSERT INTO `enrollments` (`student_id`, `course_id`, `classroom_group_id`, `enrollment_date`)
+VALUES
+(1, 1, 1, '2025-01-10'),
+(2, 1, 1, '2025-01-10'),
+(3, 2, 2, '2025-02-10'),
+(4, 2, 2, '2025-02-10'),
+(5, 3, 3, '2025-01-20');
+
+-- Disciplinas das matrículas
+INSERT INTO `enrollment_disciplines` (`enrollment_id`, `discipline_id`)
+VALUES
+(1, 1), (1, 2),
+(2, 1), (2, 2),
+(3, 3), (3, 4),
+(4, 3), (4, 4),
+(5, 5);
+
+-- Aulas
+INSERT INTO `lessons` (`discipline_id`, `classroom_group_id`, `period_start`, `period_end`, `lesson_type`, `status`, `content`, `local`)
+VALUES
+(1, 1, '2025-02-05', '2025-02-05', 0, 1, 'Revisão de equações do 1º grau', 'Sala 101'),
+(2, 1, '2025-02-06', '2025-02-06', 0, 1, 'Interpretação de texto e gramática', 'Sala 102'),
+(3, 2, '2025-03-10', '2025-03-10', 1, 1, 'Estudo de células e tecidos', 'Laboratório Biologia'),
+(4, 2, '2025-03-11', '2025-03-11', 3, 0, 'Avaliação diagnóstica de redação', 'Sala 201'),
+(5, 3, '2025-02-01', '2025-02-01', 0, 1, 'Introdução à gestão estratégica', 'Auditório A');
+
+INSERT INTO `students` (`user_id`, `classroom_group_id`, `plan_expires_at`, `phone`, `cpf`, `rg`, `address_id`, `born_date`, `status`)
+VALUES
+(1, 1, '2026-01-01', '11999999999', '11111111111', '123456789', 1, '2007-01-01', TRUE),
+(2, 1, '2026-01-01', '11999999998', '22222222222', '223456789', 2, '2007-02-02', TRUE),
+(3, 2, '2026-01-01', '11999999997', '33333333333', '323456789', 3, '2006-03-03', TRUE),
+(4, 2, '2026-01-01', '11999999996', '44444444444', '423456789', 4, '2006-04-04', TRUE),
+(5, 3, '2026-01-01', '11999999995', '55555555555', '523456789', 5, '2005-05-05', TRUE);
+
+-- Professores
+INSERT INTO `teachers` (`user_id`, `cpf`, `rg`, `address_id`, `status`)
+VALUES
+(2, '00000000101', '123456789', 1, TRUE);
+
+INSERT INTO `coordinators` (`user_id`, `phone`, `cpf`, `rg`, `address_id`, `status`)
+VALUES
+(7, '11999999994', '77777777777', '723456789', 7, TRUE);
+
+INSERT INTO `enrollments` (`student_id`, `course_id`, `classroom_group_id`, `enrollment_date`)
+VALUES
+(1, 1, 1, '2025-01-10'),
+(2, 1, 1, '2025-01-10'),
+(3, 2, 2, '2025-02-10'),
+(4, 2, 2, '2025-02-10'),
+(5, 3, 3, '2025-01-20');
+
 
