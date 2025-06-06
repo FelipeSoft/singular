@@ -234,4 +234,4 @@ $BASE_URL = getenv(name: "BASE_URL");
                     </svg>
                 </div>
             </header>
-            <main class="bg-white p-4 pr-8 w-full h-full">
+            <main class="bg-white p-10 w-full h-full">
