@@ -21,7 +21,7 @@
     <div class="mx-auto max-w-lg px-6 lg:px-8 absolute py-20">
       <img src="./images/Sanquim.png" alt="pagedone logo" width="400" class=" mx-auto lg:mb-11 mb-8 object-cover">
       <div class="rounded-2xl bg-white shadow-xl">
-        <form action="" class="lg:p-11 p-7 mx-auto rounded-2xl">
+        <form action=".\actions\login_action.php" class="lg:p-11 p-7 mx-auto rounded-2xl">
           <div class="mb-11">
             <h1 class="text-gray-900 text-center font-manrope text-3xl font-bold leading-10 mb-2">Login</h1>
           </div>
