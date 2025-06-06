@@ -186,7 +186,7 @@
                         </a>
                     </li>
                     <li class="text-[#F73C39] font-semibold">
-                        <a href="/start-session" class="flex items-center gap-2 text-sm">
+                        <a href="/actions/logout_action.php" class="flex items-center gap-2 text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24">
                                 <g fill="none" stroke="#F73C39" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2">
