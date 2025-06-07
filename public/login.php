@@ -21,7 +21,7 @@ session_start();
 
 <body class="font-inter overflow-hidden">
   <section class="flex justify-center relative">
-    <img class="animate-[pulse_5s_ease-in_infinite_alternate] w-full" src="./images/backgroundLogin.png" alt="gradient background image" class="w-full h-full object-cover fixed">
+    <img src="./images/backgroundLogin.png" alt="gradient background image" class=" h-full object-cover fixed animate-[pulse_5s_ease-in_infinite_alternate] w-full">
     <div class="mx-auto max-w-lg px-6 lg:px-8 absolute py-20">
       <img src="./images/Sanquim.png" alt="pagedone logo" width="400" class=" mx-auto lg:mb-11 mb-8 object-cover">
       <div class="rounded-2xl bg-white shadow-xl">
