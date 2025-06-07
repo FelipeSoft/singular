@@ -1,7 +1,7 @@
 <?php
 $title = "Singular | Aulas - Execução de Aulas";
-$tab = "class";
-$subtab = "class-execution";
+$tab = "lesson";
+$subtab = "lesson_execution";
 ?>
 <?php require __DIR__ . "/../../partials/header.php" ?>
 <section class="w-full">

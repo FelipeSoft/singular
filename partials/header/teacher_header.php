@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . "/../../bootstrap/load_env.php";
-loadEnv("./../.env");
+loadEnv(__DIR__ . "/../../.env");
 $BASE_URL = getenv(name: "BASE_URL");
 ?>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ $BASE_URL = getenv(name: "BASE_URL");
     <div class="flex h-full relative">
         <nav class="fixed top-0 left-0 h-screen w-[300px] border-r border-gray-300 bg-gray-50 z-50">
             <a href="<?=$BASE_URL?>/index.php" class="border-b border-gray-300 h-[70px] flex items-center">
-                <img class=" ml-3 object-contain w-[150px]" src="/images/sanquim.png" alt="Singular">
+                <img class=" ml-3 object-contain w-[150px]" src="<?=$BASE_URL?>/images/sanquim.png" alt="Singular">
             </a>
             <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto w-full">
                 <li class="text-[#747171] font-semibold">
@@ -41,7 +41,7 @@ $BASE_URL = getenv(name: "BASE_URL");
                 <h2 class="mt-6 font-medium text-sm mb-3 text-[#747171]">Menu</h2>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "class" ? "active" : "" ?> w-full" id="class-basic">
+                        <div class="accordion-item <?= $tab === "lesson" ? "active" : "" ?> w-full" id="class-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="class-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -70,17 +70,17 @@ $BASE_URL = getenv(name: "BASE_URL");
                                     </span>
                                 </div>
                                 <div id="class-basic-collapse"
-                                    class="accordion-content <?= $tab !== "class" ? "hidden" : "" ?> w-full overflow-hidden transition-[height] duration-300"
+                                    class="accordion-content <?= $tab !== "lesson" ? "hidden" : "" ?> w-full overflow-hidden transition-[height] duration-300"
                                     aria-labelledby="class-basic" role="region">
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
                                             <li><a href="<?=$BASE_URL?>/teacher/lesson_planning.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "lesson" && $subtab === "lesson_planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento
                                                     de Aulas</a>
                                             </li>
                                             <li><a href="<?=$BASE_URL?>/teacher/lesson_execution.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "lesson" && $subtab === "lesson_execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução
                                                     de Aulas</a></li>
                                         </ul>
                                         </p>
