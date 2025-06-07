@@ -6,23 +6,23 @@ $subtab = "take-attendance";
 $students = [
     [
         "id" => "1",
-        "name" => "Student 1"
+        "name" => "Lucas Manera"
     ],
     [
         "id" => "2",
-        "name" => "Student 2"
+        "name" => "Guilherme "
     ],
     [
         "id" => "3",
-        "name" => "Student 3"
+        "name" => "Felipe Silva"
     ],
     [
         "id" => "4",
-        "name" => "Student 4"
+        "name" => "João"
     ],
     [
         "id" => "5",
-        "name" => "Student 5"
+        "name" => "Gabriel"
     ],
 ];
 ?>
@@ -109,9 +109,8 @@ $students = [
                     <th class="text-[#747171] w-[30px]">ID</th>
                     <th class="text-[#747171]">Aluno</th>
                     <th class="text-[#747171] w-[30px]">P</th>
-                    <th class="text-[#747171] w-[30px]">F</th>
                     <th class="text-[#747171] w-[30px]">FJ</th>
-                    <th class="text-[#747171] w-[30px]">A</th>
+                   
                 </tr>
             </thead>
             <tbody>
@@ -121,24 +120,15 @@ $students = [
                         <td><?= $student['name']; ?></td>
                         <td>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
+                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess"  />
                             </div>
                         </td>
                         <td>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
+                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess"  />
                             </div>
                         </td>
-                        <td>
-                            <div class="flex items-center gap-1">
-                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex items-center gap-1">
-                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
-                            </div>
-                        </td>
+                        
 
                     </tr>
                 <?php endforeach; ?>
