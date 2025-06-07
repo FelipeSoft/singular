@@ -29,7 +29,7 @@ $students = [
 <?php require __DIR__ . "/../../partials/header.php" ?>
 <section>
   <div class="flex flex-col">
-    <h1 class="font-semibold text-black text-xl mb-4">Realizar Chamada</h1>
+    <h1 class="font-semibold text-black text-xl mb-4">Controle de Frequência</h1>
     <div class="flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path fill="#000000"
