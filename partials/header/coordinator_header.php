@@ -87,6 +87,54 @@ $BASE_URL = getenv(name: "BASE_URL");
                 </li>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
+                        <div class="accordion-item <?= $tab === "attendance" ? "active" : "" ?> w-full"
+                            id="attendance-basic">
+                            <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
+                                aria-controls="attendance-basic-collapse" aria-expanded="true">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2 text-gray-500 text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24">
+                                            <path fill="none" stroke="#747171" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2"
+                                                d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm6 10.037l6-6m-6 .031v.014m6 6v.016" />
+                                        </svg>
+                                        Frequência
+                                    </div>
+                                    <span>
+                                        <svg class="accordion-item-active:hidden block"
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 32 32">
+                                            <path fill="none" stroke="#747171" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="3" d="M30 12L16 24L2 12" />
+                                        </svg>
+                                        <svg class="accordion-item-active:block hidden"
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 32 32">
+                                            <path fill="none" stroke="#747171" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="3" d="M30 20L16 8L2 20" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div id="attendance-basic-collapse"
+                                    class="accordion-content <?= $tab !== "attendance" ? "hidden" : "" ?> w-full overflow-hidden transition-[height] duration-300"
+                                    aria-labelledby="attendance-basic" role="region">
+                                    <div class="pb-1 mt-1 w-full">
+                                        <p class="text-base-content/80 font-normal">
+                                        <ul class="flex flex-col gap-3 mt-3 w-full">
+                                            <li><a href="/coordinator/attendance_justify_abscense.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-justify-abscense" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Justificativa de Falta</a>
+                                            </li>
+                                            
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
+                    <div class="accordion divide-neutral/20 divide-y w-full">
                         <div class="accordion-item <?= $tab === "enrollment" ? "active" : "" ?> w-full"
                             id="enrollment-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
@@ -216,7 +264,7 @@ $BASE_URL = getenv(name: "BASE_URL");
         </nav>
         <div class="w-full ml-[300px]">
             <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] bg-gray-50">
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 mr-7">
                     <div class="flex flex-col items-end text-gray-500">
                         <h2 class="font-semibold">Coordenador SANQUIM</h2>
                         <p class="text-sm -mt-1">Coordenador</p>
