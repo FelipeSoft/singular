@@ -5,7 +5,18 @@ $subtab = "coordinators-management";
 ?>
 <?php require __DIR__ . "/../../partials/header.php" ?>
 <section>
-    <h1 class="font-semibold text-black text-xl mb-4">Gestão de Coordenadores</h1>
+    
+    <h1 class="font-semibold text-black text-xl mb-4 flex items-center space-x-1">
+        Estrutura Acadêmica
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mt-1">
+            <path d="M9 18L15 12L9 6" stroke="#747171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="text-gray-500 font-normal text-base mt-1">
+            Registro de Disciplinas
+        </p>
+
+
+    </h1>
     <div>
         <h2 class="text-black flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
