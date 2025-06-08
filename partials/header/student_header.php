@@ -208,7 +208,7 @@ $BASE_URL = getenv(name: "BASE_URL");
         </nav>
         <div class="w-full ml-[300px]">
             <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] bg-gray-50">
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 mr-7">
                     <div class="flex flex-col items-end text-gray-500">
                         <h2 class="font-semibold">Aluno SANQUIM</h2>
                         <p class="text-sm -mt-1">Aluno</p>
@@ -226,4 +226,4 @@ $BASE_URL = getenv(name: "BASE_URL");
                     </svg>
                 </div>
             </header>
-            <main class="bg-white p-4  w-full h-full">
+            <main class="bg-white p-10 w-full h-full">
