@@ -179,6 +179,7 @@ $subtab = "coordinators-management";
                     </tr>
                 </tbody>
             </table>
+            <div class="h-25"></div>
         </div>
     </div>
 </section>
