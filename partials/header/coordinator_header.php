@@ -18,7 +18,7 @@ $BASE_URL = getenv(name: "BASE_URL");
     <link rel="stylesheet" href="<?=$BASE_URL?>/assets/css/flatpickr.css" />
 </head>
 
-<body class="w-screen h-screen overflow-x-hidden">
+<body class="w-screen h-full overflow-x-hidden">
     <div class="flex h-full relative">
         <nav class="fixed top-0 left-0 h-screen w-[300px] border-r border-gray-300 bg-gray-50 z-50">
             <a href="<?=$BASE_URL?>/index.php" class="border-b border-gray-300 h-[70px] flex items-center">
@@ -26,7 +26,7 @@ $BASE_URL = getenv(name: "BASE_URL");
             </a>
             <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto w-full">
                 <li class="text-[#747171] font-semibold">
-                    <a href="<?=$BASE_URL?>/index.php"
+                    <a href="<?=$BASE_URL?>/coordinator/index.php"
                         class="flex items-center gap-2 text-sm <?= $tab === "home" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g fill="none" stroke="#747171" stroke-linecap="round" stroke-linejoin="round"
