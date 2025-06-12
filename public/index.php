@@ -4,9 +4,9 @@ $tab = "home";
 ?>
 <?php require __DIR__ . "/../partials/header.php" ?>
 
-<section>
+<section class="bg-white">
     <h1 class="font-semibold text-black text-xl">Página Inicial</h1>
-    <div class="grid grid-cols-3 gap-4 mt-2">
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-4 mt-2">
         <article class="flex items-center rounded-md border p-4">
             <svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -69,7 +69,7 @@ $tab = "home";
             </div>
         </article>
     </div>
-    <div class="grid grid-cols-2 mt-2 gap-4">
+    <div class="grid grid-cols-1 xl:grid-cols-2 mt-2 gap-4">
         <div class="flex flex-col gap-4">
             <h1 class="font-semibold text-black text-xl mt-6">Comunicados</h1>
             <div class="overflow-y-auto max-h-[600px] flex flex-col gap-4">
