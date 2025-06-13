@@ -4,7 +4,7 @@ loadEnv(__DIR__ . "/../../.env");
 $BASE_URL = getenv(name: "BASE_URL");
 ?>
 <!DOCTYPE html>
-<html lang="pt-br" class="w-full">
+<html lang="pt-br" class="h-full">
 
 <head>
     <meta charset="UTF-8">
