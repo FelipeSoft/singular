@@ -18,9 +18,9 @@ $BASE_URL = getenv(name: "BASE_URL");
     <link rel="stylesheet" href="<?= $BASE_URL ?>/assets/css/flatpickr.css" />
 </head>
 
-<body class="w-screen h-full overflow-x-hidden bg-red-500">
+<body class="w-screen h-full overflow-x-hidden bg-white">
     <div class="flex h-full relative">
-        <nav class="fixed top-0 left-0 h-screen overflow-y-auto pb-20 w-[300px] border-r border-gray-300 bg-gray-50 z-50">
+        <nav class="hidden md:block fixed top-0 left-0 h-screen overflow-y-auto pb-20 w-[300px] border-r border-gray-300 bg-gray-50 z-50">
             <a href="<?= $BASE_URL ?>/index.php" class="border-b border-gray-300 h-[70px] flex items-center">
                 <img class=" ml-3 object-contain w-[150px]" src="<?= $BASE_URL ?>/images/sanquim.png" alt="Singular">
             </a>
@@ -191,7 +191,9 @@ $BASE_URL = getenv(name: "BASE_URL");
                                 aria-controls="enrollment-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2 text-gray-500 text-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#747171" d="M4.616 20q-.691 0-1.153-.462T3 18.384V5.616q0-.691.463-1.153T4.615 4h14.77q.69 0 1.152.463T21 5.616v12.769q0 .69-.463 1.153T19.385 20zm0-1h14.769q.23 0 .423-.192t.192-.424V5.616q0-.231-.192-.424T19.385 5H4.615q-.23 0-.423.192T4 5.616v12.769q0 .23.192.423t.423.192M9 16.5q.214 0 .357-.143T9.5 16t-.143-.357T9 15.5H6q-.213 0-.357.143T5.5 16t.143.357T6 16.5zm5.55-3.613l-1.071-1.072q-.146-.146-.354-.152t-.354.158q-.14.146-.133.354t.153.354l1.194 1.194q.242.242.565.242t.566-.242l3.319-3.32q.146-.145.156-.344q.009-.198-.156-.363q-.166-.165-.357-.165t-.357.165zM9 12.5q.214 0 .357-.143T9.5 12t-.143-.357T9 11.5H6q-.213 0-.357.143T5.5 12t.143.357T6 12.5zm0-4q.214 0 .357-.143T9.5 8t-.143-.357T9 7.5H6q-.213 0-.357.143T5.5 8t.143.357T6 8.5zM4 19V5z" stroke-width="0.5" stroke="#747171"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="#747171" d="M4.616 20q-.691 0-1.153-.462T3 18.384V5.616q0-.691.463-1.153T4.615 4h14.77q.69 0 1.152.463T21 5.616v12.769q0 .69-.463 1.153T19.385 20zm0-1h14.769q.23 0 .423-.192t.192-.424V5.616q0-.231-.192-.424T19.385 5H4.615q-.23 0-.423.192T4 5.616v12.769q0 .23.192.423t.423.192M9 16.5q.214 0 .357-.143T9.5 16t-.143-.357T9 15.5H6q-.213 0-.357.143T5.5 16t.143.357T6 16.5zm5.55-3.613l-1.071-1.072q-.146-.146-.354-.152t-.354.158q-.14.146-.133.354t.153.354l1.194 1.194q.242.242.565.242t.566-.242l3.319-3.32q.146-.145.156-.344q.009-.198-.156-.363q-.166-.165-.357-.165t-.357.165zM9 12.5q.214 0 .357-.143T9.5 12t-.143-.357T9 11.5H6q-.213 0-.357.143T5.5 12t.143.357T6 12.5zm0-4q.214 0 .357-.143T9.5 8t-.143-.357T9 7.5H6q-.213 0-.357.143T5.5 8t.143.357T6 8.5zM4 19V5z" stroke-width="0.5" stroke="#747171" />
+                                        </svg>
                                         Notas
                                     </div>
                                     <span>
@@ -251,8 +253,17 @@ $BASE_URL = getenv(name: "BASE_URL");
                 </div>
             </ul>
         </nav>
-        <div class="w-full ml-[300px]">
-            <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] bg-gray-50">
+        <div class="w-full md:ml-[300px]">
+            <header class="border-b flex justify-between md:justify-end items-center px-4 border-gray-300 h-[70px] bg-gray-50">
+                <button class="md:hidden ml-6 border rounded-md bg-white h-10 w-10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <g fill="none">
+                            <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                            <path fill="currentColor" d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3z" />
+                        </g>
+                    </svg>
+                    <span class="sr-only">Abrir ou Fechar Menu</span>
+                </button>
                 <div class="flex items-center gap-2 mr-7">
                     <div class="flex flex-col items-end text-gray-500">
                         <h2 class="font-semibold">Aluno SANQUIM</h2>

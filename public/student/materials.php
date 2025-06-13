@@ -29,8 +29,8 @@ $subtab = "materials";
                     class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
                     id="date" />
             </div>
-            <div class="flex items-end gap-4 w-full">
-                <div class="w-1/3 text-gray-500">
+            <div class="flex flex-col lg:flex-row items-end gap-4 w-full">
+                <div class="w-full text-gray-500">
                     <label class="label-text text-gray-500" for="discipline">Disciplina</label>
                     <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
                         <option>Engenharia de Software</option>
@@ -38,8 +38,6 @@ $subtab = "materials";
                         <option>Algoritmos e Lógica de Programação</option>
                     </select>
                 </div>
-
-                
                 <div class="flex items-center gap-4">
                     <button class="btn btn-error w-16">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
