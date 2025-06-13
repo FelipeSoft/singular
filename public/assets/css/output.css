@@ -4507,19 +4507,9 @@
       margin-bottom: calc(var(--spacing) * 11);
     }
   }
-  .lg\:p-5 {
-    @media (width >= 64rem) {
-      padding: calc(var(--spacing) * 5);
-    }
-  }
   .lg\:p-11 {
     @media (width >= 64rem) {
       padding: calc(var(--spacing) * 11);
-    }
-  }
-  .lg\:p-17 {
-    @media (width >= 64rem) {
-      padding: calc(var(--spacing) * 17);
     }
   }
   .lg\:px-8 {
