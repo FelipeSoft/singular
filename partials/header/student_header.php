@@ -4,7 +4,7 @@ loadEnv(__DIR__ . "/../../.env");
 $BASE_URL = getenv(name: "BASE_URL");
 ?>
 <!DOCTYPE html>
-<html lang="pt-br" class="w-full">
+<html lang="pt-br" class="h-full">
 
 <head>
     <meta charset="UTF-8">
@@ -14,19 +14,19 @@ $BASE_URL = getenv(name: "BASE_URL");
     </title>
 
     <!-- important links/scripts -->
-    <link rel="stylesheet" href="<?=$BASE_URL?>/assets/css/output.css" ?>
-    <link rel="stylesheet" href="<?=$BASE_URL?>/assets/css/flatpickr.css" />
+    <link rel="stylesheet" href="<?= $BASE_URL ?>/assets/css/output.css" ?>
+    <link rel="stylesheet" href="<?= $BASE_URL ?>/assets/css/flatpickr.css" />
 </head>
 
-<body class="w-screen h-screen overflow-x-hidden">
+<body class="w-screen h-full overflow-x-hidden bg-red-500">
     <div class="flex h-full relative">
-        <nav class="fixed top-0 left-0 h-screen w-[300px] border-r border-gray-300 bg-gray-50 z-50">
-            <a href="<?=$BASE_URL?>/index.php" class="border-b border-gray-300 h-[70px] flex items-center">
-                <img class=" ml-3 object-contain w-[150px]" src="<?=$BASE_URL?>/images/sanquim.png" alt="Singular">
+        <nav class="fixed top-0 left-0 h-screen overflow-y-auto pb-20 w-[300px] border-r border-gray-300 bg-gray-50 z-50">
+            <a href="<?= $BASE_URL ?>/index.php" class="border-b border-gray-300 h-[70px] flex items-center">
+                <img class=" ml-3 object-contain w-[150px]" src="<?= $BASE_URL ?>/images/sanquim.png" alt="Singular">
             </a>
-            <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto w-full">
+            <ul class="p-4 relative flex flex-col max-h-screen w-full">
                 <li class="text-[#747171] font-semibold">
-                    <a href="<?=$BASE_URL?>/index.php"
+                    <a href="<?= $BASE_URL ?>/student/index.php"
                         class="flex items-center gap-2 text-sm <?= $tab === "home" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g fill="none" stroke="#747171" stroke-linecap="round" stroke-linejoin="round"
@@ -75,12 +75,13 @@ $BASE_URL = getenv(name: "BASE_URL");
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="<?=$BASE_URL?>/student/lesson_timeline.php"
+                                            <li><a href="<?= $BASE_URL ?>/student/lesson_timeline.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-timeline" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Cronograma
                                                     de Aulas</a>
                                             </li>
-                                            <li><a href="<?=$BASE_URL?>/student/materials.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "materials" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Materiais Didáticos</a></li>
+                                            <li><a href="<?= $BASE_URL ?>/student/materials.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "materials" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Materiais
+                                                    Didáticos</a></li>
                                         </ul>
                                         </p>
                                     </div>
@@ -125,8 +126,9 @@ $BASE_URL = getenv(name: "BASE_URL");
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="<?=$BASE_URL?>/student/attendance_justify_abscense.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-justify-abscense" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Justificar Ausência</a>
+                                            <li><a href="<?= $BASE_URL ?>/student/attendance_justify_abscense.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-justify-abscense" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Justificar
+                                                    Ausência</a>
                                             </li>
                                         </ul>
                                         </p>
@@ -171,8 +173,51 @@ $BASE_URL = getenv(name: "BASE_URL");
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="<?=$BASE_URL?>/student/enrollment_request_enrollment_lock.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "request-enrollment-lock" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Solicitar Trancamento</a></li>
+                                            <li><a href="<?= $BASE_URL ?>/student/enrollment_request_enrollment_lock.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "enrollment" && $subtab === "request-enrollment-lock" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Solicitar
+                                                    Trancamento</a></li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
+                    <div class="accordion divide-neutral/20 divide-y w-full">
+                        <div class="accordion-item <?= $tab === "enrollment" ? "active" : "" ?> w-full"
+                            id="enrollment-basic">
+                            <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
+                                aria-controls="enrollment-basic-collapse" aria-expanded="true">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2 text-gray-500 text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#747171" d="M4.616 20q-.691 0-1.153-.462T3 18.384V5.616q0-.691.463-1.153T4.615 4h14.77q.69 0 1.152.463T21 5.616v12.769q0 .69-.463 1.153T19.385 20zm0-1h14.769q.23 0 .423-.192t.192-.424V5.616q0-.231-.192-.424T19.385 5H4.615q-.23 0-.423.192T4 5.616v12.769q0 .23.192.423t.423.192M9 16.5q.214 0 .357-.143T9.5 16t-.143-.357T9 15.5H6q-.213 0-.357.143T5.5 16t.143.357T6 16.5zm5.55-3.613l-1.071-1.072q-.146-.146-.354-.152t-.354.158q-.14.146-.133.354t.153.354l1.194 1.194q.242.242.565.242t.566-.242l3.319-3.32q.146-.145.156-.344q.009-.198-.156-.363q-.166-.165-.357-.165t-.357.165zM9 12.5q.214 0 .357-.143T9.5 12t-.143-.357T9 11.5H6q-.213 0-.357.143T5.5 12t.143.357T6 12.5zm0-4q.214 0 .357-.143T9.5 8t-.143-.357T9 7.5H6q-.213 0-.357.143T5.5 8t.143.357T6 8.5zM4 19V5z" stroke-width="0.5" stroke="#747171"/></svg>
+                                        Notas
+                                    </div>
+                                    <span>
+                                        <svg class="accordion-item-active:hidden block"
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 32 32">
+                                            <path fill="none" stroke="#747171" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="3" d="M30 12L16 24L2 12" />
+                                        </svg>
+                                        <svg class="accordion-item-active:block hidden"
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 32 32">
+                                            <path fill="none" stroke="#747171" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="3" d="M30 20L16 8L2 20" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div id="grade-basic-collapse"
+                                    class="accordion-content <?= $tab !== "grade" ? "hidden" : "" ?> w-full overflow-hidden transition-[height] duration-300"
+                                    aria-labelledby="grade-basic" role="region">
+                                    <div class="pb-1 mt-1 w-full">
+                                        <p class="text-base-content/80 font-normal">
+                                        <ul class="flex flex-col gap-3 mt-3 w-full">
+                                            <li><a href="<?= $BASE_URL ?>/student/grade_overview.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "grade" && $subtab === "grade-overview" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Visão
+                                                    Geral</a></li>
                                         </ul>
                                         </p>
                                     </div>
@@ -182,7 +227,7 @@ $BASE_URL = getenv(name: "BASE_URL");
                 </li>
                 <div class="mt-auto">
                     <li class="text-[#747171] font-semibold mb-5">
-                        <a href="<?=$BASE_URL?>/home" class="flex items-center gap-2 text-sm">
+                        <a href="<?= $BASE_URL ?>/home" class="flex items-center gap-2 text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                 <path fill="#747171"
                                     d="m12 1l9.5 5.5v11L12 23l-9.5-5.5v-11zm0 2.311L4.5 7.653v8.694l7.5 4.342l7.5-4.342V7.653zM12 16a4 4 0 1 1 0-8a4 4 0 0 1 0 8m0-2a2 2 0 1 0 0-4a2 2 0 0 0 0 4" />
@@ -191,7 +236,7 @@ $BASE_URL = getenv(name: "BASE_URL");
                         </a>
                     </li>
                     <li class="text-[#F73C39] font-semibold">
-                        <a href="<?=$BASE_URL?>/actions/logout_action.php" class="flex items-center gap-2 text-sm">
+                        <a href="<?= $BASE_URL ?>/actions/logout_action.php" class="flex items-center gap-2 text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24">
                                 <g fill="none" stroke="#F73C39" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2">

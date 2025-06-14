@@ -20,8 +20,17 @@ if ($email && $password) {
             "email" => $data[0]["email"],
             "level" => $data[0]["level"]
         ];
-        header("Location: ./../index.php");
-        die;
+        switch ($data[0]["level"]) {
+            case 1: 
+                header("Location: ./../student/index.php");
+                die;
+            case 2:
+                header("Location: ./../teacher/index.php");
+                die;
+            case 3:
+                header("Location: ./../coordinator/index.php");
+                die;
+        }
     }
     
     $_SESSION["flash"] = "E-mail e/ou senha incorretos";

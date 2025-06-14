@@ -5,7 +5,33 @@ $subtab = "coordinators-management";
 ?>
 <?php require __DIR__ . "/../../partials/header.php" ?>
 <section>
-    <h1 class="font-semibold text-black text-xl mb-4">Gestão de Coordenadores</h1>
+
+    <h1 class="font-semibold text-black text-xl mb-4 flex items-center space-x-1">
+        Estrutura Acadêmica
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mt-1">
+            <path d="M9 18L15 12L9 6" stroke="#747171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p class="text-gray-500 font-normal text-base mt-1">
+            Registro de Disciplinas
+        </p>
+
+
+    </h1>
+
+    <div class="flex-col w-full items-start rounded-md py-4 px-4 mb-5 shadow-lg border-gray-200 border-2">
+        <div class="flex gap-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 16V12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 8H12.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h2 class="text-black">Informativo</h2>
+        </div>
+        <p>
+            Na sessão abaixo, para editar ou adicionar uma nova disciplina, basta utilizar o formulário multifunções logo abaixo.
+        </p>
+    </div>
+
     <div>
         <h2 class="text-black flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -29,37 +55,57 @@ $subtab = "coordinators-management";
             </div>
             <div class="flex items-center gap-4 w-full">
                 <div class="flex items-center gap-4 w-full">
-                    <div class="w-1/3 text-gray-500">
-                        <label class="label-text text-gray-500" for="discipline">Nome</label>
-                        <input type="text" placeholder="ex.: João Silva"
-                            class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                            id="name" />
+                    <div class="w-1/6 text-gray-500">
+                        <label class="label-text text-gray-500" for="discipline">ID</label>
+                        <div>
+                            <div class="input flex align-middle items-center bg-gray-200 text-gray-400 placeholder:text-gray-500 border-gray-300 focus:outline-[#F73C39]">
+                                <h1 class="w-1/10">
+                                    X
+                                </h1>
+                                <div class="w-8/10">
+                                </div>
+                                <svg class="1/10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z" stroke="#747171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="#747171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="w-1/3 text-gray-500">
-                        <label class="label-text text-gray-500" for="discipline">E-mail</label>
-                        <input type="text" placeholder="ex.: joao.silva@teste.com.br"
-                            class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                            id="name" />
-                    </div>
-                    <div class="w-1/3 text-gray-500">
-                        <label class="label-text text-gray-500" for="discipline">Perfil</label>
+                    <div class="w-3/6 text-gray-500">
+                        <label class="label-text text-gray-500" for="discipline">Curso</label>
                         <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
-                            <option>Aluno</option>
-                            <option>Professor</option>
-                            <option>Coordenador</option>
+                            <option>Curso1</option>
+                            <option>Curso2</option>
+                            <option>Curso3</option>
+                        </select>
+                    </div>
+                    <div class="w-2/6 text-gray-500">
+                        <div class="flex gap-2 items-center">
+                            <label class="label-text text-gray-500" for="discipline">Multidocência</label>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_14_971)">
+                                    <path d="M9.50016 17.4166C13.8724 17.4166 17.4168 13.8722 17.4168 9.49992C17.4168 5.12766 13.8724 1.58325 9.50016 1.58325C5.12791 1.58325 1.5835 5.12766 1.5835 9.49992C1.5835 13.8722 5.12791 17.4166 9.50016 17.4166Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M7.19629 7.12496C7.38241 6.59587 7.74978 6.14971 8.23334 5.86553C8.71689 5.58134 9.28541 5.47746 9.83822 5.57228C10.391 5.6671 10.8924 5.9545 11.2536 6.38359C11.6148 6.81268 11.8125 7.35575 11.8117 7.91663C11.8117 9.49996 9.43671 10.2916 9.43671 10.2916" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M9.5 13.4583H9.50875" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_14_971">
+                                        <rect width="19" height="19" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
+                            <option>SIM</option>
+                            <option>NÃO</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="flex items-end gap-4 w-full">
-                <div class="w-1/2 text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">Senha</label>
-                    <input type="password"
-                        class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                        id="name" />
-                </div>
-                <div class="w-1/2 text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">Confirmar Senha</label>
+                <div class="w-full text-gray-500">
+                    <label class="label-text text-gray-500" for="discipline">Nome da disciplina</label>
                     <input type="password"
                         class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
                         id="name" />
@@ -70,14 +116,6 @@ $subtab = "coordinators-management";
                 </div>
             </div>
         </form>
-        <h2 class="text-black flex items-center gap-2 mt-8">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    d="M8.857 12.506C6.37 10.646 4.596 8.6 3.627 7.45c-.3-.356-.398-.617-.457-1.076c-.202-1.572-.303-2.358.158-2.866S4.604 3 6.234 3h11.532c1.63 0 2.445 0 2.906.507c.461.508.36 1.294.158 2.866c-.06.459-.158.72-.457 1.076c-.97 1.152-2.747 3.202-5.24 5.065a1.05 1.05 0 0 0-.402.747c-.247 2.731-.475 4.227-.617 4.983c-.229 1.222-1.96 1.957-2.888 2.612c-.552.39-1.222-.074-1.293-.678a196 196 0 0 1-.674-6.917a1.05 1.05 0 0 0-.402-.755"
-                    color="#000" />
-            </svg>
-            <span class="text-gray-500">Filtros</span>
-        </h2>
         <form class="flex flex-wrap gap-4">
             <script>
                 window.addEventListener('load', function() {
@@ -92,82 +130,56 @@ $subtab = "coordinators-management";
                     class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
                     id="date" />
             </div>
-            <div class="flex items-end gap-4 w-full">
-                <div class="w-1/2 text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">Perfil</label>
-                    <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
-                        <option>Coordenador</option>
-                        <option>Professor</option>
-                        <option>Aluno</option>
-                    </select>
-                </div>
-                <div class="w-1/2 text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">E-mail</label>
-                    <input type="text" placeholder="ex.: joao.silva@teste.com.br"
-                        class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                        id="name" />
-                </div>
-                <div class="flex items-center gap-4">
-                    <button class="btn btn-error w-16">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13.758 19.414L9 21v-8.5L4.52 7.572A2 2 0 0 1 4 6.227V4h16v2.172a2 2 0 0 1-.586 1.414L15 12v1.5m7 8.5l-5-5m0 5l5-5" />
-                        </svg>
-                        <span class="sr-only">Remover filtro</span>
-                    </button>
-                    <button class="btn bg-black text-white w-24">Filtrar</button>
-                </div>
-            </div>
+            
         </form>
         <div class="w-full overflow-x-auto mt-4">
             <table class="text-black table border border-gray-300">
                 <thead class="border-gray-300">
                     <tr class="border-b border-gray-300">
-                        <th class="text-black">ID</th>
-                        <th class="text-black">Nome</th>
-                        <th class="text-black">E-mail</th>
-                        <th class="text-black">Ações</th>
+                        <th class="text-black w-1/10">ID</th>
+                        <th class="text-black w-8/10">Nome da disciplina</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="border-b border-gray-300">
                         <td>1</td>
-                        <td>João da Silva</td>
-                        <td>joao.silva@teste.com.br</td>
+                        <td>Matemática</td>
                         <td>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
+                        </td>
                         </td>
                     </tr>
                     <tr class="border-b border-gray-300">
-                        <td>2</td>
-                        <td>Maria Aparecida</td>
-                        <td>maria.aparecida@teste.com.br</td>
+                        <td>1</td>
+                        <td>Matemática</td>
                         <td>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
+                        </td>
                         </td>
                     </tr>
                     <tr class="border-b border-gray-300">
-                        <td>3</td>
-                        <td>Rodrigo Martins</td>
-                        <td>rodrigo.martins@teste.com.br</td>
+                        <td>1</td>
+                        <td>Matemática</td>
                         <td>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
                         </td>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Ana Luisa</td>
-                        <td>ana.luisa@teste.com.br</td>
+                    <tr class="border-b border-gray-300">
+                        <td>1</td>
+                        <td>Matemática</td>
                         <td>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
+                        </td>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <div class="h-25"></div>
         </div>
     </div>
 </section>

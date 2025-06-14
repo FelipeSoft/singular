@@ -1,13 +1,11 @@
 <?php
-$title = "Singular | Coordenadores - Gestão de Coordenadores";
-$tab = "profiles";
-$subtab = "coordinators-management";
+$title = "Singular | Professores - Gestão de Notas";
+$tab = "grades";
+$subtab = "grade-register";
 ?>
 <?php require __DIR__ . "/../../partials/header.php" ?>
 <section>
-    <h1 class="font-semibold text-black text-xl mb-4">
-        Gestão de Coordenadores 
-    </h1> 
+    <h1 class="font-semibold text-black text-xl mb-4">Gestão de Notas</h1>
     <div>
         <h2 class="text-black flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -24,7 +22,7 @@ $subtab = "coordinators-management";
                 })
             </script>
             <div class="w-[200px] text-gray-500">
-                <label hidden class="label-text text-gray-500" for="date">ID</label>
+                <label hidden class="label-text text-gray-500" for="date">Disciplina</label>
                 <input disabled hidden type="text"
                     class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
                     id="date" />
@@ -32,45 +30,30 @@ $subtab = "coordinators-management";
             <div class="flex items-center gap-4 w-full">
                 <div class="flex items-center gap-4 w-full">
                     <div class="w-1/3 text-gray-500">
-                        <label class="label-text text-gray-500" for="discipline">Nome</label>
-                        <input type="text" placeholder="ex.: João Silva"
-                            class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                            id="name" />
-                    </div>
-                    <div class="w-1/3 text-gray-500">
-                        <label class="label-text text-gray-500" for="discipline">E-mail</label>
-                        <input type="text" placeholder="ex.: joao.silva@teste.com.br"
-                            class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                            id="name" />
-                    </div>
-                    <div class="w-1/3 text-gray-500">
-                        <label class="label-text text-gray-500" for="discipline">Perfil</label>
+                        <label class="label-text text-gray-500" for="discipline">Disciplina</label>
                         <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
-                            <option>Aluno</option>
-                            <option>Professor</option>
-                            <option>Coordenador</option>
+                            <option>Matemática</option>
+                            <option>História</option>
                         </select>
                     </div>
+                    <div class="w-1/3 text-gray-500">
+                        <label class="label-text text-gray-500" for="period">Periodo</label>
+                        <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
+                            <option>Manhã</option>
+                            <option>Tarde</option>
+                            <option>Noite</option>
+                        </select>
+                    </div>
+                    <div class="w-1/3">
+                    </div>
+                    <div class="w-1/3 text-gray-500">
+                        <label class="label-text text-white" for="btn">.</label>
+                        <button class="btn bg-black text-white w-full">Busca</button>
+                    </div>
+
                 </div>
             </div>
-            <div class="flex items-end gap-4 w-full">
-                <div class="w-1/2 text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">Senha</label>
-                    <input type="password"
-                        class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                        id="name" />
-                </div>
-                <div class="w-1/2 text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">Confirmar Senha</label>
-                    <input type="password"
-                        class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                        id="name" />
-                </div>
-                <div class="flex items-center gap-4">
-                    <button class="btn bg-[#E3E3E3] text-black w-24">Cancelar</button>
-                    <button class="btn bg-black text-white w-24">Salvar</button>
-                </div>
-            </div>
+
         </form>
         <h2 class="text-black flex items-center gap-2 mt-8">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -96,16 +79,23 @@ $subtab = "coordinators-management";
             </div>
             <div class="flex items-end gap-4 w-full">
                 <div class="w-1/2 text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">Perfil</label>
+                    <label class="label-text text-gray-500" for="discipline">Nome</label>
+                    <input type="text" placeholder="Fulano de tal"
+                        class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
+                        id="name" />
+                </div>
+
+                <div class="w-1/3 text-gray-500">
+                    <label class="label-text text-gray-500" for="discipline">Condição</label>
                     <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
-                        <option>Coordenador</option>
-                        <option>Professor</option>
-                        <option>Aluno</option>
+                        <option>Maior que</option>
+                        <option>Menor que</option>
+                        <option>Igual à</option>
                     </select>
                 </div>
                 <div class="w-1/2 text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">E-mail</label>
-                    <input type="text" placeholder="ex.: joao.silva@teste.com.br"
+                    <label class="label-text text-gray-500" for="discipline">Nota</label>
+                    <input type="text" placeholder="5"
                         class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
                         id="name" />
                 </div>
@@ -125,9 +115,11 @@ $subtab = "coordinators-management";
             <table class="text-black table border border-gray-300">
                 <thead class="border-gray-300">
                     <tr class="border-b border-gray-300">
+
                         <th class="text-black">ID</th>
                         <th class="text-black">Nome</th>
-                        <th class="text-black">E-mail</th>
+                        <th class="w-110"></th>
+                        <th class="text-black">Nota</th>
                         <th class="text-black">Ações</th>
                     </tr>
                 </thead>
@@ -135,7 +127,11 @@ $subtab = "coordinators-management";
                     <tr class="border-b border-gray-300">
                         <td>1</td>
                         <td>João da Silva</td>
-                        <td>joao.silva@teste.com.br</td>
+                        <td class="w-110"></td>
+                        <td class="text-black">
+                            10.0
+                        </td>
+
                         <td>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
@@ -144,7 +140,11 @@ $subtab = "coordinators-management";
                     <tr class="border-b border-gray-300">
                         <td>2</td>
                         <td>Maria Aparecida</td>
-                        <td>maria.aparecida@teste.com.br</td>
+                        <td class="w-110"></td>
+                        <td class="text-black">
+                            7.0
+                        </td>
+
                         <td>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
@@ -153,7 +153,11 @@ $subtab = "coordinators-management";
                     <tr class="border-b border-gray-300">
                         <td>3</td>
                         <td>Rodrigo Martins</td>
-                        <td>rodrigo.martins@teste.com.br</td>
+                        <td class="w-110"></td>
+                        <td class="text-black">
+                            5.0
+                        </td>
+
                         <td>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
@@ -162,7 +166,11 @@ $subtab = "coordinators-management";
                     <tr>
                         <td>4</td>
                         <td>Ana Luisa</td>
-                        <td>ana.luisa@teste.com.br</td>
+                        <td class="w-110"></td>
+                        <td class="text-black">
+                            2.0
+                        </td>
+
                         <td>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
@@ -170,6 +178,7 @@ $subtab = "coordinators-management";
                     </tr>
                 </tbody>
             </table>
+            <div class="h-25"></div>
         </div>
     </div>
 </section>

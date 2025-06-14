@@ -4,7 +4,7 @@ loadEnv(__DIR__ . "/../../.env");
 $BASE_URL = getenv(name: "BASE_URL");
 ?>
 <!DOCTYPE html>
-<html lang="pt-br" class="w-full">
+<html lang="pt-br" class="h-full">
 
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@ $BASE_URL = getenv(name: "BASE_URL");
     <link rel="stylesheet" href="<?=$BASE_URL?>/assets/css/flatpickr.css" />
 </head>
 
-<body class="w-screen h-screen overflow-x-hidden">
+<body class="w-screen h-full overflow-x-hidden bg-white">
     <div class="flex h-full relative">
         <nav class="fixed top-0 left-0 h-screen w-[300px] border-r border-gray-300 bg-gray-50 z-50">
             <a href="<?=$BASE_URL?>/index.php" class="border-b border-gray-300 h-[70px] flex items-center">
@@ -26,7 +26,7 @@ $BASE_URL = getenv(name: "BASE_URL");
             </a>
             <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto w-full">
                 <li class="text-[#747171] font-semibold">
-                    <a href="<?=$BASE_URL?>/index.php"
+                    <a href="<?=$BASE_URL?>/teacher/index.php"
                         class="flex items-center gap-2 text-sm <?= $tab === "home" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g fill="none" stroke="#747171" stroke-linecap="round" stroke-linejoin="round"
@@ -134,6 +134,52 @@ $BASE_URL = getenv(name: "BASE_URL");
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Controle
                                                     de
                                                     Frequência</a></li>
+                                        </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
+                    <div class="accordion divide-neutral/20 divide-y w-full">
+                        <div class="accordion-item <?= $tab === "class" ? "active" : "" ?> w-full" id="class-basic">
+                            <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
+                                aria-controls="class-basic-collapse" aria-expanded="true">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2 text-gray-500 text-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24">
+                                            <path fill="none" stroke="#747171" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2"
+                                                d="M12 7v14m4-9h2m-2-4h2M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4a4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3a3 3 0 0 0-3-3zm3-6h2M6 8h2" />
+                                        </svg>
+                                        Notas
+                                    </div>
+                                    <span>
+                                        <svg class="accordion-item-active:hidden block"
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 32 32">
+                                            <path fill="none" stroke="#747171" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="3" d="M30 12L16 24L2 12" />
+                                        </svg>
+                                        <svg class="accordion-item-active:block hidden"
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 32 32">
+                                            <path fill="none" stroke="#747171" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="3" d="M30 20L16 8L2 20" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div id="class-basic-collapse"
+                                    class="accordion-content <?= $tab !== "class" ? "hidden" : "" ?> w-full overflow-hidden transition-[height] duration-300"
+                                    aria-labelledby="class-basic" role="region">
+                                    <div class="pb-1 mt-1 w-full">
+                                        <p class="text-base-content/80 font-normal">
+                                        <ul class="flex flex-col gap-3 mt-3 w-full">
+                                            <li><a href="<?= $BASE_URL ?>/teacher/grade_register.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "grades" && $subtab === "grades-register" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Gestão de Notas</a>
+                                            </li>
                                         </ul>
                                         </p>
                                     </div>
