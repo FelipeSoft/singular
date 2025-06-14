@@ -1,11 +1,11 @@
 <?php
 $title = "Singular | Aulas - Execução de Aulas";
-$tab = "lesson";
-$subtab = "lesson_execution";
+$tab = "class";
+$subtab = "class-execution";
 ?>
 <?php require __DIR__ . "/../../partials/header.php" ?>
-<section class="w-full">
-    <div class="flex flex-col w-full">
+<section>
+    <div class="flex flex-col">
         <h1 class="font-semibold text-black text-xl mb-4">Execução de Aulas</h1>
         <div class="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

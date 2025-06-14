@@ -3,31 +3,26 @@ $title = "Singular | Aulas - Planejamento de Aulas";
 $tab = "lesson";
 $subtab = "lesson_planning";
 
-$disciplines = [
+$students = [
     [
         "id" => "1",
-        "name" => "Disciplina 1",
-        "curso" => "Análise e Desenvolvimento de Sistemas"
+        "name" => "Student 1"
     ],
     [
         "id" => "2",
-        "name" => "Disciplina 2",
-        "curso" => "Análise e Desenvolvimento de Sistemas"
+        "name" => "Student 2"
     ],
     [
         "id" => "3",
-        "name" => "Disciplina 3",
-        "curso" => "Análise e Desenvolvimento de Sistemas"
+        "name" => "Student 3"
     ],
     [
         "id" => "4",
-        "name" => "Disciplina 4",
-        "curso" => "Análise e Desenvolvimento de Sistemas"
+        "name" => "Student 4"
     ],
     [
         "id" => "5",
-        "name" => "Disciplina 5",
-        "curso" => "Análise e Desenvolvimento de Sistemas"
+        "name" => "Student 5"
     ],
 ];
 ?>
@@ -175,62 +170,37 @@ $disciplines = [
         <table class="text-black table border border-gray-300">
             <thead class="border-gray-300">
                 <tr class="border-b border-gray-300">
-                    <th class="text-[#747171] ">ID</th>
-                    <th class="text-[#747171]">Disciplina</th>
-                    <th class="text-[#747171] w-1/2">Curso</th>
-                    <th class="text-[#747171] w-[100px] "></th>
-                    <th class="text-[#747171] w-[100px] "></th>
+                    <th class="text-[#747171] w-[30px]">ID</th>
+                    <th class="text-[#747171]">Aluno</th>
+                    <th class="text-[#747171] w-[30px]">P</th>
+                    <th class="text-[#747171] w-[30px]">F</th>
+                    <th class="text-[#747171] w-[30px]">FJ</th>
+                    <th class="text-[#747171] w-[30px]">A</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($disciplines as $discipline): ?>
+                <?php foreach ($students as $student): ?>
                     <tr class="border-b border-gray-300">
-                        <td><?= $discipline['id']; ?></td>
-                        <td><?= $discipline['name']; ?></td>
-                        <td>
-                            <?= $discipline['curso']; ?>
-                        </td>
+                        <td><?= $student['id']; ?></td>
+                        <td><?= $student['name']; ?></td>
                         <td>
                             <div class="flex items-center gap-1">
-                                <a href="">
-                                    <svg class="hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 20H21" stroke="black" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M16.376 3.62198C16.7741 3.22389 17.314 3.00024 17.877 3.00024C18.44 3.00024 18.9799 3.22389 19.378 3.62198C19.7761 4.02007 19.9997 4.55999 19.9997 5.12298C19.9997 5.68596 19.7761 6.22589 19.378 6.62398L7.36798 18.635C7.13007 18.8729 6.836 19.0469 6.51298 19.141L3.64098 19.979C3.55493 20.0041 3.46372 20.0056 3.37689 19.9833C3.29006 19.9611 3.2108 19.9159 3.14742 19.8525C3.08404 19.7892 3.03887 19.7099 3.01662 19.6231C2.99437 19.5362 2.99588 19.445 3.02098 19.359L3.85898 16.487C3.9532 16.1643 4.12722 15.8706 4.36498 15.633L16.376 3.62198Z"
-                                            stroke="black" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M15 5L18 8" stroke="black" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-
-
+                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
                             </div>
                         </td>
                         <td>
                             <div class="flex items-center gap-1">
-                                <a href="">
-                                    <svg class="hover:cursor-pointer" width="27" height="27" viewBox="0 0 27 27" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_109_570)">
-                                            <path d="M24.75 2.25L2.25 24.75" stroke="#F73C39" stroke-width="3.33333"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path
-                                                d="M13.5 24.75C19.7132 24.75 24.75 19.7132 24.75 13.5C24.75 7.2868 19.7132 2.25 13.5 2.25C7.2868 2.25 2.25 7.2868 2.25 13.5C2.25 19.7132 7.2868 24.75 13.5 24.75Z"
-                                                stroke="#F73C39" stroke-width="3.33333" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_109_570">
-                                                <rect width="27" height="27" fill="white" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-
-                                </a>
-
+                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flex items-center gap-1">
+                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flex items-center gap-1">
+                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
                             </div>
                         </td>
 
@@ -241,20 +211,8 @@ $disciplines = [
             </tbody>
         </table>
     </div>
-    <div class="flex justify-between mt-5">
-        <h3 class="text-gray-500">Total de Registros: 40</h3>
-        <nav class="flex items-center gap-x-1">
-            <button type="button" class="btn btn-text">Anterior</button>
-            <div class="flex items-center gap-x-1">
-                <button type="button" class="btn btn-text btn-square aria-[current='page']:text-bg-primary">1</button>
-                <button type="button"
-                    class="btn btn-text btn-square aria-[current='page']:bg-[#37908e] aria-[current='page']:text-white"
-                    aria-current="page"> 2 </button>
-                <button type="button" class="btn btn-text btn-square aria-[current='page']:text-bg-primary">3</button>
-            </div>
-            <button type="button" class="btn btn-text">Próximo</button>
-        </nav>
+    <div class="col-end-4 flex items-end justify-end gap-4 mt-4">
+        <button class="btn bg-black text-white w-24">Salvar</button>
     </div>
-
 </section>
 <?php require __DIR__ . "/../../partials/footer.php" ?>
