@@ -1,5 +1,5 @@
 <?php
-$title = "Singular | Frequência - Controle de Frequência";
+$title = "Singular | Frequência - Acompanhamento de Frequência";
 $tab = "attendance";
 $subtab = "attendance-tracking";
 

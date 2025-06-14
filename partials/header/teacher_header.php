@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . "/../../bootstrap/load_env.php";
+loadEnv(__DIR__ . "/../../.env");
+$BASE_URL = getenv(name: "BASE_URL");
+?>
 <!DOCTYPE html>
 <html lang="pt-br" class="w-full">
 
@@ -9,19 +14,19 @@
     </title>
 
     <!-- important links/scripts -->
-    <link rel="stylesheet" href="/assets/css/output.css" ?>
-    <link rel="stylesheet" href="/assets/css/flatpickr.css" />
+    <link rel="stylesheet" href="<?=$BASE_URL?>/assets/css/output.css" ?>
+    <link rel="stylesheet" href="<?=$BASE_URL?>/assets/css/flatpickr.css" />
 </head>
 
-<body class="w-screen h-screen overflow-x-hidden">
+<body class="w-screen h-full overflow-x-hidden bg-white">
     <div class="flex h-full relative">
         <nav class="fixed top-0 left-0 h-screen w-[300px] border-r border-gray-300 bg-gray-50 z-50">
-            <a href="/index.php" class="border-b border-gray-300 h-[70px] flex items-center">
-                <img class=" ml-3 object-contain w-[150px]" src="/images/sanquim.png" alt="Singular">
+            <a href="<?=$BASE_URL?>/index.php" class="border-b border-gray-300 h-[70px] flex items-center">
+                <img class=" ml-3 object-contain w-[150px]" src="<?=$BASE_URL?>/images/sanquim.png" alt="Singular">
             </a>
             <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto w-full">
                 <li class="text-[#747171] font-semibold">
-                    <a href="/index.php"
+                    <a href="<?=$BASE_URL?>/teacher/index.php"
                         class="flex items-center gap-2 text-sm <?= $tab === "home" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g fill="none" stroke="#747171" stroke-linecap="round" stroke-linejoin="round"
@@ -36,7 +41,7 @@
                 <h2 class="mt-6 font-medium text-sm mb-3 text-[#747171]">Menu</h2>
                 <li class="text-[#747171] font-semibold flex items-center gap-2 w-full mb-5">
                     <div class="accordion divide-neutral/20 divide-y w-full">
-                        <div class="accordion-item <?= $tab === "class" ? "active" : "" ?> w-full" id="class-basic">
+                        <div class="accordion-item <?= $tab === "lesson" ? "active" : "" ?> w-full" id="class-basic">
                             <button class="p-0 w-full accordion-toggle flex flex-col justify-between gap-x-2 text-start"
                                 aria-controls="class-basic-collapse" aria-expanded="true">
                                 <div class="flex items-center justify-between">
@@ -65,17 +70,17 @@
                                     </span>
                                 </div>
                                 <div id="class-basic-collapse"
-                                    class="accordion-content <?= $tab !== "class" ? "hidden" : "" ?> w-full overflow-hidden transition-[height] duration-300"
+                                    class="accordion-content <?= $tab !== "lesson" ? "hidden" : "" ?> w-full overflow-hidden transition-[height] duration-300"
                                     aria-labelledby="class-basic" role="region">
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/teacher/lesson_planning.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento
+                                            <li><a href="<?=$BASE_URL?>/teacher/lesson_planning.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "lesson" && $subtab === "lesson_planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento
                                                     de Aulas</a>
                                             </li>
-                                            <li><a href="/teacher/lesson_execution.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "class" && $subtab === "class-execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução
+                                            <li><a href="<?=$BASE_URL?>/teacher/lesson_execution.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "lesson" && $subtab === "lesson_execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução
                                                     de Aulas</a></li>
                                         </ul>
                                         </p>
@@ -121,11 +126,11 @@
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="/teacher/attendance_take.php"
+                                            <li><a href="<?=$BASE_URL?>/teacher/attendance_take.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "take-attendance" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Realizar
                                                     Chamada</a>
                                             </li>
-                                            <li><a href="/teacher/attendance_tracking.php"
+                                            <li><a href="<?=$BASE_URL?>/teacher/attendance_tracking.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Controle
                                                     de
                                                     Frequência</a></li>
@@ -138,7 +143,7 @@
                 </li>
                 <div class="mt-auto">
                     <li class="text-[#747171] font-semibold mb-5">
-                        <a href="/home" class="flex items-center gap-2 text-sm">
+                        <a href="<?=$BASE_URL?>/home" class="flex items-center gap-2 text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                 <path fill="#747171"
                                     d="m12 1l9.5 5.5v11L12 23l-9.5-5.5v-11zm0 2.311L4.5 7.653v8.694l7.5 4.342l7.5-4.342V7.653zM12 16a4 4 0 1 1 0-8a4 4 0 0 1 0 8m0-2a2 2 0 1 0 0-4a2 2 0 0 0 0 4" />
@@ -147,7 +152,7 @@
                         </a>
                     </li>
                     <li class="text-[#F73C39] font-semibold">
-                        <a href="/actions/logout_action.php" class="flex items-center gap-2 text-sm">
+                        <a href="<?=$BASE_URL?>/actions/logout_action.php" class="flex items-center gap-2 text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24">
                                 <g fill="none" stroke="#F73C39" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2">
@@ -164,7 +169,7 @@
         </nav>
         <div class="w-full ml-[300px]">
             <header class="border-b flex justify-end items-center px-4 border-gray-300 h-[70px] bg-gray-50">
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 mr-7">
                     <div class="flex flex-col items-end text-gray-500">
                         <h2 class="font-semibold">Professor SANQUIM</h2>
                         <p class="text-sm -mt-1">Professor</p>
@@ -182,4 +187,4 @@
                     </svg>
                 </div>
             </header>
-            <main class="bg-white p-4  w-full h-full">
+            <main class="bg-white p-10  w-full h-full">
