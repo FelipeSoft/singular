@@ -19,13 +19,13 @@ session_start();
   <link rel="stylesheet" href="./assets/css/animations.css" />
 </head>
 
-<body class="font-inter overflow-hidden">
-  <section class="flex justify-center relative">
+<body class="font-inter min-h-screen">
+  <section class="flex justify-center items-center h-screen relative">
     <img src="./images/backgroundLogin.png" alt="gradient background image" class=" h-full object-cover fixed animate-[pulse_5s_ease-in_infinite_alternate] w-full">
-    <div class="mx-auto max-w-lg px-6 lg:px-8 absolute py-20">
-      <img src="./images/Sanquim.png" alt="pagedone logo" width="400" class=" mx-auto lg:mb-11 mb-8 object-cover">
+    <div class="mx-auto max-w-lg px-6 lg:px-8 absolute">
+      <img src="./images/Sanquim.png" alt="pagedone logo" width="400" class="mx-auto lg:mb-11 mb-8 object-cover">
       <div class="rounded-2xl bg-white shadow-xl">
-        <form action="./actions/login_action.php" method="POST" class="lg:p-11 p-7 mx-auto rounded-2xl">
+        <form action="./actions/login_action.php" method="POST" class="p-10 mx-auto rounded-2xl">
           <div class="mb-11">
             <h1 class="text-gray-900 text-center font-manrope text-3xl font-bold leading-10 mb-2">Login</h1>
           </div>

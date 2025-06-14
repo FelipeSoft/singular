@@ -1,7 +1,7 @@
 <?php
-$title = "Singular | Alunos - Gestão de Alunos";
-$tab = "profiles";
-$subtab = "students-management";
+$title = "Singular | Professores - Gestão de Notas";
+$tab = "grades";
+$subtab = "grade-register";
 ?>
 <?php require __DIR__ . "/../../partials/header.php" ?>
 <section>
