@@ -7,8 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-amber-50: oklch(98.7% 0.022 95.277);
+    --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-indigo-600: oklch(51.1% 0.262 276.966);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -20,6 +22,7 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-sm: 24rem;
     --container-lg: 32rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
@@ -48,7 +51,6 @@
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
-    --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --blur-xs: 4px;
@@ -1651,52 +1653,6 @@
       }
     }
   }
-  .advance-select-toggle {
-    position: relative;
-    display: inline-flex;
-    width: 100%;
-    flex-shrink: 1;
-    cursor: pointer;
-    appearance: none;
-    align-items: center;
-    background-color: var(--color-base-100);
-    padding-inline-start: calc(0.25rem * 3);
-    padding-inline-end: calc(0.25rem * 10);
-    vertical-align: middle;
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
-    color: var(--color-base-content);
-    webkit-user-select: none;
-    user-select: none;
-    height: var(--size);
-    border-start-start-radius: var(--join-ss, var(--radius-field));
-    border-start-end-radius: var(--join-se, var(--radius-field));
-    border-end-start-radius: var(--join-es, var(--radius-field));
-    border-end-end-radius: var(--join-ee, var(--radius-field));
-    text-overflow: ellipsis;
-    border: var(--border) solid #0000;
-    border-color: var(--input-color);
-    --input-color: var(--color-base-content);
-    @supports (color: color-mix(in lab, red, red)) {
-      --input-color: color-mix(in oklab, var(--color-base-content) 40%, #0000);
-    }
-    --size: calc(var(--size-field, 0.25rem) * 9.5);
-    &:focus, &:focus-within {
-      --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-      --input-color: var(--color-primary);
-      --tw-shadow-color: var(--input-color);
-      @supports (color: color-mix(in lab, red, red)) {
-        --tw-shadow-color: color-mix(in oklab, var(--input-color) 30%, #0000);
-      }
-      outline: 1px solid var(--input-color);
-      border-color: var(--input-color);
-      isolation: isolate;
-    }
-    &:focus-visible {
-      outline: unset;
-    }
-  }
   .sr-only {
     position: absolute;
     width: 1px;
@@ -2226,6 +2182,137 @@
       background-position: 99% center;
     }
   }
+  .textarea {
+    display: inline-flex;
+    min-height: calc(0.25rem * 20);
+    width: 100%;
+    flex-shrink: 1;
+    appearance: none;
+    border-radius: var(--radius-field);
+    background-color: var(--color-base-100);
+    padding-inline: calc(0.25rem * 4);
+    padding-block: calc(0.25rem * 2);
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+    color: var(--color-base-content);
+    &::placeholder {
+      color: var(--color-base-content);
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, var(--color-base-content) 50%, transparent);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-base-content);
+        @supports (color: color-mix(in lab, red, red)) {
+          border-color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+        }
+      }
+    }
+    &:focus-visible {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
+    border: var(--border) solid #0000;
+    border-color: var(--input-color);
+    --input-color: var(--color-base-content);
+    @supports (color: color-mix(in lab, red, red)) {
+      --input-color: color-mix(in oklab, var(--color-base-content) 40%, #0000);
+    }
+    :where(textarea) {
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      &:focus, &:focus-within {
+        --tw-outline-style: none;
+        outline-style: none;
+      }
+    }
+    &:focus, &:focus-within {
+      --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      --input-color: var(--color-primary);
+      --tw-shadow-color: var(--input-color);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-shadow-color: color-mix(in oklab, var(--input-color) 30%, #0000);
+      }
+      outline: 1px solid var(--input-color);
+      border-color: var(--input-color);
+      isolation: isolate;
+    }
+    &:has(> textarea[disabled]), &:is(:disabled, [disabled]) {
+      cursor: not-allowed;
+      border-color: var(--color-base-200);
+      background-color: var(--color-base-200);
+      color: var(--color-base-content);
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
+      }
+      &::placeholder {
+        color: var(--color-base-content);
+        @supports (color: color-mix(in lab, red, red)) {
+          color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+        }
+      }
+    }
+    &:has(> textarea[disabled]) > textarea[disabled] {
+      cursor: not-allowed;
+    }
+    &:has(> textarea) {
+      padding: calc(0.25rem * 0);
+      textarea {
+        height: auto;
+        min-height: calc(0.25rem * 20);
+        width: 100%;
+        &:first-child {
+          padding-block: calc(0.25rem * 2);
+          padding-inline-start: calc(0.25rem * 4);
+        }
+        &:nth-child(2) {
+          padding-block: calc(0.25rem * 2);
+        }
+        &:last-child {
+          padding-block: calc(0.25rem * 2);
+          padding-inline-end: calc(0.25rem * 4);
+        }
+      }
+    }
+    &:has(> .textarea-floating) {
+      padding: calc(0.25rem * 0);
+      :where(.textarea-floating:first-child) > textarea {
+        padding-block: calc(0.25rem * 2);
+        padding-inline-start: calc(0.25rem * 4);
+      }
+      :where(.textarea-floating:nth-child(2)) > textarea {
+        padding-block: calc(0.25rem * 2);
+      }
+      :where(.textarea-floating:last-child) > textarea {
+        padding-block: calc(0.25rem * 2);
+        padding-inline-end: calc(0.25rem * 4);
+      }
+      :where(.textarea-floating:nth-child(2)) .textarea-floating-label, :where(.textarea-floating:last-child) .textarea-floating-label {
+        margin-inline-start: calc(0.25rem * 0);
+      }
+      & * > textarea {
+        width: 100%;
+        height: 100%;
+        min-height: calc(0.25rem * 20);
+      }
+    }
+    &:has(> .textarea-floating) textarea {
+      &::placeholder {
+        color: transparent;
+      }
+      &:focus {
+        &::placeholder {
+          color: var(--color-base-content);
+          @supports (color: color-mix(in lab, red, red)) {
+            color: color-mix(in oklab, var(--color-base-content) 50%, transparent);
+          }
+        }
+      }
+    }
+  }
   .dropdown-menu {
     z-index: 10;
     margin-top: calc(0.25rem * 2);
@@ -2253,6 +2340,57 @@
     transition-duration: 300ms;
     --tw-duration: 300ms;
   }
+  .z-50 {
+    z-index: 50;
+  }
+  .stat {
+    display: inline-grid;
+    width: 100%;
+    column-gap: calc(0.25rem * 4);
+    row-gap: calc(0.25rem * 1);
+    padding-inline: calc(0.25rem * 6);
+    padding-block: calc(0.25rem * 4);
+    grid-template-columns: repeat(1, 1fr);
+    border-color: inherit;
+    .stat-figure {
+      grid-column-start: 2;
+      grid-row: span 3 / span 3;
+      grid-row-start: 1;
+      place-self: center;
+      justify-self: flex-end;
+    }
+    .stat-title {
+      grid-column-start: 1;
+      white-space: nowrap;
+      color: var(--color-base-content);
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, var(--color-base-content) 80%, transparent);
+      }
+    }
+    .stat-value {
+      grid-column-start: 1;
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+      --tw-font-weight: var(--font-weight-semibold);
+      font-weight: var(--font-weight-semibold);
+      white-space: nowrap;
+      color: var(--color-base-content);
+    }
+    .stat-desc {
+      grid-column-start: 1;
+      font-size: var(--text-xs);
+      line-height: var(--tw-leading, var(--text-xs--line-height));
+      white-space: nowrap;
+      color: var(--color-base-content);
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, var(--color-base-content) 50%, transparent);
+      }
+    }
+    .stat-actions {
+      grid-column-start: 1;
+      margin-top: calc(0.25rem * 3);
+      white-space: nowrap;
+    }
   .z-50 {
     z-index: 50;
   }
@@ -2568,9 +2706,6 @@
   }
   .mr-10 {
     margin-right: calc(var(--spacing) * 10);
-  }
-  .mb-0 {
-    margin-bottom: calc(var(--spacing) * 0);
   }
   .mb-0\.5 {
     margin-bottom: calc(var(--spacing) * 0.5);
@@ -3034,8 +3169,14 @@
   .h-1\/3 {
     height: calc(1/3 * 100%);
   }
+  .h-1\/3 {
+    height: calc(1/3 * 100%);
+  }
   .h-2 {
     height: calc(var(--spacing) * 2);
+  }
+  .h-2\/3 {
+    height: calc(2/3 * 100%);
   }
   .h-2\/3 {
     height: calc(2/3 * 100%);
@@ -3222,6 +3363,9 @@
   .w-90 {
     width: calc(var(--spacing) * 90);
   }
+  .w-90 {
+    width: calc(var(--spacing) * 90);
+  }
   .w-110 {
     width: calc(var(--spacing) * 110);
   }
@@ -3236,6 +3380,9 @@
   }
   .w-\[300px\] {
     width: 300px;
+  }
+  .w-\[500px\] {
+    width: 500px;
   }
   .w-full {
     width: 100%;
@@ -3286,6 +3433,20 @@
         box-shadow: none;
       }
     }
+  .max-w-full {
+    max-width: 100%;
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
+  }
+  .max-w-sm {
+    max-width: var(--container-sm);
+  }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .animate-\[pulse_5s_ease-in_infinite_alternate\] {
     animation: pulse 5s ease-in infinite alternate;
@@ -3352,6 +3513,9 @@
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
@@ -3987,6 +4151,36 @@
       }
     }
   }
+  .textarea {
+    &.is-valid, &:has(.is-valid), .validate &:valid, .validate &:has(:valid) {
+      border-color: var(--color-success);
+      &:hover {
+        @media (hover: hover) {
+          border-color: var(--color-success);
+        }
+      }
+      &:has(:hover):not(:focus, :focus-within) {
+        border-color: var(--color-success);
+      }
+      &:focus, &:focus-within {
+        --input-color: var(--color-success);
+      }
+    }
+    &.is-invalid, &:has(.is-invalid), .validate &:invalid, .validate &:has(:invalid) {
+      border-color: var(--color-error);
+      &:hover {
+        @media (hover: hover) {
+          border-color: var(--color-error);
+        }
+      }
+      &:has(:hover):not(:focus, :focus-within) {
+        border-color: var(--color-error);
+      }
+      &:focus, &:focus-within {
+        --input-color: var(--color-error);
+      }
+    }
+  }
   .switch {
     &.is-valid, &:has(.is-valid), .validate &:valid, .validate &:has(:valid) {
       --input-color: var(--color-success);
@@ -4017,6 +4211,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
     }
+  }
+  .border-black {
+    border-color: var(--color-black);
   }
   .border-black {
     border-color: var(--color-black);
@@ -4237,6 +4434,15 @@
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  .btn-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    --btn-p: 0.75rem;
+    --size: calc(var(--size-field, 0.25rem) * 7.5);
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -4575,6 +4781,42 @@
       }
     }
   }
+  .file\:cursor-pointer {
+    &::file-selector-button {
+      cursor: pointer;
+    }
+  }
+  .file\:rounded-md {
+    &::file-selector-button {
+      border-radius: var(--radius-md);
+    }
+  }
+  .file\:border-0 {
+    &::file-selector-button {
+      border-style: var(--tw-border-style);
+      border-width: 0px;
+    }
+  }
+  .file\:bg-\[\#388F8E\] {
+    &::file-selector-button {
+      background-color: #388F8E;
+    }
+  }
+  .file\:px-4 {
+    &::file-selector-button {
+      padding-inline: calc(var(--spacing) * 4);
+    }
+  }
+  .file\:py-2 {
+    &::file-selector-button {
+      padding-block: calc(var(--spacing) * 2);
+    }
+  }
+  .file\:text-white {
+    &::file-selector-button {
+      color: var(--color-white);
+    }
+  }
   .placeholder\:text-gray-400 {
     &::placeholder {
       color: var(--color-gray-400);
@@ -4649,6 +4891,22 @@
     &:focus {
       --tw-outline-style: none;
       outline-style: none;
+    }
+  }
+  .aria-\[current\=\'page\'\]\:text-bg-primary {
+    &[aria-current='page'] {
+      background-color: var(--color-primary);
+      color: var(--color-primary-content);
+    }
+  }
+  .aria-\[current\=\'page\'\]\:bg-\[\#37908e\] {
+    &[aria-current='page'] {
+      background-color: #37908e;
+    }
+  }
+  .aria-\[current\=\'page\'\]\:text-white {
+    &[aria-current='page'] {
+      color: var(--color-white);
     }
   }
   .aria-\[current\=\'page\'\]\:text-bg-primary {
@@ -5705,6 +5963,10 @@ span.flatpickr-weekday, .flatpickr-weekwrapper .flatpickr-weekday {
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @keyframes pulse {
   50% {
     opacity: 0.5;
@@ -5757,7 +6019,6 @@ span.flatpickr-weekday, .flatpickr-weekwrapper .flatpickr-weekday {
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
       --tw-duration: initial;
-      --tw-ease: initial;
     }
   }
 }
