@@ -6,23 +6,23 @@ $subtab = "take-attendance";
 $students = [
     [
         "id" => "1",
-        "name" => "Lucas Manera"
+        "name" => "Student 1"
     ],
     [
         "id" => "2",
-        "name" => "Guilherme "
+        "name" => "Student 2 "
     ],
     [
         "id" => "3",
-        "name" => "Felipe Silva"
+        "name" => "Student 3"
     ],
     [
         "id" => "4",
-        "name" => "João"
+        "name" => "Student 4"
     ],
     [
         "id" => "5",
-        "name" => "Gabriel"
+        "name" => "Student 5"
     ],
 ];
 ?>
@@ -37,9 +37,9 @@ $students = [
             </svg>
             <h1 class="text-gray-500 font-semibold">Configurar</h1>
         </div>
-        <form class="grid grid-cols-3 gap-8 mt-4">
+        <form class="grid grid-cols-3 gap-3 mt-4">
             <script>
-                window.addEventListener('load', function() {
+                window.addEventListener('load', function () {
                     flatpickr('#date', {
                         monthSelectorType: 'static'
                     })
@@ -52,23 +52,26 @@ $students = [
                     id="date" />
             </div>
             <div class="w-full text-gray-500">
-                <label class="label-text text-gray-500" for="classroomgroup">Turma</label>
-                <select name="classroomgroup"
-                    class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
-                    id="classroomgroup">
-                    <option>Engenharia de Software VIII</option>
-                    <option>Cybersegurança</option>
-                </select>
-            </div>
-            <div class="w-full text-gray-500">
                 <label class="label-text text-gray-500" for="course">Curso</label>
                 <select name="course"
                     class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
                     id="course">
-                    <option>Análise e Desenvolvimento de Sistemas</option>
-                    <option>Mecatrônica</option>
+                    <option>Ensino Médio | Pré-vestibulinho</option>
+                    <option>Pré-vestibular</option>
+                    <option>Empreendedorismo</option>
                 </select>
             </div>
+            <div class="w-full text-gray-500">
+                <label class="label-text text-gray-500" for="classroomgroup">Turma</label>
+                <select name="classroomgroup"
+                    class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
+                    id="classroomgroup">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+            </div>
+
             <div class="w-full text-gray-500">
                 <label class="label-text text-gray-500" for="discipline">Disciplina</label>
                 <select name="discipline"
@@ -78,15 +81,7 @@ $students = [
                     <option>Engenharia de Software I</option>
                 </select>
             </div>
-            <div class="w-full text-gray-500">
-                <label class="label-text text-gray-500" for="teather">Professor</label>
-                <select name="teatcher"
-                    class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
-                    id="teatcher">
-                    <option>José</option>
-                    <option>Maria</option>
-                </select>
-            </div>
+
             <div class="col-end-4 flex items-end gap-4">
                 <button class="btn bg-black text-white w-full"><svg width="24" height="24" viewBox="0 0 24 24"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +105,7 @@ $students = [
                     <th class="text-[#747171]">Aluno</th>
                     <th class="text-[#747171] w-[30px]">P</th>
                     <th class="text-[#747171] w-[30px]">FJ</th>
-                   
+
                 </tr>
             </thead>
             <tbody>
@@ -120,15 +115,15 @@ $students = [
                         <td><?= $student['name']; ?></td>
                         <td>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess"  />
+                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" />
                             </div>
                         </td>
                         <td>
                             <div class="flex items-center gap-1">
-                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess"  />
+                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" />
                             </div>
                         </td>
-                        
+
 
                     </tr>
                 <?php endforeach; ?>
@@ -138,6 +133,7 @@ $students = [
         </table>
     </div>
     <div class="col-end-4 flex items-end justify-end gap-4 mt-4">
+       
         <button class="btn bg-black text-white w-24">Salvar</button>
     </div>
 </section>

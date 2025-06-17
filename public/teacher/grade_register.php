@@ -44,7 +44,13 @@ $subtab = "grade-register";
                             <option>Noite</option>
                         </select>
                     </div>
-                    <div class="w-1/3">
+                    <div class="w-1/3 text-gray-500">
+                        <label class="label-text text-gray-500" for="period">Prova/Trabalho</label>
+                        <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
+                            <option>Prova 1</option>
+                            <option>Trabalho 1</option>
+                            <option>Prova 2</option>
+                        </select>
                     </div>
                     <div class="w-1/3 text-gray-500">
                         <label class="label-text text-white" for="btn">.</label>

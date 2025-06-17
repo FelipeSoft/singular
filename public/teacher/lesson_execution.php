@@ -31,23 +31,43 @@ $subtab = "class-execution";
                     id="date" />
             </div>
             <div class="w-full text-gray-500">
-                <label class="label-text text-gray-500" for="discipline">Disciplina</label>
-                <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
-                    <option>Engenharia de Software VIII</option>
-                    <option>Cybersegurança</option>
+                <label class="label-text text-gray-500" for="course">Curso</label>
+                <select name="course"
+                    class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
+                    id="course">
+                    <option>Ensino Médio | Pré-vestibulinho</option>
+                    <option>Pré-vestibular</option>
+                    <option>Empreendedorismo</option>
                 </select>
             </div>
             <div class="w-full text-gray-500">
-                <label class="label-text text-gray-500" for="defaultInput">Disciplina</label>
-                <input type="text" placeholder="John Doe"
-                    class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                    id="defaultInput" />
+                <label class="label-text text-gray-500" for="classroomgroup">Turma</label>
+                <select name="classroomgroup"
+                    class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
+                    id="classroomgroup">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
             </div>
+
             <div class="w-full text-gray-500">
+                <label class="label-text text-gray-500" for="discipline">Disciplina</label>
+                <select name="discipline"
+                    class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
+                    id="discipline">
+                    <option>Matemática Discreta </option>
+                    <option>Engenharia de Software I</option>
+                </select>
+            </div>
+             <div class="w-full text-gray-500">
                 <label class="label-text text-gray-500" for="status">Status</label>
-                <input type="text" placeholder="John Doe"
-                    class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                    id="status" />
+                <select name="status"
+                    class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
+                    id="status">
+                    <option>Ministrada</option>
+                    <option>Não ministrada</option>
+                </select>
             </div>
             <div class="col-end-4 flex items-end justify-end gap-4">
                 <button class="btn btn-error w-16">
@@ -64,8 +84,8 @@ $subtab = "class-execution";
     <div class="flex items-center justify-between mt-8">
         <h1 class="font-semibold text-black text-xl">Execução de Aulas</h1>
         <article class="flex items-center gap-4">
-            <p class="text-gray-500">Definições de Aulas Pendentes: <strong class="text-[#F73C39]">36</strong></p>
-            <p class="text-gray-500">Definições de Aulas Pendentes: <strong class="text-[#F73C39]">1</strong></p>
+            <p class="text-gray-500">Definições de Aulas Ministradas: <strong class="text-[#F73C39]">25</strong></p>
+            <p class="text-gray-500">Definições de Aulas Pendentes: <strong class="text-[#F73C39]">4</strong></p>
         </article>
     </div>
     <div class="flex flex-col gap-4">
@@ -79,7 +99,7 @@ $subtab = "class-execution";
                         <span class="sr-only">Segunda</span>
                     </div>
                     <div>
-                        <h2 class="text-[#F73C39] font-semibold text-xl">Engenharia de Software VIII</h2>
+                        <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
                         <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
                     </div>
                 </div>
