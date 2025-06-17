@@ -4,7 +4,7 @@ loadEnv(__DIR__ . "/../../.env");
 $BASE_URL = getenv(name: "BASE_URL");
 ?>
 <!DOCTYPE html>
-<html lang="pt-br" class="h-full">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -14,19 +14,19 @@ $BASE_URL = getenv(name: "BASE_URL");
     </title>
 
     <!-- important links/scripts -->
-    <link rel="stylesheet" href="<?=$BASE_URL?>/assets/css/output.css" ?>
-    <link rel="stylesheet" href="<?=$BASE_URL?>/assets/css/flatpickr.css" />
+    <link rel="stylesheet" href="<?= $BASE_URL ?>/assets/css/output.css" ?>
+    <link rel="stylesheet" href="<?= $BASE_URL ?>/assets/css/flatpickr.css" />
 </head>
 
-<body class="w-screen h-full overflow-x-hidden bg-white">
+<body class="w-screen min-h-screen overflow-x-hidden bg-white">
     <div class="flex h-full relative">
         <nav class="fixed top-0 left-0 h-screen w-[300px] border-r border-gray-300 bg-gray-50 z-50">
-            <a href="<?=$BASE_URL?>/index.php" class="border-b border-gray-300 h-[70px] flex items-center">
-                <img class=" ml-3 object-contain w-[150px]" src="<?=$BASE_URL?>/images/sanquim.png" alt="Singular">
+            <a href="<?= $BASE_URL ?>/index.php" class="border-b border-gray-300 h-[70px] flex items-center">
+                <img class=" ml-3 object-contain w-[150px]" src="<?= $BASE_URL ?>/images/sanquim.png" alt="Singular">
             </a>
             <ul class="p-4 relative flex flex-col max-h-screen overflow-x-auto w-full">
                 <li class="text-[#747171] font-semibold">
-                    <a href="<?=$BASE_URL?>/teacher/index.php"
+                    <a href="<?= $BASE_URL ?>/teacher/index.php"
                         class="flex items-center gap-2 text-sm <?= $tab === "home" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g fill="none" stroke="#747171" stroke-linecap="round" stroke-linejoin="round"
@@ -75,11 +75,11 @@ $BASE_URL = getenv(name: "BASE_URL");
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="<?=$BASE_URL?>/teacher/lesson_planning.php"
+                                            <li><a href="<?= $BASE_URL ?>/teacher/lesson_planning.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "lesson" && $subtab === "lesson_planning" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Planejamento
                                                     de Aulas</a>
                                             </li>
-                                            <li><a href="<?=$BASE_URL?>/teacher/lesson_execution.php"
+                                            <li><a href="<?= $BASE_URL ?>/teacher/lesson_execution.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "lesson" && $subtab === "lesson_execution" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Execução
                                                     de Aulas</a></li>
                                         </ul>
@@ -126,11 +126,15 @@ $BASE_URL = getenv(name: "BASE_URL");
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
-                                            <li><a href="<?=$BASE_URL?>/teacher/attendance_take.php"
+                                            <li><a href="<?= $BASE_URL ?>/teacher/attendance_take.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "take-attendance" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Realizar
                                                     Chamada</a>
                                             </li>
-                                            <li><a href="<?=$BASE_URL?>/teacher/attendance_tracking.php"
+                                            <li><a href="<?= $BASE_URL ?>/teacher/attendance_change.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-change" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Alterar
+                                                    Chamada
+                                                </a></li>
+                                            <li><a href="<?= $BASE_URL ?>/teacher/attendance_tracking.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Controle
                                                     de
                                                     Frequência</a></li>
@@ -178,7 +182,8 @@ $BASE_URL = getenv(name: "BASE_URL");
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
                                             <li><a href="<?= $BASE_URL ?>/teacher/grade_register.php"
-                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "grades" && $subtab === "grades-register" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Gestão de Notas</a>
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "grades" && $subtab === "grades-register" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Gestão
+                                                    de Notas</a>
                                             </li>
                                         </ul>
                                         </p>
@@ -189,7 +194,7 @@ $BASE_URL = getenv(name: "BASE_URL");
                 </li>
                 <div class="mt-auto">
                     <li class="text-[#747171] font-semibold mb-5">
-                        <a href="<?=$BASE_URL?>/home" class="flex items-center gap-2 text-sm">
+                        <a href="<?= $BASE_URL ?>/teacher/settings.php" class="flex items-center gap-2 text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                 <path fill="#747171"
                                     d="m12 1l9.5 5.5v11L12 23l-9.5-5.5v-11zm0 2.311L4.5 7.653v8.694l7.5 4.342l7.5-4.342V7.653zM12 16a4 4 0 1 1 0-8a4 4 0 0 1 0 8m0-2a2 2 0 1 0 0-4a2 2 0 0 0 0 4" />
@@ -198,7 +203,7 @@ $BASE_URL = getenv(name: "BASE_URL");
                         </a>
                     </li>
                     <li class="text-[#F73C39] font-semibold">
-                        <a href="<?=$BASE_URL?>/actions/logout_action.php" class="flex items-center gap-2 text-sm">
+                        <a href="<?= $BASE_URL ?>/actions/logout_action.php" class="flex items-center gap-2 text-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24">
                                 <g fill="none" stroke="#F73C39" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2">
