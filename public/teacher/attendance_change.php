@@ -1,7 +1,7 @@
 <?php
-$title = "Singular | Frequência - Controle de Frequência";
+$title = "Singular | Frequência - Alterar Chamada";
 $tab = "attendance";
-$subtab = "attendance-tracking";
+$subtab = "attendance-change";
 
 $students = [
   [
@@ -29,7 +29,7 @@ $students = [
 <?php require __DIR__ . "/../../partials/header.php" ?>
 <section>
   <div class="flex flex-col">
-    <h1 class="font-semibold text-black text-xl mb-4">Controle de frequência</h1>
+    <h1 class="font-semibold text-black text-xl mb-4">Alterar Chamada</h1>
     <div class="flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path fill="#000000"
@@ -37,7 +37,7 @@ $students = [
       </svg>
       <h1 class="text-gray-500 font-semibold">Configurar</h1>
     </div>
-<div class="max-h-[70vh] overflow-y-auto">
+
     <form class="grid grid-cols-3 gap-3 mt-4">
       <script>
         window.addEventListener('load', function () {
@@ -46,6 +46,12 @@ $students = [
           })
         })
       </script>
+      <div class="w-full text-gray-500">
+        <label class="label-text text-gray-500" for="date">Data</label>
+        <input name="date" type="text" placeholder="dd/mm/aaaa"
+          class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
+          id="date" />
+      </div>
       <div class="w-full text-gray-500">
         <label class="label-text text-gray-500" for="course">Curso</label>
         <select name="course"
@@ -76,27 +82,6 @@ $students = [
           <option>Engenharia de Software I</option>
         </select>
       </div>
-      <div class="w-full text-gray-500">
-        <label class="label-text text-gray-500" for="year">Ano</label>
-        <select name="year"
-          class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
-          id="year">
-          <option>2022</option>
-          <option>2023</option>
-          <option>2024</option>
-          <option>2025</option>
-        </select>
-      </div>
-      <div class="w-full text-gray-500">
-        <label class="label-text text-gray-500" for="semester">Semestre</label>
-        <select name="semester"
-          class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
-          id="semester">
-          <option>1º Semestre</option>
-          <option>2º Semestre</option>
-       
-        </select>
-      </div>
 
 
 
@@ -111,7 +96,6 @@ $students = [
         <button class="btn bg-black text-white w-24">Filtrar</button>
       </div>
     </form>
-    </div>
   </div>
 </section>
 <section>
@@ -121,9 +105,8 @@ $students = [
         <tr class="border-b border-gray-300">
           <th class="text-[#747171] w-[30px]">ID</th>
           <th class="text-[#747171]">Aluno</th>
-          <th class="text-[#747171] w-[30px]">Aulas presentes</th>
-          <th class="text-[#747171] w-[30px]">Aulas ministradas</th>
-          <th class="text-[#747171] w-[30px]">%</th>
+          <th class="text-[#747171] w-[30px]">P</th>
+          <th class="text-[#747171] w-[30px]">FJ</th>
 
         </tr>
       </thead>
@@ -132,15 +115,17 @@ $students = [
           <tr class="border-b border-gray-300">
             <td><?= $student['id']; ?></td>
             <td><?= $student['name']; ?></td>
-            <td class="text-center">
-              8
+            <td>
+              <div class="flex items-center gap-1">
+                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
+              </div>
             </td>
-            <td class="text-center">
-              10
+            <td>
+              <div class="flex items-center gap-1">
+                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" />
+              </div>
             </td>
-            <td class="text-center">
-              80%
-            </td>
+
 
           </tr>
         <?php endforeach; ?>
@@ -148,6 +133,10 @@ $students = [
 
       </tbody>
     </table>
+  </div>
+  <div class="col-end-4 flex items-end justify-end gap-4 mt-4">
+    
+    <button class="btn bg-black text-white w-24">Salvar</button>
   </div>
 </section>
 <?php require __DIR__ . "/../../partials/footer.php" ?>

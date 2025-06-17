@@ -120,22 +120,35 @@ $students = [
                     class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
                     id="date" />
             </div>
+
             <div class="w-full text-gray-500">
-                <label class="label-text text-gray-500" for="classroomgroup">Curso</label>
-                <select name="classroomgroup"
-                    class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
-                    id="classroomgroup">
-                    <option>Engenharia de Software VIII</option>
-                    <option>Cybersegurança</option>
-                </select>
-            </div>
-            <div class="w-full text-gray-500">
-                <label class="label-text text-gray-500" for="course">Disciplina</label>
+                <label class="label-text text-gray-500" for="course">Curso</label>
                 <select name="course"
                     class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
                     id="course">
-                    <option>Análise e Desenvolvimento de Sistemas</option>
-                    <option>Mecatrônica</option>
+                    <option>Ensino Médio | Pré-vestibulinho</option>
+                    <option>Pré-vestibular</option>
+                    <option>Empreendedorismo</option>
+                </select>
+            </div>
+            <div class="w-full text-gray-500">
+                <label class="label-text text-gray-500" for="classroomgroup">Turma</label>
+                <select name="classroomgroup"
+                    class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
+                    id="classroomgroup">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+            </div>
+
+            <div class="w-full text-gray-500">
+                <label class="label-text text-gray-500" for="discipline">Disciplina</label>
+                <select name="discipline"
+                    class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
+                    id="discipline">
+                    <option>Matemática Discreta </option>
+                    <option>Engenharia de Software I</option>
                 </select>
             </div>
             <div class="w-full text-gray-500">
@@ -147,18 +160,16 @@ $students = [
             <div class="w-full text-gray-500">
                 <label class="label-text text-gray-500" for="discipline">Anexos</label>
                 <input type="file" name="discipline"
-                    class="input bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39]"
+                    class="input file:bg-[#388F8E] file:text-white file:rounded-md file:px-4 file:py-2 file:border-0 file:cursor-pointer bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39]"
                     id="discipline">
             </div>
-            <div>
-
-            </div>
+         
             <div class="flex flex-row justify-end gap-5">
                 <div class="col-end-4 flex items-end justify-end gap-4 mt-4">
                     <button class="btn bg-[#e3e3e3] border-none text-black w-24">Cancelar</button>
                 </div>
                 <div class="col-end-4 flex items-end justify-end gap-4 mt-4">
-                    <button class="btn bg-black text-white w-24">Salvar</button>
+                    <button class="btn bg-black text-white w-24">Enviar</button>
                 </div>
             </div>
 
@@ -170,46 +181,82 @@ $students = [
         <table class="text-black table border border-gray-300">
             <thead class="border-gray-300">
                 <tr class="border-b border-gray-300">
-                    <th class="text-[#747171] w-[30px]">ID</th>
-                    <th class="text-[#747171]">Aluno</th>
-                    <th class="text-[#747171] w-[30px]">P</th>
-                    <th class="text-[#747171] w-[30px]">F</th>
-                    <th class="text-[#747171] w-[30px]">FJ</th>
-                    <th class="text-[#747171] w-[30px]">A</th>
+
+                    <th class="text-black">ID</th>
+                    <th class="text-black">Arquivo</th>
+                    <th class="w-110"></th>
+                    <th class="text-black"></th>
+                    <th class="text-black">Ações</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($students as $student): ?>
-                    <tr class="border-b border-gray-300">
-                        <td><?= $student['id']; ?></td>
-                        <td><?= $student['name']; ?></td>
-                        <td>
-                            <div class="flex items-center gap-1">
-                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex items-center gap-1">
-                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex items-center gap-1">
-                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
-                            </div>
-                        </td>
-                        <td>
-                            <div class="flex items-center gap-1">
-                                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
-                            </div>
-                        </td>
+                <tr class="border-b border-gray-300">
+                    <td>1</td>
+                    <td>slide1.pdf</td>
+                    <td class="w-110"></td>
+                    <td class="text-black">
 
-                    </tr>
-                <?php endforeach; ?>
+                    </td>
 
+                    <td>
+                        <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span
+                                class="icon-[tabler--pencil] size-5"></span></button>
+                        <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span
+                                class="icon-[tabler--trash] size-5"></span></button>
 
+                    </td>
+                </tr>
+                <tr class="border-b border-gray-300">
+                    <td>2</td>
+                    <td>slide2.pdf</td>
+                    <td class="w-110"></td>
+                    <td class="text-black">
+
+                    </td>
+
+                    <td>
+                        <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span
+                                class="icon-[tabler--pencil] size-5"></span></button>
+                        <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span
+                                class="icon-[tabler--trash] size-5"></span></button>
+
+                    </td>
+                </tr>
+                <tr class="border-b border-gray-300">
+                    <td>3</td>
+                    <td>slide3.pdf</td>
+                    <td class="w-110"></td>
+                    <td class="text-black">
+
+                    </td>
+
+                    <td>
+                        <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span
+                                class="icon-[tabler--pencil] size-5"></span></button>
+                        <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span
+                                class="icon-[tabler--trash] size-5"></span></button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>slide4.pdf</td>
+                    <td class="w-110"></td>
+                    <td class="text-black">
+
+                    </td>
+
+                    <td>
+                        <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span
+                                class="icon-[tabler--pencil] size-5"></span></button>
+                        <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span
+                                class="icon-[tabler--trash] size-5"></span></button>
+
+                    </td>
+                </tr>
             </tbody>
         </table>
+
     </div>
     <div class="col-end-4 flex items-end justify-end gap-4 mt-4">
         <button class="btn bg-black text-white w-24">Salvar</button>

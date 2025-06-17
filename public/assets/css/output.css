@@ -14,6 +14,8 @@
     --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-amber-600: oklch(66.6% 0.179 58.318);
+    --color-yellow-200: oklch(94.5% 0.129 101.54);
+    --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-indigo-500: oklch(58.5% 0.233 277.117);
     --color-indigo-600: oklch(51.1% 0.262 276.966);
@@ -1765,52 +1767,6 @@
       padding: calc(0.25rem * 6);
     }
   }
-  .advance-select-toggle {
-    position: relative;
-    display: inline-flex;
-    width: 100%;
-    flex-shrink: 1;
-    cursor: pointer;
-    appearance: none;
-    align-items: center;
-    background-color: var(--color-base-100);
-    padding-inline-start: calc(0.25rem * 3);
-    padding-inline-end: calc(0.25rem * 10);
-    vertical-align: middle;
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
-    color: var(--color-base-content);
-    webkit-user-select: none;
-    user-select: none;
-    height: var(--size);
-    border-start-start-radius: var(--join-ss, var(--radius-field));
-    border-start-end-radius: var(--join-se, var(--radius-field));
-    border-end-start-radius: var(--join-es, var(--radius-field));
-    border-end-end-radius: var(--join-ee, var(--radius-field));
-    text-overflow: ellipsis;
-    border: var(--border) solid #0000;
-    border-color: var(--input-color);
-    --input-color: var(--color-base-content);
-    @supports (color: color-mix(in lab, red, red)) {
-      --input-color: color-mix(in oklab, var(--color-base-content) 40%, #0000);
-    }
-    --size: calc(var(--size-field, 0.25rem) * 9.5);
-    &:focus, &:focus-within {
-      --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-      --input-color: var(--color-primary);
-      --tw-shadow-color: var(--input-color);
-      @supports (color: color-mix(in lab, red, red)) {
-        --tw-shadow-color: color-mix(in oklab, var(--input-color) 30%, #0000);
-      }
-      outline: 1px solid var(--input-color);
-      border-color: var(--input-color);
-      isolation: isolate;
-    }
-    &:focus-visible {
-      outline: unset;
-    }
-  }
   .sr-only {
     position: absolute;
     width: 1px;
@@ -3270,6 +3226,9 @@
   .max-h-3 {
     max-height: calc(var(--spacing) * 3);
   }
+  .max-h-\[70vh\] {
+    max-height: 70vh;
+  }
   .max-h-\[600px\] {
     max-height: 600px;
   }
@@ -3395,20 +3354,11 @@
   .w-2\/6 {
     width: calc(2/6 * 100%);
   }
-  .w-2\/10 {
-    width: calc(2/10 * 100%);
-  }
   .w-3 {
     width: calc(var(--spacing) * 3);
   }
-  .w-3\/1 {
-    width: calc(3/1 * 100%);
-  }
   .w-3\/6 {
     width: calc(3/6 * 100%);
-  }
-  .w-3\/10 {
-    width: calc(3/10 * 100%);
   }
   .w-3\/20 {
     width: calc(3/20 * 100%);
@@ -3416,14 +3366,8 @@
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
-  .w-4\/10 {
-    width: calc(4/10 * 100%);
-  }
   .w-5 {
     width: calc(var(--spacing) * 5);
-  }
-  .w-5\/10 {
-    width: calc(5/10 * 100%);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
@@ -3433,9 +3377,6 @@
   }
   .w-9 {
     width: calc(var(--spacing) * 9);
-  }
-  .w-9\/10 {
-    width: calc(9/10 * 100%);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -3636,9 +3577,6 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
-  }
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
@@ -4375,9 +4313,6 @@
   .bg-amber-50 {
     background-color: var(--color-amber-50);
   }
-  .bg-\[\#e3e3e3\] {
-    background-color: #e3e3e3;
-  }
   .bg-base-100 {
     background-color: var(--color-base-100);
   }
@@ -4857,12 +4792,6 @@
     --tw-shadow-color: var(--color-base-300);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-base-300) 20%, transparent) var(--tw-shadow-alpha), transparent);
-    }
-  }
-  .inset-shadow-gray-700 {
-    --tw-inset-shadow-color: oklch(37.3% 0.034 259.733);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-inset-shadow-color: color-mix(in oklab, var(--color-gray-700) var(--tw-inset-shadow-alpha), transparent);
     }
   }
   .inset-shadow-gray-700 {
@@ -6239,6 +6168,10 @@ span.flatpickr-weekday, .flatpickr-weekwrapper .flatpickr-weekday {
   inherits: false;
 }
 @property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
   syntax: "*";
   inherits: false;
 }
