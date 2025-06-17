@@ -13,7 +13,8 @@ $subtab = "users-management";
             </svg>
             <span class="text-gray-500">Manutenção</span>
         </h2>
-        <form action="./actions/user_maintenance_action.php" method="POST" class="flex flex-wrap gap-4">
+        <?php require_once __DIR__ . "/../../partials/toast.php"; ?>
+        <form action="../../actions/users/create_user.php" method="POST" class="flex flex-wrap gap-4">
             <script>
                 window.addEventListener('load', function() {
                     flatpickr('#date', {
@@ -30,42 +31,44 @@ $subtab = "users-management";
             <div class="flex items-center gap-4 w-full">
                 <div class="flex items-center gap-4 w-full">
                     <div class="w-1/3 text-gray-500">
-                        <label class="label-text text-gray-500" for="discipline">Nome</label>
-                        <input type="text" placeholder="ex.: João Silva"
+                        <label class="label-text text-gray-500" for="user_name"><span class="text-rose-700 mr-0.5">*</span>Nome</label>
+                        <input value="<?= $_SESSION["form_data"]["name"] ?? "" ?>" type="text" placeholder="ex.: João Silva"
                             class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                            id="name" name="user_name" />
+                            id="user_name" name="user_name" />
                     </div>
                     <div class="w-1/3 text-gray-500">
-                        <label class="label-text text-gray-500" for="discipline">E-mail</label>
-                        <input type="text" placeholder="ex.: joao.silva@teste.com.br"
+                        <label class="label-text text-gray-500" for="user_email"><span class="text-rose-700 mr-0.5">*</span>E-mail</label>
+                        <input value="<?= $_SESSION["form_data"]["email"] ?? "" ?>" type="text" placeholder="ex.: joao.silva@teste.com.br"
                             class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                            id="name" />
+                            id="user_email" name="user_email" />
                     </div>
                     <div class="w-1/3 text-gray-500">
-                        <label class="label-text text-gray-500" for="discipline">Perfil</label>
-                        <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
-                            <option>Aluno</option>
-                            <option>Professor</option>
-                            <option>Coordenador</option>
+                        <label class="label-text text-gray-500" for="user_level">
+                            <span class="text-rose-700 mr-0.5">*</span>Perfil
+                        </label>
+                        <?php $selectedLevel = $_SESSION["form_data"]["level"] ?? ""; ?>
+                        <select id="user_level" name="user_level" class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select">
+                            <option value="1" <?= $selectedLevel == "1" ? "selected" : "" ?>>Aluno</option>
+                            <option value="2" <?= $selectedLevel == "2" ? "selected" : "" ?>>Professor</option>
+                            <option value="3" <?= $selectedLevel == "3" ? "selected" : "" ?>>Coordenador</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="flex items-end gap-4 w-full">
                 <div class="w-1/2 text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">Senha</label>
+                    <label class="label-text text-gray-500" for="user_password"><span class="text-rose-700 mr-0.5">*</span>Senha</label>
                     <input type="password"
                         class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                        id="name" />
+                        id="user_password" name="user_password" />
                 </div>
                 <div class="w-1/2 text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">Confirmar Senha</label>
+                    <label class="label-text text-gray-500" for="discipline"><span class="text-rose-700 mr-0.5">*</span>Confirmar Senha</label>
                     <input type="password"
                         class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                        id="name" />
+                        id="user_confirm_password" name="user_confirm_password" />
                 </div>
                 <div class="flex items-center gap-4">
-                    <button class="btn bg-[#E3E3E3] text-black w-24">Cancelar</button>
                     <button class="btn bg-black text-white w-24">Salvar</button>
                 </div>
             </div>
@@ -94,11 +97,11 @@ $subtab = "users-management";
             </div>
             <div class="flex items-end gap-4 w-full">
                 <div class="w-1/2 text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">Perfil</label>
-                    <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
-                        <option>Coordenador</option>
-                        <option>Professor</option>
-                        <option>Aluno</option>
+                    <label class="label-text text-gray-500" for="user_level"><span class="text-rose-700 mr-0.5">*</span>Perfil</label>
+                    <select id="user_level" name="user_level" class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select">
+                        <option value="1">Aluno</option>
+                        <option value="2">Professor</option>
+                        <option value="3" selected>Coordenador</option>
                     </select>
                 </div>
                 <div class="w-1/2 text-gray-500">
