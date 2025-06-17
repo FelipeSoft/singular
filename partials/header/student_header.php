@@ -16,6 +16,11 @@ $BASE_URL = getenv(name: "BASE_URL");
     <!-- important links/scripts -->
     <link rel="stylesheet" href="<?= $BASE_URL ?>/assets/css/output.css" ?>
     <link rel="stylesheet" href="<?= $BASE_URL ?>/assets/css/flatpickr.css" />
+    <style>
+        #file-upload-button {
+            background: red;
+        }
+    </style>
 </head>
 
 <body class="w-screen h-full overflow-x-hidden bg-white">
