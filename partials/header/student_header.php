@@ -4,7 +4,7 @@ loadEnv(__DIR__ . "/../../.env");
 $BASE_URL = getenv(name: "BASE_URL");
 ?>
 <!DOCTYPE html>
-<html lang="pt-br" class="h-full">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -23,7 +23,7 @@ $BASE_URL = getenv(name: "BASE_URL");
     </style>
 </head>
 
-<body class="w-screen h-full overflow-x-hidden bg-white">
+<body class="w-screen min-h-screen overflow-x-hidden bg-white">
     <div class="flex h-full relative">
         <nav class="hidden md:block fixed top-0 left-0 h-screen overflow-y-auto pb-20 w-[300px] border-r border-gray-300 bg-gray-50 z-50">
             <a href="<?= $BASE_URL ?>/index.php" class="border-b border-gray-300 h-[70px] flex items-center">
@@ -287,4 +287,4 @@ $BASE_URL = getenv(name: "BASE_URL");
                     </svg>
                 </div>
             </header>
-            <main class="bg-white p-10 w-full h-full">
+            <main class="bg-white p-10 h-full">

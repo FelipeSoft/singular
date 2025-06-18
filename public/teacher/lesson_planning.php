@@ -27,7 +27,7 @@ $students = [
 ];
 ?>
 <?php require __DIR__ . "/../../partials/header.php" ?>
-<section class="p-4">
+<section>
     <div class="flex flex-col">
         <div class="flex flex-row items-center justify-between mb-5">
             <h1 class="font-semibold text-black text-xl">Planejamento de Aulas</h1>

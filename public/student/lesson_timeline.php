@@ -252,7 +252,7 @@ $subtab = "class-timeline";
                 <div class="bg-white text-gray-500 border rounded-md border-gray-300 ">
                     <div class="stat w-90 flex-col flex gap-5 ">
                         <div class=" text-2xl">Matemática - 020</div>
-                        <p>conteúdo bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                        <p class="">Os alunos assumem o papel de assistentes de um detetive que precisa resolver um caso misterioso usando conceitos matemáticos. Eles devem identificar padrões e completar sequências numéricas para solucionar o mistério. </p>
                         <div class="flex justify-between">
                             <p class="text-gray-400 text-md">Horário: 07:00</p>
                             <p class="text-gray-400 text-md ">Prof: Thales</p>
@@ -263,7 +263,7 @@ $subtab = "class-timeline";
                 <div class="bg-white text-gray-500 border rounded-md border-gray-300 ">
                     <div class="stat w-90 flex-col flex gap-5 ">
                         <div class=" text-2xl">Português - 019</div>
-                        <p>conteúdo bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                        <p>Analisando poemas e músicas, os alunos identificam e discutem o uso de figuras de linguagem, como metáforas e hipérboles, em diferentes contextos literários. </p>
                         <div class="flex justify-between">
                             <p class="text-gray-400 text-md">Horário: 07:45</p>
                             <p class="text-gray-400 text-md ">Prof: Thales</p>
@@ -274,7 +274,7 @@ $subtab = "class-timeline";
                 <div class="bg-white text-gray-500 border rounded-md border-gray-300 ">
                     <div class="stat w-90 flex-col flex gap-5 ">
                         <div class=" text-2xl">Filosofia - 005</div>
-                        <p>conteúdo bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                        <p>Os alunos irão analisar conceitos fundamentais da filosofia, como ética, lógica e pensamento crítico, e como eles influenciam a sociedade atual.</p>
                         <div class="flex justify-between">
                             <p class="text-gray-400 text-md">Horário: 08:30</p>
                             <p class="text-gray-400 text-md ">Prof: Thales</p>
@@ -285,7 +285,7 @@ $subtab = "class-timeline";
                 <div class="bg-white text-gray-500 border rounded-md border-gray-300 ">
                     <div class="stat w-90 flex-col flex gap-5 ">
                         <div class=" text-2xl">Filosofia - 005</div>
-                        <p>conteúdo bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                        <p>Os alunos irão analisar conceitos fundamentais da filosofia, como ética, lógica e pensamento crítico, e como eles influenciam a sociedade atual.</p>
                         <div class="flex justify-between">
                             <p class="text-gray-400 text-md">Horário: 08:30</p>
                             <p class="text-gray-400 text-md ">Prof: Thales</p>
@@ -296,7 +296,7 @@ $subtab = "class-timeline";
                 <div class="bg-white text-gray-500 border rounded-md border-gray-300 ">
                     <div class="stat w-90 flex-col flex gap-5 ">
                         <div class=" text-2xl">Filosofia - 005</div>
-                        <p>conteúdo bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                        <p>Os alunos irão analisar conceitos fundamentais da filosofia, como ética, lógica e pensamento crítico, e como eles influenciam a sociedade atual.</p>
                         <div class="flex justify-between">
                             <p class="text-gray-400 text-md">Horário: 08:30</p>
                             <p class="text-gray-400 text-md ">Prof: Thales</p>
@@ -307,7 +307,7 @@ $subtab = "class-timeline";
                 <div class="bg-white text-gray-500 border rounded-md border-gray-300 ">
                     <div class="stat w-90 flex-col flex gap-5 ">
                         <div class=" text-2xl">Filosofia - 005</div>
-                        <p>conteúdo bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                        <p>Os alunos irão analisar conceitos fundamentais da filosofia, como ética, lógica e pensamento crítico, e como eles influenciam a sociedade atual.</p>
                         <div class="flex justify-between">
                             <p class="text-gray-400 text-md">Horário: 08:30</p>
                             <p class="text-gray-400 text-md ">Prof: Thales</p>
@@ -318,7 +318,7 @@ $subtab = "class-timeline";
                 <div class="bg-white text-gray-500 border rounded-md border-gray-300 ">
                     <div class="stat w-90 flex-col flex gap-5 ">
                         <div class=" text-2xl">Filosofia - 005</div>
-                        <p>conteúdo bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                        <p>Os alunos irão analisar conceitos fundamentais da filosofia, como ética, lógica e pensamento crítico, e como eles influenciam a sociedade atual.</p>
                         <div class="flex justify-between">
                             <p class="text-gray-400 text-md">Horário: 08:30</p>
                             <p class="text-gray-400 text-md ">Prof: Thales</p>

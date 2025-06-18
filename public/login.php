@@ -44,8 +44,6 @@ session_start();
             <span class="text-[#36918f] hover:text-[#E0A400] transition-all duration-500 text-right text-base font-normal leading-6">Esqueceu sua senha?</span>
           </a>
           <button class="w-full h-12 cursor-pointer text-white text-center text-base font-semibold leading-6 rounded-full hover:bg-[#E0A400] transition-all duration-500 bg-[#36918f] shadow-sm mb-11">Entrar</button>
-          <a href="javascript:;" class="flex justify-center text-gray-900 text-base font-medium leading-6"> Não possui uma conta? <span class="text-[#36918f] hover:text-[#E0A400] transition-all duration-500 font-semibold pl-3"> Registrar</span>
-          </a>
         </form>
       </div>
     </div>
