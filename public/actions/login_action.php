@@ -9,11 +9,12 @@ if ($email && $password) {
     $statement = $connection->prepare("SELECT u.id, u.name, u.email, u.level, u.password FROM users AS u WHERE email = :email;");
     $statement->bindValue(":email", $email, PDO::PARAM_STR);
     $statement->execute();
-    
+
     $data = $statement->fetchAll(PDO::FETCH_ASSOC);
     $correctPassword = $data[0]["password"];
-    
-    if ($correctPassword === $password) {
+    $isCorrectPassword = password_verify($password, $correctPassword);
+
+    if ($isCorrectPassword) {
         $_SESSION["logged_user"] = [
             "id" => $data[0]["id"],
             "name" => $data[0]["name"],
@@ -21,7 +22,7 @@ if ($email && $password) {
             "level" => $data[0]["level"]
         ];
         switch ($data[0]["level"]) {
-            case 1: 
+            case 1:
                 header("Location: ./../student/index.php");
                 die;
             case 2:
@@ -30,9 +31,13 @@ if ($email && $password) {
             case 3:
                 header("Location: ./../coordinator/index.php");
                 die;
+            default:
+                $_SESSION["flash"] = "Acesso negado. Tente novamente.";
+                header("Location: ./../../login.php");
+                die;
         }
     }
-    
+
     $_SESSION["flash"] = "E-mail e/ou senha incorretos";
     header("Location: ../login.php");
     die;
