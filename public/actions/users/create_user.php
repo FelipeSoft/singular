@@ -2,6 +2,7 @@
 require_once __DIR__ . "/../../../bootstrap/connection.php";
 session_start();
 
+$userId = filter_input(INPUT_POST, "user_id", FILTER_SANITIZE_SPECIAL_CHARS);
 $name = filter_input(INPUT_POST, "user_name", FILTER_SANITIZE_SPECIAL_CHARS);
 $email = filter_input(INPUT_POST, "user_email", FILTER_VALIDATE_EMAIL);
 $level = filter_input(INPUT_POST, "user_level", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -23,7 +24,7 @@ if ($name && $email && $level && $password && $confirm_password) {
     $rowsCount = $statement->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
 
     if ($rowsCount > 0) {
-         $_SESSION["flash"] = [
+        $_SESSION["flash"] = [
             "message" => "O e-mail informado já está em uso.",
             "variant" => "error"
         ];
@@ -63,7 +64,6 @@ if ($name && $email && $level && $password && $confirm_password) {
         "message" => "O usuário foi salvo com sucesso!",
         "variant" => "success"
     ];
-    $_SESSION["form_data"] = "";
     header("Location: ../../coordinator/users_management.php");
     die;
 }
@@ -73,3 +73,4 @@ $_SESSION["flash"] = [
     "variant" => "error"
 ];
 header("Location: ../../coordinator/users_management.php");
+die;
