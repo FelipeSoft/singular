@@ -7,7 +7,7 @@ $subtab = "coordinators-management";
 <section>
 
     <h1 class="font-semibold text-black text-xl mb-4 flex items-center space-x-1">
-        Estrutura Acadêmica
+        <a href="/coordinator/lesson_academic_structure.php" class="hover:underline">Estrutura Acadêmica</a>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mt-1">
             <path d="M9 18L15 12L9 6" stroke="#747171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
@@ -71,13 +71,11 @@ $subtab = "coordinators-management";
                             </div>
                         </div>
                     </div>
-                    <div class="w-3/6 text-gray-500">
-                        <label class="label-text text-gray-500" for="discipline">Curso</label>
-                        <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
-                            <option>Curso1</option>
-                            <option>Curso2</option>
-                            <option>Curso3</option>
-                        </select>
+                    <div class="w-full text-gray-500">
+                        <label class="label-text text-gray-500" for="discipline">Nome do curso</label>
+                        <input type="password"
+                            class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
+                            id="name" />
                     </div>
                     <div class="w-2/6 text-gray-500">
                         <div class="flex gap-2 items-center">
@@ -95,7 +93,6 @@ $subtab = "coordinators-management";
                                 </defs>
                             </svg>
                         </div>
-
                         <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
                             <option>SIM</option>
                             <option>NÃO</option>
@@ -103,14 +100,8 @@ $subtab = "coordinators-management";
                     </div>
                 </div>
             </div>
-            <div class="flex items-end gap-4 w-full">
-                <div class="w-full text-gray-500">
-                    <label class="label-text text-gray-500" for="discipline">Nome da disciplina</label>
-                    <input type="password"
-                        class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-                        id="name" />
-                </div>
-                <div class="flex items-center gap-4">
+            <div class="w-full flex justify-end">
+                <div class="flex gap-4">
                     <button class="btn bg-[#E3E3E3] text-black w-24">Cancelar</button>
                     <button class="btn bg-black text-white w-24">Salvar</button>
                 </div>
@@ -130,20 +121,19 @@ $subtab = "coordinators-management";
                     class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
                     id="date" />
             </div>
-            
         </form>
         <div class="w-full overflow-x-auto mt-4">
             <table class="text-black table border border-gray-300">
                 <thead class="border-gray-300">
                     <tr class="border-b border-gray-300">
                         <th class="text-black w-1/10">ID</th>
-                        <th class="text-black w-8/10">Nome da disciplina</th>
+                        <th class="text-black w-8/10">Nome do curso</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="border-b border-gray-300">
                         <td>1</td>
-                        <td>Matemática</td>
+                        <td>Ensino Médio | Pré-vestibulinho</td>
                         <td>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
@@ -151,8 +141,8 @@ $subtab = "coordinators-management";
                         </td>
                     </tr>
                     <tr class="border-b border-gray-300">
-                        <td>1</td>
-                        <td>Matemática</td>
+                        <td>2</td>
+                        <td>Pré-vestibular</td>
                         <td>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
@@ -160,17 +150,8 @@ $subtab = "coordinators-management";
                         </td>
                     </tr>
                     <tr class="border-b border-gray-300">
-                        <td>1</td>
-                        <td>Matemática</td>
-                        <td>
-                            <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
-                            <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
-                        </td>
-                        </td>
-                    </tr>
-                    <tr class="border-b border-gray-300">
-                        <td>1</td>
-                        <td>Matemática</td>
+                        <td>3</td>
+                        <td>Empreendedorismo</td>
                         <td>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>

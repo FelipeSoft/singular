@@ -78,7 +78,7 @@ $subtab = "academic-structure";
                     <p class="text-gray-400 font-semibold">Administre os Cursos da sua instituição</h2>
                 </div>
             </div>
-            <a href="/">
+            <a href="/coordinator/courses_register.php">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
                     <path fill="#747171"
                         d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z" />
@@ -106,7 +106,7 @@ $subtab = "academic-structure";
                     <p class="text-gray-400 font-semibold">Administre as Disciplinas da sua instituição</h2>
                 </div>
             </div>
-            <a href="/">
+            <a href="/coordinator/disciplines_register.php">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
                     <path fill="#747171"
                         d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z" />
@@ -114,7 +114,7 @@ $subtab = "academic-structure";
                 <span class="sr-only">Ver detalhes da aula</span>
             </a>
         </div>
-        <div class="flex items-center justify-between p-4 border border-gray-300 rounded-md">
+        <!-- <div class="flex items-center justify-between p-4 border border-gray-300 rounded-md">
             <div class="flex items-center gap-4">
                 <div
                     class="border flex flex-col items-center justify-center rounded-full h-16 w-16 text-black border-gray-300 text-xl font-semibold">
@@ -154,8 +154,8 @@ $subtab = "academic-structure";
                 </svg>
                 <span class="sr-only">Ver detalhes da aula</span>
             </a>
-        </div>
-        <div class="flex items-center justify-between p-4 border border-gray-300 rounded-md">
+        </div> -->
+        <!-- <div class="flex items-center justify-between p-4 border border-gray-300 rounded-md">
             <div class="flex items-center gap-4">
                 <div
                     class="border flex flex-col items-center justify-center rounded-full h-16 w-16 text-black border-gray-300 text-xl font-semibold">
@@ -185,7 +185,7 @@ $subtab = "academic-structure";
                 </svg>
                 <span class="sr-only">Ver detalhes da aula</span>
             </a>
-        </div>
+        </div> -->
     </article>
 </section>
 <?php require __DIR__ . "/../../partials/footer.php" ?>
