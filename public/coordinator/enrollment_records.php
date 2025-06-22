@@ -28,7 +28,7 @@ $subtab = "enrollment-records";
                 <div class="flex items-center gap-4 w-full">
                     <div class="w-1/3 text-gray-500">
                         <label class="label-text text-gray-500" for="discipline">Nome</label>
-                    <input type="text" placeholder="Fulano de tal"
+                    <input type="text" placeholder="ex.: Aluno 1"
                         class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
                         id="name" />
                     </div>
