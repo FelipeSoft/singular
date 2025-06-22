@@ -64,7 +64,8 @@ if ($name || $email || $level || ($password && $confirm_password)) {
     $statement->bindValue(":name", $name ?? $foundUserToUpdate["name"], PDO::PARAM_STR);
     $statement->bindValue(":email", $email ?? $foundUserToUpdate["email"], PDO::PARAM_STR);
 
-    $passwordHash = $password ? password_hash($password, PASSWORD_DEFAULT) : $foundUserToUpdate["password"];
+    // $passwordHash = $password ? password_hash($password, PASSWORD_DEFAULT) : $foundUserToUpdate["password"];
+    $passwordHash = $password;
     $statement->bindValue(":password", $passwordHash, PDO::PARAM_STR);
 
     $statement->bindValue(":level", $level ?? $foundUserToUpdate["level"], PDO::PARAM_STR);

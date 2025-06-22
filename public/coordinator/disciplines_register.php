@@ -7,7 +7,7 @@ $subtab = "coordinators-management";
 <section>
 
     <h1 class="font-semibold text-black text-xl mb-4 flex items-center space-x-1">
-        Estrutura Acadêmica
+        <a href="/coordinator/lesson_academic_structure.php" class="hover:underline">Estrutura Acadêmica</a>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mt-1">
             <path d="M9 18L15 12L9 6" stroke="#747171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
@@ -130,7 +130,7 @@ $subtab = "coordinators-management";
                     class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
                     id="date" />
             </div>
-            
+
         </form>
         <div class="w-full overflow-x-auto mt-4">
             <table class="text-black table border border-gray-300">
