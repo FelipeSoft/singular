@@ -10,7 +10,7 @@ $subtab = "enroll-student";
         <div class="flex flex-wrap gap-4">
             <div class="w-1/2 text-gray-500">
                 <label class="label-text text-gray-500" for="discipline">Nome</label>
-                <input type="text" placeholder="Fulano de tal"
+                <input type="text" placeholder="ex.: Aluno 1"
                     class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
                     id="name" />
             </div>
