@@ -27,7 +27,7 @@ $subtab = "coordinators-management";
             </svg>
             <h2 class="text-black">Informativo</h2>
         </div>
-        <p>
+        <p class="text-gray-400">
             Na sessão abaixo, para editar ou adicionar uma nova disciplina, basta utilizar o formulário multifunções logo abaixo.
         </p>
     </div>
@@ -74,9 +74,9 @@ $subtab = "coordinators-management";
                     <div class="w-3/6 text-gray-500">
                         <label class="label-text text-gray-500" for="discipline">Curso</label>
                         <select class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select" id="discipline">
-                            <option>Curso1</option>
-                            <option>Curso2</option>
-                            <option>Curso3</option>
+                            <option>Ensino Médio | Pré-Vestibulinho</option>
+                            <option>Pré-vestibular</option>
+                            <option>Empreendedorismo</option>
                         </select>
                     </div>
                     <div class="w-2/6 text-gray-500">
@@ -136,45 +136,56 @@ $subtab = "coordinators-management";
             <table class="text-black table border border-gray-300">
                 <thead class="border-gray-300">
                     <tr class="border-b border-gray-300">
-                        <th class="text-black w-1/10">ID</th>
-                        <th class="text-black w-8/10">Nome da disciplina</th>
+                        <td class="text-black">ID</td>
+                        <td class="text-black">NOME DA DISCIPLINA</td>
+                        <td class="text-black">PERTENCE AO CURSO</td>
+                        <td class="text-right"><td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="border-b border-gray-300">
                         <td>1</td>
                         <td>Matemática</td>
-                        <td>
+                        <td class="text-gray-500">Ensino Médio | Pré-Vestibulinho</td>
+                        <td class="text-right flex justify-end w-full">
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
-                        </td>
                         </td>
                     </tr>
                     <tr class="border-b border-gray-300">
-                        <td>1</td>
-                        <td>Matemática</td>
-                        <td>
+                        <td>2</td>
+                        <td>Português</td>
+                        <td class="text-gray-500">Ensino Médio | Pré-Vestibulinho</td>
+                        <td class="text-right flex justify-end w-full">
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
-                        </td>
                         </td>
                     </tr>
                     <tr class="border-b border-gray-300">
-                        <td>1</td>
-                        <td>Matemática</td>
-                        <td>
+                        <td>3</td>
+                        <td>História</td>
+                        <td class="text-gray-500">Ensino Médio | Pré-Vestibulinho</td>
+                        <td class="text-right flex justify-end w-full">
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
-                        </td>
                         </td>
                     </tr>
                     <tr class="border-b border-gray-300">
-                        <td>1</td>
-                        <td>Matemática</td>
-                        <td>
+                        <td>4</td>
+                        <td>Geografia</td>
+                        <td class="text-gray-500">Ensino Médio | Pré-Vestibulinho</td>
+                        <td class="text-right flex justify-end w-full">
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
                             <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
                         </td>
+                    </tr>
+                    <tr class="border-b border-gray-300">
+                        <td>5</td>
+                        <td>Ciências</td>
+                        <td class="text-gray-500">Ensino Médio | Pré-Vestibulinho</td>
+                        <td class="text-right flex justify-end w-full">
+                            <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--pencil] size-5"></span></button>
+                            <button class="btn btn-circle btn-text btn-sm" aria-label="Action button"><span class="icon-[tabler--trash] size-5"></span></button>
                         </td>
                     </tr>
                 </tbody>

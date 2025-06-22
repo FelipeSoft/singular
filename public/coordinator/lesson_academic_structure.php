@@ -26,7 +26,7 @@ $subtab = "academic-structure";
                     </svg>
                     <h2 class="text-[#000000] font-semibold">O que é a Estrutura Acadêmica?</h2>
                 </div>
-                <p class="text-gray-400 font-semibold">
+                <p class="text-gray-400">
                     A definição da Estrutura Acadêmica, que é baseada em Cursos e Disciplinas, afetará diretamente na
                     categorização das aulas. Dentro de cada Curso, haverá um conjunto de Disciplinas a serem ministradas.
                     </p>
