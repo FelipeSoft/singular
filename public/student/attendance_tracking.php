@@ -6,30 +6,50 @@ $subtab = "attendance-tracking";
 $students = [
   [
     "id" => "1",
-    "name" => "Student 1"
+    "discipline" => "Matemática",
+    "lessons_total" => 10,
+    "abscents" => 2,
+    "watched" => 8,
+    "attendance_percentage" => "80.00%"
   ],
   [
     "id" => "2",
-    "name" => "Student 2"
+    "discipline" => "Português",
+    "lessons_total" => 10,
+    "abscents" => 2,
+    "watched" => 8,
+    "attendance_percentage" => "80.00%"
   ],
   [
     "id" => "3",
-    "name" => "Student 3"
+    "discipline" => "História",
+    "lessons_total" => 10,
+    "abscents" => 2,
+    "watched" => 8,
+    "attendance_percentage" => "80.00%"
   ],
   [
     "id" => "4",
-    "name" => "Student 4"
+    "discipline" => "Geografia",
+    "lessons_total" => 10,
+    "abscents" => 2,
+    "watched" => 8,
+    "attendance_percentage" => "80.00%"
   ],
   [
     "id" => "5",
-    "name" => "Student 5"
+    "discipline" => "Ciências",
+    "lessons_total" => 10,
+    "abscents" => 2,
+    "watched" => 8,
+    "attendance_percentage" => "80.00%"
   ],
 ];
 ?>
 <?php require __DIR__ . "/../../partials/header.php" ?>
 <section>
   <div class="flex flex-col">
-    <h1 class="font-semibold text-black text-xl mb-4">Realizar Chamada</h1>
+    <h1 class="font-semibold text-black text-xl mb-4">Acompanhamento de Frequência</h1>
     <div class="flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <path fill="#000000"
@@ -37,70 +57,57 @@ $students = [
       </svg>
       <h1 class="text-gray-500 font-semibold">Configurar</h1>
     </div>
-
-    <form class="grid grid-cols-3 gap-8 mt-4">
-      <script>
-        window.addEventListener('load', function() {
-          flatpickr('#date', {
-            monthSelectorType: 'static'
+    <div class="max-h-[70vh] overflow-y-auto">
+      <form class="grid grid-cols-3 gap-3 mt-4">
+        <script>
+          window.addEventListener('load', function() {
+            flatpickr('#date', {
+              monthSelectorType: 'static'
+            })
           })
-        })
-      </script>
-      <div class="w-full text-gray-500">
-        <label class="label-text text-gray-500" for="date">Data</label>
-        <input name="date" type="text" placeholder="dd/mm/aaaa"
-          class="input bg-white text-gray-500 placeholder:text-gray-400 border-gray-300 focus:outline-[#F73C39]"
-          id="date" />
-      </div>
-      <div class="w-full text-gray-500">
-        <label class="label-text text-gray-500" for="classroomgroup">Turma</label>
-        <select name="classroomgroup"
-          class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
-          id="classroomgroup">
-          <option>Engenharia de Software VIII</option>
-          <option>Cybersegurança</option>
-        </select>
-      </div>
-      <div class="w-full text-gray-500">
-        <label class="label-text text-gray-500" for="course">Curso</label>
-        <select name="course"
-          class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
-          id="course">
-          <option>Análise e Desenvolvimento de Sistemas</option>
-          <option>Mecatrônica</option>
-        </select>
-      </div>
-      <div class="w-full text-gray-500">
-        <label class="label-text text-gray-500" for="discipline">Disciplina</label>
-        <select name="discipline"
-          class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
-          id="discipline">
-          <option>Matemática Discreta </option>
-          <option>Engenharia de Software I</option>
-        </select>
-      </div>
-      <div class="w-full text-gray-500">
-        <label class="label-text text-gray-500" for="teather">Professor</label>
-        <select name="teatcher"
-          class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
-          id="teatcher">
-          <option>José</option>
-          <option>Maria</option>
-        </select>
-      </div>
-
-
-      <div class="col-end-4 flex items-end justify-end gap-4">
-        <button class="btn btn-error w-16">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M13.758 19.414L9 21v-8.5L4.52 7.572A2 2 0 0 1 4 6.227V4h16v2.172a2 2 0 0 1-.586 1.414L15 12v1.5m7 8.5l-5-5m0 5l5-5" />
-          </svg>
-          <span class="sr-only">Remover filtro</span>
-        </button>
-        <button class="btn bg-black text-white w-24">Filtrar</button>
-      </div>
-    </form>
+        </script>
+        <div class="w-full text-gray-500">
+          <label class="label-text text-gray-500" for="course">Curso</label>
+          <select name="course"
+            class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
+            id="course">
+            <option>Ensino Médio | Pré-vestibulinho</option>
+            <option>Pré-vestibular</option>
+            <option>Empreendedorismo</option>
+          </select>
+        </div>
+        <div class="w-full text-gray-500">
+          <label class="label-text text-gray-500" for="year">Ano</label>
+          <select name="year"
+            class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
+            id="year">
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+          </select>
+        </div>
+        <div class="w-full text-gray-500">
+          <label class="label-text text-gray-500" for="semester">Semestre</label>
+          <select name="semester"
+            class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
+            id="semester">
+            <option>1º Semestre</option>
+            <option>2º Semestre</option>
+          </select>
+        </div>
+        <div class="col-end-4 flex items-end justify-end gap-4">
+          <button class="btn btn-error w-16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13.758 19.414L9 21v-8.5L4.52 7.572A2 2 0 0 1 4 6.227V4h16v2.172a2 2 0 0 1-.586 1.414L15 12v1.5m7 8.5l-5-5m0 5l5-5" />
+            </svg>
+            <span class="sr-only">Remover filtro</span>
+          </button>
+          <button class="btn bg-black text-white w-24">Filtrar</button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 <section>
@@ -109,39 +116,22 @@ $students = [
       <thead class="border-gray-300">
         <tr class="border-b border-gray-300">
           <th class="text-[#747171] w-[30px]">ID</th>
-          <th class="text-[#747171]">Aluno</th>
-          <th class="text-[#747171] w-[30px]">P</th>
-          <th class="text-[#747171] w-[30px]">F</th>
-          <th class="text-[#747171] w-[30px]">FJ</th>
-          <th class="text-[#747171] w-[30px]">A</th>
+          <th class="text-[#747171]">DISCIPLINA</th>
+          <th class="text-[#747171] w-[30px]">FALTAS</th>
+          <th class="text-[#747171] w-[30px]">PRESENÇAS</th>
+          <th class="text-[#747171] w-[30px]">TOTAL DE AULAS</th>
+          <th class="text-[#747171] w-[30px] text-right">FREQUÊNCIA (%)</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($students as $student): ?>
           <tr class="border-b border-gray-300">
             <td><?= $student['id']; ?></td>
-            <td><?= $student['name']; ?></td>
-            <td>
-              <div class="flex items-center gap-1">
-                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
-              </div>
-            </td>
-            <td>
-              <div class="flex items-center gap-1">
-                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
-              </div>
-            </td>
-            <td>
-              <div class="flex items-center gap-1">
-                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
-              </div>
-            </td>
-            <td>
-              <div class="flex items-center gap-1">
-                <input type="checkbox" class="checkbox checkbox-success" id="checkboxSuccess" checked />
-              </div>
-            </td>
-
+            <td><?= $student['discipline']; ?></td>
+            <td class="text-center"><?= $student['abscents'] ?></td>
+            <td class="text-center"><?= $student['watched'] ?></td>
+            <td class="text-center"><?= $student['lessons_total'] ?></td>
+            <td class="text-center"><?= $student['attendance_percentage'] ?></td>
           </tr>
 
 
@@ -150,9 +140,6 @@ $students = [
 
       </tbody>
     </table>
-  </div>
-  <div class="col-end-4 flex items-end justify-end gap-4 mt-4">
-    <button class="btn bg-black text-white w-24">Salvar</button>
   </div>
 </section>
 <?php require __DIR__ . "/../../partials/footer.php" ?>

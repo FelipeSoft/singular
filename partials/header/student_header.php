@@ -131,6 +131,9 @@ $BASE_URL = getenv(name: "BASE_URL");
                                     <div class="pb-1 mt-1 w-full">
                                         <p class="text-base-content/80 font-normal">
                                         <ul class="flex flex-col gap-3 mt-3 w-full">
+                                            <li><a href="<?= $BASE_URL ?>/student/attendance_tracking.php"
+                                                    class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-tracking" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Acompanhamento de Frequência</a>
+                                            </li>
                                             <li><a href="<?= $BASE_URL ?>/student/attendance_justify_abscense.php"
                                                     class="text-sm text-[#747171] w-full flex hover:text-[#37908e] transition-all <?= $tab === "attendance" && $subtab === "attendance-justify-abscense" ? "border border-gray-300 bg-white rounded-sm p-2 pointer-events-none" : "" ?>">Justificar
                                                     Ausência</a>

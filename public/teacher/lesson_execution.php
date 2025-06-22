@@ -56,11 +56,14 @@ $subtab = "class-execution";
                 <select name="discipline"
                     class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
                     id="discipline">
-                    <option>Matemática Discreta </option>
-                    <option>Engenharia de Software I</option>
+                    <option>Matemática</option>
+                    <option>Português</option>
+                    <option>História</option>
+                    <option>Geografia</option>
+                    <option>Ciências</option>
                 </select>
             </div>
-             <div class="w-full text-gray-500">
+            <div class="w-full text-gray-500">
                 <label class="label-text text-gray-500" for="status">Status</label>
                 <select name="status"
                     class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
@@ -99,8 +102,8 @@ $subtab = "class-execution";
                         <span class="sr-only">Segunda</span>
                     </div>
                     <div>
-                        <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                        <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                     </div>
                 </div>
                 <a href="/">
@@ -120,8 +123,8 @@ $subtab = "class-execution";
                         <span class="sr-only">Terça</span>
                     </div>
                     <div>
-                        <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                        <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                     </div>
                 </div>
                 <a href="/">
@@ -141,8 +144,8 @@ $subtab = "class-execution";
                         <span class="sr-only">Quarta</span>
                     </div>
                     <div>
-                        <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                        <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                     </div>
                 </div>
                 <a href="/">
@@ -162,8 +165,8 @@ $subtab = "class-execution";
                         <span class="sr-only">Quinta</span>
                     </div>
                     <div>
-                        <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                        <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                     </div>
                 </div>
                 <a href="/">
@@ -183,8 +186,8 @@ $subtab = "class-execution";
                         <span class="sr-only">Sexta</span>
                     </div>
                     <div>
-                        <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                        <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                     </div>
                 </div>
                 <a href="/">
@@ -204,8 +207,8 @@ $subtab = "class-execution";
                         <span class="sr-only">Sábado</span>
                     </div>
                     <div>
-                        <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                        <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                        <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                     </div>
                 </div>
                 <a href="/">

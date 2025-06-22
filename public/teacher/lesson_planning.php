@@ -91,7 +91,7 @@ $students = [
         </div>
         <form class="grid grid-cols-4 gap-8 mt-4">
             <script>
-                window.addEventListener('load', function () {
+                window.addEventListener('load', function() {
                     flatpickr('#date', {
                         monthSelectorType: 'static'
                     })
@@ -147,8 +147,11 @@ $students = [
                 <select name="discipline"
                     class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
                     id="discipline">
-                    <option>Matemática Discreta </option>
-                    <option>Engenharia de Software I</option>
+                    <option>Matemática</option>
+                    <option>Português</option>
+                    <option>História</option>
+                    <option>Geografia</option>
+                    <option>Ciências</option>
                 </select>
             </div>
             <div class="w-full text-gray-500">
@@ -163,7 +166,7 @@ $students = [
                     class="input file:bg-[#388F8E] file:text-white file:rounded-md file:px-4 file:py-2 file:border-0 file:cursor-pointer bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39]"
                     id="discipline">
             </div>
-         
+
             <div class="flex flex-row justify-end gap-5">
                 <div class="col-end-4 flex items-end justify-end gap-4 mt-4">
                     <button class="btn bg-[#e3e3e3] border-none text-black w-24">Cancelar</button>
