@@ -24,9 +24,11 @@ $subtab = "grade-overview";
             <select
                 class="bg-white text-gray-500 placeholder:text-gray-400 focus:border-none border-gray-300 focus:outline-[#F73C39] select"
                 id="discipline">
-                <option>Engenharia de Software 1</option>
-                <option>Algoritimos e Lógica de Programação</option>
-                <option>Matemática Discreta</option>
+                <option>Matemática</option>
+                <option>Português</option>
+                <option>História</option>
+                <option>Geografia</option>
+                <option>Ciências</option>
             </select>
         </div>
 

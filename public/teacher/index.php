@@ -183,8 +183,8 @@ $tab = "home";
                             <span class="sr-only">Segunda</span>
                         </div>
                         <div>
-                            <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                            <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                         </div>
                     </div>
                     <a href="/">
@@ -204,8 +204,8 @@ $tab = "home";
                             <span class="sr-only">Terça</span>
                         </div>
                         <div>
-                            <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                            <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                         </div>
                     </div>
                     <a href="/">
@@ -225,8 +225,8 @@ $tab = "home";
                             <span class="sr-only">Quarta</span>
                         </div>
                         <div>
-                            <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                            <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                         </div>
                     </div>
                     <a href="/">
@@ -246,8 +246,8 @@ $tab = "home";
                             <span class="sr-only">Quinta</span>
                         </div>
                         <div>
-                            <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                            <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                         </div>
                     </div>
                     <a href="/">
@@ -267,8 +267,8 @@ $tab = "home";
                             <span class="sr-only">Sexta</span>
                         </div>
                         <div>
-                            <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                            <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                         </div>
                     </div>
                     <a href="/">
@@ -288,8 +288,8 @@ $tab = "home";
                             <span class="sr-only">Sábado</span>
                         </div>
                         <div>
-                            <h2 class="text-black font-semibold text-xl">Engenharia de Software VIII</h2>
-                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Laboratório 12</h2>
+                            <h2 class="text-black font-semibold text-xl">Matemática</h2>
+                            <p class="text-gray-400 font-semibold">19h00 - 22h30 | Turma A | Sala 12</h2>
                         </div>
                     </div>
                     <a href="/">

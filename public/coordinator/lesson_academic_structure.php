@@ -28,29 +28,7 @@ $subtab = "academic-structure";
                 </div>
                 <p class="text-gray-400 font-semibold">
                     A definição da Estrutura Acadêmica, que é baseada em Cursos e Disciplinas, afetará diretamente na
-                    categorização das aulas. Dentro de um Curso haverá as Disciplinas, e dentro das Disciplinas, é obrigatório informar a hora-aula por dia letivo.
-                    </p>
-            </div>
-        </div>
-    </div>
-    <div class="p-4 border border-gray-300 rounded-md mt-8 shadow-md mb-8">
-        <div class="flex items-center gap-4">
-            <div>
-                <div class="flex gap-4">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12 16V12" stroke="black" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M12 8H12.01" stroke="black" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-
-                    <h2 class="text-[#000000] font-semibold">Como atribuir Cursos e/ou Disciplinas para um ou mais professores?</h2>
-                </div>
-                <p class="text-gray-400 font-semibold">
-                    Ao selecionar um dos Recursos logo abaixo chamado de “Anexar Disciplina ou Curso”, será possível escolher os professores desejados para lecionarem integralmente um Curso, ou, parcialmente as Disciplinas específicas dentro de um Curso.
+                    categorização das aulas. Dentro de cada Curso, haverá um conjunto de Disciplinas a serem ministradas.
                     </p>
             </div>
         </div>
