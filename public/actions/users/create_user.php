@@ -50,7 +50,8 @@ if ($name && $email && $level && $password && $confirm_password) {
         die;
     }
 
-    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+    // $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+    $passwordHash = $password;
 
     $sql = "INSERT INTO `users` (`name`, `email`, `password`, `level`, `status`) VALUES (:name, :email, :password, :level, TRUE);";
     $statement = $connection->prepare($sql);

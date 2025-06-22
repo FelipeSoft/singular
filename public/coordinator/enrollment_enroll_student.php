@@ -5,7 +5,7 @@ $subtab = "enroll-student";
 ?>
 <?php require __DIR__ . "/../../partials/header.php" ?>
 <section>
-    <h1 class="font-semibold text-black text-xl mb-4">Registro de Matrículas</h1>
+    <h1 class="font-semibold text-black text-xl mb-4">Matricular Aluno</h1>
     <div class="w-full">
         <div class="flex flex-wrap gap-4">
             <div class="w-1/2 text-gray-500">
