@@ -12,7 +12,7 @@ if ($email && $password) {
 
     $data = $statement->fetchAll(PDO::FETCH_ASSOC);
     $correctPassword = $data[0]["password"];
-    $isCorrectPassword = password_verify($password, $correctPassword);
+    $isCorrectPassword = $correctPassword === $password;
 
     if ($isCorrectPassword) {
         $_SESSION["logged_user"] = [
