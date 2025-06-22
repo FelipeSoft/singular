@@ -27,7 +27,7 @@ $subtab = "coordinators-management";
             </svg>
             <h2 class="text-black">Informativo</h2>
         </div>
-        <p>
+        <p class="text-gray-400">
             Na sessão abaixo, para editar ou adicionar uma nova disciplina, basta utilizar o formulário multifunções logo abaixo.
         </p>
     </div>

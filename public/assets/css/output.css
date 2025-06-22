@@ -2560,6 +2560,15 @@
   .mt-auto {
     margin-top: auto;
   }
+  .-mr-2 {
+    margin-right: calc(var(--spacing) * -2);
+  }
+  .-mr-20 {
+    margin-right: calc(var(--spacing) * -20);
+  }
+  .-mr-24 {
+    margin-right: calc(var(--spacing) * -24);
+  }
   .mr-0 {
     margin-right: calc(var(--spacing) * 0);
   }
@@ -2577,6 +2586,9 @@
   }
   .mr-10 {
     margin-right: calc(var(--spacing) * 10);
+  }
+  .mr-20 {
+    margin-right: calc(var(--spacing) * 20);
   }
   .mb-0 {
     margin-bottom: calc(var(--spacing) * 0);
@@ -2619,6 +2631,15 @@
   }
   .ml-6 {
     margin-left: calc(var(--spacing) * 6);
+  }
+  .ml-10 {
+    margin-left: calc(var(--spacing) * 10);
+  }
+  .ml-16 {
+    margin-left: calc(var(--spacing) * 16);
+  }
+  .ml-20 {
+    margin-left: calc(var(--spacing) * 20);
   }
   .ml-\[300px\] {
     margin-left: 300px;
